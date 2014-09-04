@@ -1,0 +1,150 @@
+{
+    "appKeys": {
+        "live_minute": 4,
+        "local": 0,
+        "local_goals": 2,
+        "round": 6,
+        "status": 5,
+        "visitor": 1,
+        "visitor_goals": 3
+    },
+    "capabilities": [
+        ""
+    ],
+    "companyName": "David Rodriguez Rincon",
+    "longName": "Football Pal",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/GRA40x40.png",
+                "name": "GRA",
+                "type": "png"
+            },
+            {
+                "file": "images/ELC40x40.png",
+                "name": "ELC",
+                "type": "png"
+            },
+            {
+                "file": "images/RAY40x40.png",
+                "name": "RAY",
+                "type": "png"
+            },
+            {
+                "file": "images/DEP40x40.png",
+                "name": "DEP",
+                "type": "png"
+            },
+            {
+                "file": "images/RSO40x40.png",
+                "name": "RSO",
+                "type": "png"
+            },
+            {
+                "file": "images/VIL40x40.png",
+                "name": "VIL",
+                "type": "png"
+            },
+            {
+                "file": "images/ESP40x40.png",
+                "name": "ESP",
+                "type": "png"
+            },
+            {
+                "file": "images/EIB40x40.png",
+                "name": "EIB",
+                "type": "png"
+            },
+            {
+                "file": "images/COR40x40.png",
+                "name": "COR",
+                "type": "png"
+            },
+            {
+                "file": "images/CEL40x40.png",
+                "name": "CEL",
+                "type": "png"
+            },
+            {
+                "file": "images/LEV40x40.png",
+                "name": "LEV",
+                "type": "png"
+            },
+            {
+                "file": "images/ATH40x40.png",
+                "name": "ATH",
+                "type": "png"
+            },
+            {
+                "file": "images/VAL40x40.png",
+                "name": "VCF",
+                "type": "png"
+            },
+            {
+                "file": "images/ALM40x40.png",
+                "name": "ALM",
+                "type": "png"
+            },
+            {
+                "file": "images/GET40x40.png",
+                "name": "GET",
+                "type": "png"
+            },
+            {
+                "file": "images/MAL40x40.png",
+                "name": "MAL",
+                "type": "png"
+            },
+            {
+                "file": "images/SEV40x40.png",
+                "name": "SEV",
+                "type": "png"
+            },
+            {
+                "file": "images/RMA40x40.png",
+                "name": "RMA",
+                "type": "png"
+            },
+            {
+                "file": "images/FCB40x40.png",
+                "name": "FCB",
+                "type": "png"
+            },
+            {
+                "file": "images/ATM40x40.png",
+                "name": "ATM",
+                "type": "png"
+            },
+            {
+                "file": "images/LIGA BBVA.png",
+                "name": "LIGA_BBVA",
+                "type": "png"
+            },
+            {
+                "file": "images/Football Pal icon.png",
+                "menuIcon": true,
+                "name": "menu_icon",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[0-9: ]",
+                "file": "fonts/futura_condensed_bold-webfont.ttf",
+                "name": "FUTURA_CONDENSED_53",
+                "type": "font"
+            },
+            {
+                "file": "fonts/futura.ttf",
+                "name": "FUTURA_17",
+                "type": "font"
+            }
+        ]
+    },
+    "shortName": "Football Pal",
+    "uuid": "1f6720ca-a410-48b9-9135-ee57b4da4ee4",
+    "versionCode": 1,
+    "versionLabel": "2.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
