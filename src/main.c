@@ -3,6 +3,10 @@
 #include "pebble_fonts.h"
 	
 #define DIAL_RADIUS 3
+	
+#define NUM_MENU_SECTIONS 2
+#define NUM_FIRST_MENU_ITEMS 2
+#define NUM_SECOND_MENU_ITEMS 1
 
 static const char *LigaBBVA[] = {
 	NULL,
@@ -125,6 +129,8 @@ int intLocal;
 int intVisitor;
 
 int intPage = 1;
+int i=0;
+int intLeague_Id = 1;
 
 //InverterLayer *inv_layer;
 
@@ -173,7 +179,138 @@ static TextLayer *Weekday_Layer;
 static TextLayer *results_layer;
 
 
-//HANDLE THE TIME
+
+
+/*************************/
+/* CREATE THE MENU LAYER */
+/*************************/
+static SimpleMenuLayer *simple_menu_layer;
+// A simple menu layer can have multiple sections
+static SimpleMenuSection menu_sections[NUM_MENU_SECTIONS];
+// Each section is composed of a number of menu items
+static SimpleMenuItem first_menu_items[NUM_FIRST_MENU_ITEMS];
+static SimpleMenuItem second_menu_items[NUM_SECOND_MENU_ITEMS];
+// Menu items can optionally have icons
+static GBitmap *menu_icon_image;
+static bool special_flag = false;
+static int hit_count = 0;
+
+static const char *Competitions[] = {
+	"Liga BBVA",
+	//"Bundesliga",
+	//"Premier League",
+	"Serie A",
+};
+
+// You can capture when the user selects a menu icon with a menu item select callback
+static void menu_select_callback(int index, void *ctx) {
+  // Select the league
+	i++;
+	if (i>1){i=0;}
+	if(index==1){
+		first_menu_items[index].subtitle = Competitions[i];
+	}
+  
+  // Mark the layer to be updated
+  layer_mark_dirty(simple_menu_layer_get_layer(simple_menu_layer));
+}
+
+/* I don't need this yet, but I'll keep just in case
+
+// You can specify special callbacks to differentiate functionality of a menu item
+static void special_select_callback(int index, void *ctx) {
+  // Of course, you can do more complicated things in a menu item select callback
+  // Here, we have a simple toggle
+  special_flag = !special_flag;
+
+  SimpleMenuItem *menu_item = &second_menu_items[index];
+
+  if (special_flag) {
+    menu_item->subtitle = "Okay, it's not so special.";
+  } else {
+    menu_item->subtitle = "Well, maybe a little.";
+  }
+
+
+	  // Mark the layer to be updated
+  layer_mark_dirty(simple_menu_layer_get_layer(simple_menu_layer));
+}
+
+*/
+
+static void CallMenu(){
+	static Window *Menu_Window;
+// We'll have to load the icon before we can use it
+  //menu_icon_image = gbitmap_create_with_resource(RESOURCE_ID_ATM);
+	  // Although we already defined NUM_FIRST_MENU_ITEMS, you can define
+  // an int as such to easily change the order of menu items later
+	int num_a_items = 0;
+
+  // This is an example of how you'd set a simple menu item
+  first_menu_items[num_a_items++] = (SimpleMenuItem){
+    // You should give each menu item a title and callback
+    .title = "Set Language",
+	.subtitle = "English",
+    .callback = menu_select_callback,
+  };
+  // The menu items appear in the order saved in the menu items array
+  //int i=0;
+  first_menu_items[num_a_items++] = (SimpleMenuItem){
+    .title = "Competition",
+    // You can also give menu items a subtitle
+    .subtitle = "Liga BBVA",
+    .callback = menu_select_callback,
+  };
+
+/* I don't need this yet... I'll keep it Just In case
+	
+  // This initializes the second section
+  second_menu_items[0] = (SimpleMenuItem){
+    .title = "Special Item",
+    // You can use different callbacks for your menu items
+    .callback = special_select_callback,
+  };
+
+*/
+  // Bind the menu items to the corresponding menu sections
+  menu_sections[0] = (SimpleMenuSection){
+    .num_items = NUM_FIRST_MENU_ITEMS,
+    .items = first_menu_items,
+  };
+	
+/*	
+  menu_sections[1] = (SimpleMenuSection){
+    // Menu sections can also have titles as well
+    .title = "Yet Another Section",
+    .num_items = NUM_SECOND_MENU_ITEMS,
+    .items = second_menu_items,
+  };
+  */
+
+	
+  // Now we prepare to initialize the simple menu layer
+  // We need the bounds to specify the simple menu layer's viewport size
+  // In this case, it'll be the same as the window's
+	
+   //Menu_Window = window_create();
+   //window_stack_push(Menu_Window, true /* Animated */);
+	
+  //Layer *window_layer = window_get_root_layer(Menu_Window);
+  Layer *window_layer = window_get_root_layer(s_window);
+  GRect bounds = layer_get_frame(window_layer);
+
+  // Initialize the simple menu layer
+  simple_menu_layer = simple_menu_layer_create(bounds, Menu_Window, menu_sections, NUM_MENU_SECTIONS, NULL);
+
+  // Add it to the window for display
+  layer_add_child(window_layer, simple_menu_layer_get_layer(simple_menu_layer));
+}
+
+
+/////////////////////
+// HANDLE THE TIME //
+/////////////////////
+
 void handle_tick(struct tm *tick_time, TimeUnits units_changed)
 {
 		
@@ -470,7 +607,7 @@ static void send_cmd(void) {
 
 	void config_provider(Window *window) {
 	 // SELECT BUTTON
-	  //window_single_click_subscribe(BUTTON_ID_SELECT, select_pressed);
+	  window_single_click_subscribe(BUTTON_ID_SELECT, CallMenu);
 	  //window_long_click_subscribe(BUTTON_ID_SELECT,700,toggle_setting_mode,select_long_release_handler);
 	  window_multi_click_subscribe(BUTTON_ID_SELECT,2,2,0,false,RefreshData);	
 	  
@@ -997,6 +1134,9 @@ void handle_init(void)
 		// BUTTONS //
 		//*********//
 		window_set_click_config_provider(s_window, (ClickConfigProvider) config_provider);
+	
+	  
+	
 	
         
 } //HANDLE_INIT
