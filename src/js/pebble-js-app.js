@@ -21,6 +21,72 @@ var LigaBBVA = {
 	69605 : "20", //"ELC", //Elche
 };
 
+var TeamShortName = {
+	69600 : "MAL", //Málaga
+	69593 : "ATH", //Athletic de Bilbao
+	69594 : "SEV", //Sevilla
+	69597 : "VCF", //Valencia
+	69604 : "GRA", //Granada
+	69705 : "DEP", //Deportivo
+	69606 : "ALM", //Almeria
+	69603 : "ESP", //Español
+	69706 : "EIB", //Eibar
+	69596 : "RSO", //Real Sociedad
+	69598 : "CEL", //Celta de Vigo
+	69602 : "GET", //Getafe
+	69599 : "LEV", //Levante
+	69595 : "VIL", //Villareal
+	69592 : "RMA", //Real Madrid
+	69894 : "COR", //Córdoba
+	69601 : "RAY", //Rayo Vallecano
+	69590 : "ATM", //Atlético de Madrid
+	69591 : "FCB", //Barça
+	69605 : "ELC", //Elche
+};
+
+var FieldName = {
+	69600 : "La Rosaleda", //Málaga
+	69593 : "San Mames", //Athletic de Bilbao
+	69594 : "Ramon Sanchez Pizjuan", //Sevilla
+	69597 : "Mestalla", //Valencia
+	69604 : "Nuevo Los Carmenes", //Granada
+	69705 : "Municipal Riazor", //Deportivo
+	69606 : "Los Juegos del Mediterraneo", //Almeria
+	69603 : "Power8 Stadium", //Español
+	69706 : "Municipal de Ipurua", //Eibar
+	69596 : "Anoeta", //Real Sociedad
+	69598 : "Balaidos", //Celta de Vigo
+	69602 : "Coliseum Alfonso Perez", //Getafe
+	69599 : "Ciutat de Valencia", //Levante
+	69595 : "El Madrigal", //Villareal
+	69592 : "Santiago Bernabeu", //Real Madrid
+	69894 : "Municipal Nuevo Arcangel", //Córdoba
+	69601 : "Vallecas", //Rayo Vallecano
+	69590 : "Vicente Calderon", //Atlético de Madrid
+	69591 : "Camp Nou", //Barça
+	69605 : "Martinez Valero", //Elche
+};
+
+//Formatting Functions
+function Left(str, n){
+	if (n <= 0)
+	    return "";
+	else if (n > String(str).length)
+	    return str;
+	else
+	    return String(str).substring(0,n);
+}
+function Right(str, n){
+    if (n <= 0)
+       return "";
+    else if (n > String(str).length)
+       return str;
+    else {
+       var iLen = String(str).length;
+       return String(str).substring(iLen, iLen - n);
+    }
+}
+
 
 //function getWorldCupMatchs() 
 function getLigaBBVA(){
@@ -32,6 +98,7 @@ function getLigaBBVA(){
 	//var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?key=721430254d3a0ca7684955899533eb08&format=json&req=matchsday&country=es");
 	var req = new XMLHttpRequest();
 	var i;
+	var j;
 	var local;
 	var visitor;
 	var round;
@@ -95,6 +162,33 @@ function getLigaBBVA(){
 				//Concatenate the results to the output chain
 				resultados = resultados+ "\n" + local +" "+ matches[i].result + " "+ visitor + " (" + matches[i].live_minute+"')";
 				
+				//Create Timeline PIN
+				var TimelineTime;
+				var matchtime = (parseInt(matches[i].hour) - 2) + ":" + matches[i].minute;
+				//The GMT time is hardcoded but will be fixed to be dynamic pretty soon.
+				TimelineTime = Left(matches[i].schedule,10) + "T" +  matchtime  + ":00Z";
+				var shortLocal = TeamShortName[matches[i].team1];
+				var shortVisitor = TeamShortName[matches[i].team2];
+				var pinTitle = shortLocal+ " - " + shortVisitor;
+				
+				//get the TV Channels
+				var channels;
+				for (j=0;j<matches[i].channels.length;j++){
+					if (j===0){channels = matches[i].channels[j].name;}
+					else{channels = channels + ", " + matches[i].channels[j].name;}
+				}
+				
+				var estadio = FieldName[matches[i].team1];
+				
+				console.log("PIN ID: "+matches[i].id);
+				console.log("TimelineTime: "+TimelineTime);
+				console.log("pinTitle: "+pinTitle);
+				
+				createPIN(matches[i].id, TimelineTime, pinTitle, channels, "Round " + round, estadio);
+				
+				//clear channels
+				channels = "";
+				
 				arrLocal = arrLocal + "|" + local;
 				arrVisitor = arrVisitor + "|" + visitor;
 				arrLocalGoals = arrLocalGoals + "|" + local_goals;
@@ -147,3 +241,96 @@ Pebble.addEventListener("ready", function(e) {
   getLigaBBVA();
 
 });
+
+//CREATE A NEW PIN
+function createPIN(id, time, title, subtitle, body, locationName){
+
+
+  // Create the pin
+  var pin = {
+		  "id": id,
+		  "time": time,
+		  "layout": {
+			"type": "genericPin",
+			"title": title,
+			"subtitle": subtitle,
+			"body": body,
+			"locationName":locationName, 
+			"foregroundColor": "#FFFFFF",
+    		"backgroundColor": "#55AA55",
+			"tinyIcon": "system://images/SOCCER_GAME"
+		  },
+	  "actions": [
+    {
+      "title": "Open Football Pal",
+      "type": "openWatchApp",
+      "launchCode": 15
+    }]
+		};
+
+  console.log('Inserting pin in the future: ' + JSON.stringify(pin));
+
+  insertUserPin(pin, function(responseText) { 
+    console.log('Result: ' + responseText);
+  });
+}
+
+/******************************* timeline lib *********************************/
+
+// The timeline public URL root
+var API_URL_ROOT = 'https://timeline-api.getpebble.com/';
+
+/**
+ * Send a request to the Pebble public web timeline API.
+ * @param pin The JSON pin to insert. Must contain 'id' field.
+ * @param type The type of request, either PUT or DELETE.
+ * @param callback The callback to receive the responseText after the request has completed.
+ */
+function timelineRequest(pin, type, callback) {
+  // User or shared?
+  var url = API_URL_ROOT + 'v1/user/pins/' + pin.id;
+
+  // Create XHR
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    console.log('timeline: response received: ' + this.responseText);
+    callback(this.responseText);
+  };
+  xhr.open(type, url);
+
+  // Get token
+	
+  Pebble.getTimelineToken(function(token) {
+	  
+    // Add headers
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('X-User-Token', '' + token);
+
+    // Send
+    xhr.send(JSON.stringify(pin));
+    console.log('timeline: request sent.');
+  }, function(error) { console.log('timeline: error getting timeline token: ' + error); });
+
+}
+
+	
+
+/**
+ * Insert a pin into the timeline for this user.
+ * @param pin The JSON pin to insert.
+ * @param callback The callback to receive the responseText after the request has completed.
+ */
+function insertUserPin(pin, callback) {
+  timelineRequest(pin, 'PUT', callback);
+}
+
+/**
+ * Delete a pin from the timeline for this user.
+ * @param pin The JSON pin to delete.
+ * @param callback The callback to receive the responseText after the request has completed.
+ */
+function deleteUserPin(pin, callback) {
+  timelineRequest(pin, 'DELETE', callback);
+}
+
+/***************************** end timeline lib *******************************/

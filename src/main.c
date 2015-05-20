@@ -126,7 +126,7 @@ int intVisitor;
 
 int intPage = 1;
 
-InverterLayer *inv_layer;
+//InverterLayer *inv_layer;
 
 
 						 
@@ -142,13 +142,15 @@ static GBitmap *s_res_visitor1;
 static GBitmap *s_res_local1;
 static GBitmap *s_res_local2;
 static GBitmap *s_res_visitor2;
+static GBitmap *escudo_visitante1;
+static GBitmap *escudo_visitante2;
 static GBitmap *s_res_liga_bbva;
 static GFont s_res_gothic_14;
 static GFont s_res_gothic_28_bold;
-static BitmapLayer *visitor1_img;
+static BitmapLayer *visitor1_layer;
 static BitmapLayer *local1_img;
 static BitmapLayer *local2_img;
-static BitmapLayer *visitor2_img;
+static BitmapLayer *visitor2_layer;
 static BitmapLayer *league_img;
 static TextLayer *jornada_layer;
 static TextLayer *RoundNumber_layer;
@@ -165,6 +167,7 @@ static TextLayer *local2_goals;
 static TextLayer *visitor2_goals;
 static TextLayer *live_minute1;
 static TextLayer *live_minute2;
+static TextLayer *header_layer;
 
 static TextLayer *Weekday_Layer;
 static TextLayer *results_layer;
@@ -176,9 +179,18 @@ void handle_tick(struct tm *tick_time, TimeUnits units_changed)
 		
 //Init the date
 			
-	//Get the English fortmat
-	strftime(month_text,sizeof(month_text),"%B %e",tick_time);
+	
 	strftime(weekday_text,sizeof(weekday_text),"%A",tick_time);
+	
+	//get the local date
+	char *sys_locale = setlocale(LC_ALL, "");
+		
+	if (strcmp("en_US", sys_locale) == 0) {
+		strftime(month_text,sizeof(month_text),"%B %e",tick_time);
+			
+	} else {
+		strftime(month_text,sizeof(month_text),"%e %B",tick_time);
+	}
 
 	text_layer_set_text(weekday_layer,weekday_text); //Update the weekday layer  
 	text_layer_set_text(date_layer,month_text); 
@@ -253,8 +265,8 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 	intVisitor = a+b;
 			
 	memcpy(&visitor1, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-	if (s_res_visitor1!= NULL) {gbitmap_destroy(s_res_visitor1);}
-	s_res_visitor1 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	if (escudo_visitante1!= NULL) {gbitmap_destroy(escudo_visitante1);}
+	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
 
 
 	//Split the string to get Visitor 2
@@ -267,8 +279,8 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 	intVisitor = a+b;
 			
 	memcpy(&visitor2, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-	if (s_res_visitor2!= NULL) {gbitmap_destroy(s_res_visitor2);}
-	s_res_visitor2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	if (escudo_visitante2!= NULL) {gbitmap_destroy(escudo_visitante2);}
+	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
 		
 }
 
@@ -366,7 +378,7 @@ void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage)
 		
 	} //Match 1 is playing
 	else if (Status[PageNumbers[intPage]] == '-'){memcpy(&txtlive_minute1,"---",3);} //Match 1 didn't start yet
-	else if ((Status[PageNumbers[intPage]] == '+')){memcpy(&txtlive_minute1,"FIN",3);} //Matc 1 already finish
+	else if (Status[PageNumbers[intPage]] == '+'){memcpy(&txtlive_minute1,"FIN",3);} //Matc 1 already finish
 	
 	if (Status[PageNumbers[intPage]+3] == '0') {
 		//Split the string to get Local 2
@@ -383,7 +395,7 @@ void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage)
 		
 	} //Match 2 is playing
 	else if (Status[PageNumbers[intPage]+3] == '-'){memcpy(&txtlive_minute2,"---",3);} //Match 2 didn't start yet
-	else if ((Status[PageNumbers[intPage]+3] == '+')){memcpy(&txtlive_minute2,"FIN",3);} //Matc 2 already finish
+	else if (Status[PageNumbers[intPage]+3] == '+'){memcpy(&txtlive_minute2,"FIN",3);} //Match 2 already finish
 
 }
 
@@ -540,53 +552,98 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 	//Page 1
 	Center1 = GPoint(50, 160);
 	
-	graphics_context_set_stroke_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_stroke_color(ctx, GColorWhite);
+		#endif
     graphics_draw_circle(ctx, Center1, DIAL_RADIUS);
 	
 	if(intPage == 1){
-		graphics_context_set_fill_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_fill_color(ctx, GColorWhite);
+		#endif
     	graphics_fill_circle(ctx, Center1, DIAL_RADIUS);
 	}
 
 	//Page 2
 	Center2 = GPoint(60, 160);
 	
-	graphics_context_set_stroke_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_stroke_color(ctx, GColorWhite);
+		#endif
     graphics_draw_circle(ctx, Center2, DIAL_RADIUS);
 	
 	if(intPage == 2){
-		graphics_context_set_fill_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_fill_color(ctx, GColorWhite);
+		#endif
     	graphics_fill_circle(ctx, Center2, DIAL_RADIUS);
 	}
 	
 	//Page 3
 	Center3 = GPoint(70, 160);
 	
-	graphics_context_set_stroke_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_stroke_color(ctx, GColorWhite);
+		#endif
+			
     graphics_draw_circle(ctx, Center3, DIAL_RADIUS);
 	
 	if(intPage == 3){
-		graphics_context_set_fill_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_fill_color(ctx, GColorWhite);
+		#endif
+		
     	graphics_fill_circle(ctx, Center3, DIAL_RADIUS);
 	}
 	//Page 4
 	Center4 = GPoint(80, 160);
 	
-	graphics_context_set_stroke_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_stroke_color(ctx, GColorWhite);
+		#endif
     graphics_draw_circle(ctx, Center4, DIAL_RADIUS);
 	
 	if(intPage == 4){
-		graphics_context_set_fill_color(ctx, GColorWhite);
+		#ifdef PBL_COLOR
+		  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_fill_color(ctx, GColorWhite);
+		#endif
     	graphics_fill_circle(ctx, Center4, DIAL_RADIUS);
 	}
 	//Page 5
 	Center5 = GPoint(90, 160);
 	
-	graphics_context_set_stroke_color(ctx, GColorWhite);
+	
+		#ifdef PBL_COLOR
+		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_stroke_color(ctx, GColorWhite);
+		#endif
     graphics_draw_circle(ctx, Center5, DIAL_RADIUS);
 	
 	if(intPage == 5){
-		graphics_context_set_fill_color(ctx, GColorWhite);
+		
+		#ifdef PBL_COLOR
+		  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+		#else
+		  graphics_context_set_fill_color(ctx, GColorWhite);
+		#endif
+			
     	graphics_fill_circle(ctx, Center5, DIAL_RADIUS);
 	}
 	  
@@ -618,6 +675,14 @@ void SetupMessages(){
 void handle_init(void)
 {
 	
+	
+	//Use the internationalization API to detect the user's language
+	setlocale(LC_ALL, i18n_get_system_locale());
+	
+	//Developer Hardcode - REMOVE!!
+	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[18]);
+	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[19]);
+	
 	//Initialize the Message Service
 	SetupMessages();
 	
@@ -626,9 +691,26 @@ void handle_init(void)
 	
 	//Create the main window
 	s_window = window_create(); 
-	window_set_fullscreen(s_window,true);
+	#ifdef PBL_PLATFORM_APLITE
+		window_set_fullscreen(s_window,true);
+	#endif
 	window_stack_push(s_window, true /* Animated */);
-	window_set_background_color(s_window, GColorBlack);
+
+		#ifdef PBL_COLOR
+		  window_set_background_color(s_window, GColorWhite );
+		#else
+		  window_set_background_color(s_window, GColorBlack);
+		#endif
+	
+	// HEADER
+	  	header_layer = text_layer_create(GRect(0, 0, 144, 57));
+	  	
+	  	layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(header_layer));
+		#ifdef PBL_COLOR
+		  	text_layer_set_background_color(header_layer, GColorJaegerGreen);
+		#else
+			text_layer_set_background_color(header_layer, GColorWhite);
+		#endif
 	
 	//Draw the page indicator
 	GRect window_bounds = GRect(0, 0, 144, 168);
@@ -642,35 +724,30 @@ void handle_init(void)
 	  s_res_gothic_28_bold = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
 	
 	
-	  // visitor1_img
-	  visitor1_img = bitmap_layer_create(GRect(98, 62, 40, 40));
-	  bitmap_layer_set_bitmap(visitor1_img, s_res_visitor1);
-	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor1_img));
 	
-	  // local1_img
-	  local1_img = bitmap_layer_create(GRect(1, 62, 40, 40));
-	  bitmap_layer_set_bitmap(local1_img, s_res_local1);
-	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local1_img));
-
-	  // local2_img
-	  local2_img = bitmap_layer_create(GRect(1, 111, 40, 40));
-	  bitmap_layer_set_bitmap(local2_img, s_res_local2);
-	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local2_img));
-
-	  // visitor2_img
-	  visitor2_img = bitmap_layer_create(GRect(98, 111, 40, 40));
-	  bitmap_layer_set_bitmap(visitor2_img, s_res_visitor2);
-	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor2_img));
 
 	  // league_img
-	  league_img = bitmap_layer_create(GRect(95, 35, 43, 18));
-	  bitmap_layer_set_bitmap(league_img, s_res_liga_bbva);
-	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(league_img));
+		#ifdef PBL_PLATFORM_APLITE
+			league_img = bitmap_layer_create(GRect(95, 35, 43, 18));
+			bitmap_layer_set_compositing_mode(league_img, GCompOpAssign);
+		#elif PBL_PLATFORM_BASALT
+			league_img = bitmap_layer_create(GRect(75, 35, 67, 18));
+			bitmap_layer_set_compositing_mode(league_img, GCompOpSet);
+		#endif
+			
+		bitmap_layer_set_bitmap(league_img, s_res_liga_bbva);
+	  	layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(league_img));
 
 	  // jornada_layer
 	  jornada_layer = text_layer_create(GRect(1, 35, 40, 20));
 	  text_layer_set_background_color(jornada_layer, GColorClear);
-	  text_layer_set_text_color(jornada_layer, GColorWhite);
+	  
+		#ifdef PBL_COLOR
+		  text_layer_set_text_color(jornada_layer, GColorWhite);
+		#else
+		  text_layer_set_text_color(jornada_layer, GColorBlack);
+		#endif
+			
 	  text_layer_set_text(jornada_layer, jornada);
 	  text_layer_set_text_alignment(jornada_layer, GTextAlignmentRight);
 	  text_layer_set_font(jornada_layer, s_res_gothic_14);
@@ -678,9 +755,13 @@ void handle_init(void)
 	
 	  // RoundNumber_layer
 	  //snprintf(txtRound,2,"%d",intRound);
-	  RoundNumber_layer = text_layer_create(GRect(46, 35, 8, 20));
+	  RoundNumber_layer = text_layer_create(GRect(46, 35, 15, 20));
 	  text_layer_set_background_color(RoundNumber_layer, GColorClear);
-	  text_layer_set_text_color(RoundNumber_layer, GColorWhite);
+	  #ifdef PBL_COLOR
+		  text_layer_set_text_color(RoundNumber_layer, GColorWhite);
+		#else
+		  text_layer_set_text_color(RoundNumber_layer, GColorBlack);
+		#endif
 	  text_layer_set_text(RoundNumber_layer, txtRound);
 	  text_layer_set_text_alignment(RoundNumber_layer, GTextAlignmentLeft);
 	  text_layer_set_font(RoundNumber_layer, s_res_gothic_14);
@@ -689,7 +770,11 @@ void handle_init(void)
 	  // date_layer
 	  date_layer = text_layer_create(GRect(65, 14, 74, 20));
 	  text_layer_set_background_color(date_layer, GColorClear);
-	  text_layer_set_text_color(date_layer, GColorWhite);
+	  #ifdef PBL_COLOR
+		  text_layer_set_text_color(date_layer, GColorWhite);
+		#else
+		  text_layer_set_text_color(date_layer, GColorBlack);
+		#endif
 	  text_layer_set_text(date_layer, month_text);
 	  text_layer_set_text_alignment(date_layer, GTextAlignmentRight);
 	  text_layer_set_font(date_layer, s_res_gothic_14);
@@ -698,7 +783,11 @@ void handle_init(void)
 	  // weekday_layer
 	  weekday_layer = text_layer_create(GRect(65, 1, 74, 20));
 	  text_layer_set_background_color(weekday_layer, GColorClear);
-	  text_layer_set_text_color(weekday_layer, GColorWhite);
+	  #ifdef PBL_COLOR
+		  text_layer_set_text_color(weekday_layer, GColorWhite);
+		#else
+		  text_layer_set_text_color(weekday_layer, GColorBlack);
+		#endif
 	  text_layer_set_text(weekday_layer, weekday_text);
 	  text_layer_set_text_alignment(weekday_layer, GTextAlignmentRight);
 	  text_layer_set_font(weekday_layer, s_res_gothic_14);
@@ -707,7 +796,11 @@ void handle_init(void)
 	  // time_layer
 	  time_layer = text_layer_create(GRect(2, 2, 66, 28));
 	  text_layer_set_background_color(time_layer, GColorClear);
-	  text_layer_set_text_color(time_layer, GColorWhite);
+	  #ifdef PBL_COLOR
+		  text_layer_set_text_color(time_layer, GColorWhite);
+		#else
+		  text_layer_set_text_color(time_layer, GColorBlack);
+		#endif
 	  text_layer_set_text(time_layer, time_text);
 	  text_layer_set_text_alignment(time_layer, GTextAlignmentCenter);
 	  text_layer_set_font(time_layer, s_res_gothic_28_bold);
@@ -716,7 +809,11 @@ void handle_init(void)
 	  // local1_layer
 	  local1_layer = text_layer_create(GRect(39, 61, 30, 16));
 	  text_layer_set_background_color(local1_layer, GColorClear);
-	  text_layer_set_text_color(local1_layer, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(local1_layer, GColorBlack);
+		#else
+		  text_layer_set_text_color(local1_layer, GColorWhite);
+		#endif
 	  text_layer_set_text(local1_layer, local1);
 	  text_layer_set_text_alignment(local1_layer, GTextAlignmentCenter);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(local1_layer));
@@ -724,67 +821,110 @@ void handle_init(void)
 	  // local2_layer
 	  local2_layer = text_layer_create(GRect(39, 110, 30, 16));
 	  text_layer_set_background_color(local2_layer, GColorClear);
-	  text_layer_set_text_color(local2_layer, GColorWhite);
+		#ifdef PBL_COLOR
+		  text_layer_set_text_color(local2_layer, GColorBlack);
+		#else
+		  text_layer_set_text_color(local2_layer, GColorWhite);
+		#endif
 	  text_layer_set_text(local2_layer, local2);
 	  text_layer_set_text_alignment(local2_layer, GTextAlignmentCenter);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(local2_layer));
 
 	  // visitant1_layer
+	
 	  visitant1_layer = text_layer_create(GRect(74, 61, 30, 16));
 	  text_layer_set_background_color(visitant1_layer, GColorClear);
-	  text_layer_set_text_color(visitant1_layer, GColorWhite);
+		#ifdef PBL_COLOR
+		  text_layer_set_text_color(visitant1_layer, GColorBlack);
+		#else
+		  text_layer_set_text_color(visitant1_layer, GColorWhite);
+		#endif
 	  text_layer_set_text(visitant1_layer, visitor1);
 	  text_layer_set_text_alignment(visitant1_layer, GTextAlignmentCenter);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(visitant1_layer));
+	  
 
 	  // visitant2_layer
+	
 	  visitant2_layer = text_layer_create(GRect(74, 110, 30, 16));
 	  text_layer_set_background_color(visitant2_layer, GColorClear);
-	  text_layer_set_text_color(visitant2_layer, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(visitant2_layer, GColorBlack);
+		#else
+		  text_layer_set_text_color(visitant2_layer, GColorWhite);
+		#endif
 	  text_layer_set_text(visitant2_layer, visitor2);
 	  text_layer_set_text_alignment(visitant2_layer, GTextAlignmentCenter);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(visitant2_layer));
+	  
 
 	  // local1_goals
 	  local1_goals = text_layer_create(GRect(37, 73, 28, 28));
 	  text_layer_set_background_color(local1_goals, GColorClear);
-	  text_layer_set_text_color(local1_goals, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(local1_goals, GColorMidnightGreen );
+		#else
+		  text_layer_set_text_color(local1_goals, GColorWhite);
+		#endif
 	  text_layer_set_text(local1_goals, local1goals);
 	  text_layer_set_text_alignment(local1_goals, GTextAlignmentCenter);
 	  text_layer_set_font(local1_goals, s_res_gothic_28_bold);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(local1_goals));
 
 	  // visitor1_goals
+	
+	
 	  visitor1_goals = text_layer_create(GRect(75, 73, 28, 28));
 	  text_layer_set_background_color(visitor1_goals, GColorClear);
-	  text_layer_set_text_color(visitor1_goals, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(visitor1_goals, GColorMidnightGreen );
+		#else
+		  text_layer_set_text_color(visitor1_goals, GColorWhite);
+		#endif
 	  text_layer_set_text(visitor1_goals, visitor1goals);
 	  text_layer_set_text_alignment(visitor1_goals, GTextAlignmentCenter);
 	  text_layer_set_font(visitor1_goals, s_res_gothic_28_bold);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(visitor1_goals));
+	  
 
 	  // local2_goals
 	  local2_goals = text_layer_create(GRect(37, 121, 28, 28));
 	  text_layer_set_background_color(local2_goals, GColorClear);
-	  text_layer_set_text_color(local2_goals, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(local2_goals, GColorMidnightGreen );
+		#else
+		  text_layer_set_text_color(local2_goals, GColorWhite);
+		#endif
 	  text_layer_set_text(local2_goals, local2goals);
 	  text_layer_set_text_alignment(local2_goals, GTextAlignmentCenter);
 	  text_layer_set_font(local2_goals, s_res_gothic_28_bold);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(local2_goals));
 
+	
 	  // visitor2_goals
+	
+	
 	  visitor2_goals = text_layer_create(GRect(75, 121, 28, 28));
 	  text_layer_set_background_color(visitor2_goals, GColorClear);
-	  text_layer_set_text_color(visitor2_goals, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(visitor2_goals, GColorMidnightGreen );
+		#else
+		  text_layer_set_text_color(visitor2_goals, GColorWhite);
+		#endif
 	  text_layer_set_text(visitor2_goals, visitor2goals);
 	  text_layer_set_text_alignment(visitor2_goals, GTextAlignmentCenter);
 	  text_layer_set_font(visitor2_goals, s_res_gothic_28_bold);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(visitor2_goals));
+	
 
 	  // live_minute1
 	  live_minute1 = text_layer_create(GRect(60, 81, 20, 15));
 	  text_layer_set_background_color(live_minute1, GColorClear);
-	  text_layer_set_text_color(live_minute1, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(live_minute1, GColorBlack);
+		#else
+		  text_layer_set_text_color(live_minute1, GColorWhite);
+		#endif
 	  text_layer_set_text(live_minute1, txtlive_minute1);
 	  text_layer_set_text_alignment(live_minute1, GTextAlignmentCenter);
 	  text_layer_set_font(live_minute1, s_res_gothic_14);
@@ -793,15 +933,56 @@ void handle_init(void)
 	  // live_minute2
 	  live_minute2 = text_layer_create(GRect(60, 129, 20, 15));
 	  text_layer_set_background_color(live_minute2, GColorClear);
-	  text_layer_set_text_color(live_minute2, GColorWhite);
+	  	#ifdef PBL_COLOR
+		  text_layer_set_text_color(live_minute2, GColorBlack);
+		#else
+		  text_layer_set_text_color(live_minute2, GColorWhite);
+		#endif
 	  text_layer_set_text(live_minute2, txtlive_minute2);
 	  text_layer_set_text_alignment(live_minute2, GTextAlignmentCenter);
 	  text_layer_set_font(live_minute2, s_res_gothic_14);
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(live_minute2));
 	
+	  
+	  // local1_img
+	  local1_img = bitmap_layer_create(GRect(1, 62, 40, 40));
+	  bitmap_layer_set_bitmap(local1_img, s_res_local1);
+	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local1_img));
+			
+		// visitor1_img
+	  visitor1_layer = bitmap_layer_create(GRect(100, 62, 40, 40));
+	  bitmap_layer_set_bitmap(visitor1_layer, escudo_visitante1);
+	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor1_layer));
+	
+	  // local2_img
+	  local2_img = bitmap_layer_create(GRect(1, 111, 40, 40));
+	  bitmap_layer_set_bitmap(local2_img, s_res_local2);
+	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local2_img));
+		
+
+	  // visitor2_img
+	  visitor2_layer = bitmap_layer_create(GRect(100, 111, 40, 40));
+	  bitmap_layer_set_bitmap(visitor2_layer, escudo_visitante2);
+	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor2_layer));
+			
+	
 		//Invert layer for date and time
-		inv_layer = inverter_layer_create(GRect(0, 0, 144, 57));
-		layer_add_child(window_get_root_layer(s_window), (Layer*) inv_layer);
+		//inv_layer = inverter_layer_create(GRect(0, 0, 144, 57));
+		//layer_add_child(window_get_root_layer(s_window), (Layer*) inv_layer);
+		
+	
+		//check the Pebble model to determine if the image is colored or not
+		#ifdef PBL_PLATFORM_APLITE
+			bitmap_layer_set_compositing_mode(local1_img, GCompOpAssign);
+			bitmap_layer_set_compositing_mode(visitor1_layer, GCompOpAssign);
+			bitmap_layer_set_compositing_mode(local2_img, GCompOpAssign);
+			bitmap_layer_set_compositing_mode(visitor2_layer, GCompOpAssign);
+		#elif PBL_PLATFORM_BASALT
+			bitmap_layer_set_compositing_mode(local1_img, GCompOpSet);
+			bitmap_layer_set_compositing_mode(visitor1_layer, GCompOpSet);
+			bitmap_layer_set_compositing_mode(visitor2_layer, GCompOpSet);
+			bitmap_layer_set_compositing_mode(local2_img, GCompOpSet);
+		#endif
 	
         // Ensures time is displayed immediately (will break if NULL tick event accessed).
          // (This is why it's a good idea to have a separate routine to do the update itself.)
