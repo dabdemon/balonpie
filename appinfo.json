@@ -1,5 +1,6 @@
 {
     "appKeys": {
+        "league": 7,
         "live_minute": 4,
         "local": 0,
         "local_goals": 2,
@@ -9,7 +10,7 @@
         "visitor_goals": 3
     },
     "capabilities": [
-        ""
+        "configurable"
     ],
     "companyName": "David Rodriguez Rincon",
     "longName": "Football Pal",
@@ -17,115 +18,158 @@
     "resources": {
         "media": [
             {
-                "file": "fonts/futura.ttf",
-                "name": "FUTURA_17",
-                "type": "font"
-            },
-            {
-                "characterRegex": "[0-9: ]",
-                "file": "fonts/futura_condensed_bold-webfont.ttf",
-                "name": "FUTURA_CONDENSED_53",
-                "type": "font"
-            },
-            {
-                "file": "images/Football Pal icon.png",
-                "menuIcon": true,
-                "name": "menu_icon",
+                "file": "images/HOF_bw.png",
+                "name": "HOF",
                 "type": "png"
             },
             {
-                "file": "images/LIGA BBVA.png",
-                "name": "LIGA_BBVA",
+                "file": "images/S04_bw.png",
+                "name": "S04",
                 "type": "png"
             },
             {
-                "file": "images/ATM40x40.png",
-                "name": "ATM",
+                "file": "images/STU_bw.png",
+                "name": "STU",
                 "type": "png"
             },
             {
-                "file": "images/FCB40x40.png",
-                "name": "FCB",
+                "file": "images/BRE_bw.png",
+                "name": "BRE",
                 "type": "png"
             },
             {
-                "file": "images/RMA40x40.png",
-                "name": "RMA",
+                "file": "images/BVB_bw.png",
+                "name": "BVB",
                 "type": "png"
             },
             {
-                "file": "images/SEV40x40.png",
-                "name": "SEV",
+                "file": "images/bundesliga_bw.png",
+                "name": "bundesliga",
                 "type": "png"
             },
             {
-                "file": "images/MAL40x40.png",
-                "name": "MAL",
+                "file": "images/HSV_bw.png",
+                "name": "HSV",
                 "type": "png"
             },
             {
-                "file": "images/GET40x40.png",
-                "name": "GET",
+                "file": "images/BYM_bw.png",
+                "name": "BYM",
                 "type": "png"
             },
             {
-                "file": "images/ALM40x40.png",
-                "name": "ALM",
+                "file": "images/dummy_bw.png",
+                "name": "DUMMY",
                 "type": "png"
             },
             {
-                "file": "images/VAL40x40.png",
-                "name": "VCF",
+                "file": "images/SAS_bw.png",
+                "name": "SAS",
                 "type": "png"
             },
             {
-                "file": "images/ATH40x40.png",
-                "name": "ATH",
+                "file": "images/CHI_bw.png",
+                "name": "CHI",
                 "type": "png"
             },
             {
-                "file": "images/LEV40x40.png",
-                "name": "LEV",
+                "file": "images/EMP_bw.png",
+                "name": "EMP",
                 "type": "png"
             },
             {
-                "file": "images/CEL40x40.png",
-                "name": "CEL",
+                "file": "images/CES.png",
+                "name": "CES",
                 "type": "png"
             },
             {
-                "file": "images/COR40x40.png",
-                "name": "COR",
+                "file": "images/PAL_bw.png",
+                "name": "PAL",
                 "type": "png"
             },
             {
-                "file": "images/EIB40x40.png",
-                "name": "EIB",
+                "file": "images/HLL_bw.png",
+                "name": "HLL",
                 "type": "png"
             },
             {
-                "file": "images/ESP40x40.png",
-                "name": "ESP",
+                "file": "images/PAR_bw.png",
+                "name": "PAR",
                 "type": "png"
             },
             {
-                "file": "images/VIL40x40.png",
-                "name": "VIL",
+                "file": "images/CAG_bw.png",
+                "name": "CAG",
                 "type": "png"
             },
             {
-                "file": "images/RSO40x40.png",
-                "name": "RSO",
+                "file": "images/UDI_bw.png",
+                "name": "UDI",
                 "type": "png"
             },
             {
-                "file": "images/DEP40x40.png",
-                "name": "DEP",
+                "file": "images/ATL_bw.png",
+                "name": "ATL",
                 "type": "png"
             },
             {
-                "file": "images/RAY40x40.png",
-                "name": "RAY",
+                "file": "images/GEN_bw.png",
+                "name": "GEN",
+                "type": "png"
+            },
+            {
+                "file": "images/SAM_bw.png",
+                "name": "SAM",
+                "type": "png"
+            },
+            {
+                "file": "images/TOR_bw.png",
+                "name": "TOR",
+                "type": "png"
+            },
+            {
+                "file": "images/LAZ_bw.png",
+                "name": "LAZ",
+                "type": "png"
+            },
+            {
+                "file": "images/SerieA_color.png",
+                "name": "SerieA",
+                "type": "png"
+            },
+            {
+                "file": "images/FIO_bw.png",
+                "name": "FIO",
+                "type": "png"
+            },
+            {
+                "file": "images/NAP_bw.png",
+                "name": "NAP",
+                "type": "png"
+            },
+            {
+                "file": "images/ROM_bw.png",
+                "name": "ROM",
+                "type": "png"
+            },
+            {
+                "file": "images/MIL_bw.png",
+                "name": "ACM",
+                "type": "png"
+            },
+            {
+                "file": "images/INT_bw.png",
+                "name": "INT",
+                "type": "png"
+            },
+            {
+                "file": "images/JUV_bw.png",
+                "name": "JUV",
+                "type": "png"
+            },
+            {
+                "file": "images/GRA40x40.png",
+                "name": "GRA",
                 "type": "png"
             },
             {
@@ -134,9 +178,171 @@
                 "type": "png"
             },
             {
-                "file": "images/GRA40x40.png",
-                "name": "GRA",
+                "file": "images/RAY40x40.png",
+                "name": "RAY",
                 "type": "png"
+            },
+            {
+                "file": "images/DEP40x40.png",
+                "name": "DEP",
+                "type": "png"
+            },
+            {
+                "file": "images/RSO40x40.png",
+                "name": "RSO",
+                "type": "png"
+            },
+            {
+                "file": "images/VIL40x40.png",
+                "name": "VIL",
+                "type": "png"
+            },
+            {
+                "file": "images/ESP40x40.png",
+                "name": "ESP",
+                "type": "png"
+            },
+            {
+                "file": "images/EIN_bw.png",
+                "name": "EIN",
+                "type": "png"
+            },
+            {
+                "file": "images/PAD_bw.png",
+                "name": "PAD",
+                "type": "png"
+            },
+            {
+                "file": "images/AUG_bw.png",
+                "name": "AUG",
+                "type": "png"
+            },
+            {
+                "file": "images/M05_bw.png",
+                "name": "M05",
+                "type": "png"
+            },
+            {
+                "file": "images/WOL_bw.png",
+                "name": "WOL",
+                "type": "png"
+            },
+            {
+                "file": "images/FRE_color.png",
+                "name": "FRE",
+                "type": "png"
+            },
+            {
+                "file": "images/HAN_bw.png",
+                "name": "HAN",
+                "type": "png"
+            },
+            {
+                "file": "images/HER_bw.png",
+                "name": "HER",
+                "type": "png"
+            },
+            {
+                "file": "images/COL_bw.png",
+                "name": "COL",
+                "type": "png"
+            },
+            {
+                "file": "images/MON.png",
+                "name": "MON",
+                "type": "png"
+            },
+            {
+                "file": "images/LEV_bw.png",
+                "name": "BLEV",
+                "type": "png"
+            },
+            {
+                "file": "images/EIB40x40.png",
+                "name": "EIB",
+                "type": "png"
+            },
+            {
+                "file": "images/COR40x40.png",
+                "name": "COR",
+                "type": "png"
+            },
+            {
+                "file": "images/CEL40x40.png",
+                "name": "CEL",
+                "type": "png"
+            },
+            {
+                "file": "images/LEV40x40.png",
+                "name": "LEV",
+                "type": "png"
+            },
+            {
+                "file": "images/ATH40x40.png",
+                "name": "ATH",
+                "type": "png"
+            },
+            {
+                "file": "images/VAL40x40.png",
+                "name": "VCF",
+                "type": "png"
+            },
+            {
+                "file": "images/ALM40x40.png",
+                "name": "ALM",
+                "type": "png"
+            },
+            {
+                "file": "images/GET40x40.png",
+                "name": "GET",
+                "type": "png"
+            },
+            {
+                "file": "images/MAL40x40.png",
+                "name": "MAL",
+                "type": "png"
+            },
+            {
+                "file": "images/SEV40x40.png",
+                "name": "SEV",
+                "type": "png"
+            },
+            {
+                "file": "images/RMA40x40.png",
+                "name": "RMA",
+                "type": "png"
+            },
+            {
+                "file": "images/FCB40x40.png",
+                "name": "FCB",
+                "type": "png"
+            },
+            {
+                "file": "images/ATM40x40.png",
+                "name": "ATM",
+                "type": "png"
+            },
+            {
+                "file": "images/LIGA BBVA.png",
+                "name": "LIGA_BBVA",
+                "type": "png"
+            },
+            {
+                "file": "images/Football Pal icon.png",
+                "menuIcon": true,
+                "name": "menu_icon",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[0-9: ]",
+                "file": "fonts/futura_condensed_bold-webfont.ttf",
+                "name": "FUTURA_CONDENSED_53",
+                "type": "font"
+            },
+            {
+                "file": "fonts/futura.ttf",
+                "name": "FUTURA_17",
+                "type": "font"
             }
         ]
     },
@@ -147,7 +353,7 @@
         "basalt"
     ],
     "uuid": "1f6720ca-a410-48b9-9135-ee57b4da4ee4",
-    "versionLabel": "3.1",
+    "versionLabel": "3.2",
     "watchapp": {
         "watchface": false
     }

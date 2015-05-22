@@ -9,6 +9,7 @@
 #define NUM_SECOND_MENU_ITEMS 1
 
 static const char *LigaBBVA[] = {
+	//Liga BBVA (Spain)
 	NULL,
 	"MAL", //Málaga
 	"ATH", //Athletic de Bilbao
@@ -30,6 +31,48 @@ static const char *LigaBBVA[] = {
 	"ATM", //Atlético de Madrid
 	"FCB", //Barça
 	"ELC", //Elche
+	//Serie A (Italy)
+	"EMP", //Empoli
+	"ROM", //Roma
+	"JUV", //Juventus
+	"UDI", //Udinese
+	"SAM", //Sampdoria
+	"TOR", //Torino
+	"FIO", //Fiorentina
+	"GEN", //Genoa
+	"CAG", //Cagliari
+	"ATL", //Atalanta
+	"INT", //Inter
+	"SAS", //Sassuolo Calcio
+	"NAP", //Napoli
+	"CHI", //Chievo
+	"LAZ", //Lazio
+	"CES", //Cesena
+	"PAR", //Parma
+	"ACM", //Milan
+	"HLL", //Hellas Verona
+	"PAL", //Palermo
+	//Bundesliga (Germany)
+	"HSV", // "Hamburger SV"
+	"S04", //"Schalke 04"
+	"HAN", //"Hannover 96"
+	"SCF", //"SC Freiburg"
+	"MON", // "Borussia Monchengladbach"
+	"AUG", //"FC Augsburg"
+	"BYM", //"Bayern Munchen"
+	"M05", //"Mainz 05"
+	"COL", //"Köln""
+	"WOL", //"Wolfsburg"
+	"EIN", //Eintracht Frankfurt
+	"LEV", //B. Leverkusen
+	"HOF", //Hoffenheim 
+	"HER", //Hertha BSC
+	"BVB", //B. Dortmund
+	"BRE", //Werder Bremen
+	"PAD", //Paderborn 
+	"STU", //Stuttgart 
+	"",//DUMMY
+	"",//DUMMY
 };
 
 static const int PageNumbers[6] = {
@@ -41,8 +84,10 @@ static const int PageNumbers[6] = {
 	27, //Page 5
 };
 
+
 static const char LigaBBVA_escudos[] = {
-	RESOURCE_ID_MAL,
+	//Liga BBVA (Spain)
+	RESOURCE_ID_MAL, //Dummy (0 is not a valid identifier in the code)
 	RESOURCE_ID_MAL,
 	RESOURCE_ID_ATH,
 	RESOURCE_ID_SEV,
@@ -63,7 +108,48 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_ATM,
 	RESOURCE_ID_FCB,
 	RESOURCE_ID_ELC,
-
+	//Serie A (Italy)
+	RESOURCE_ID_EMP,
+	RESOURCE_ID_ROM,
+	RESOURCE_ID_JUV,
+	RESOURCE_ID_UDI,
+	RESOURCE_ID_SAM,
+	RESOURCE_ID_TOR,
+	RESOURCE_ID_FIO,
+	RESOURCE_ID_GEN,
+	RESOURCE_ID_CAG,
+	RESOURCE_ID_ATL,
+	RESOURCE_ID_INT,
+	RESOURCE_ID_SAS,
+	RESOURCE_ID_NAP,
+	RESOURCE_ID_CHI,
+	RESOURCE_ID_LAZ,
+	RESOURCE_ID_CES,
+	RESOURCE_ID_PAR,
+	RESOURCE_ID_ACM,
+	RESOURCE_ID_HLL,
+	RESOURCE_ID_PAL,
+	//Bundesliga (Germany)
+	RESOURCE_ID_HSV,
+	RESOURCE_ID_S04,
+	RESOURCE_ID_HAN,
+	RESOURCE_ID_FRE,
+	RESOURCE_ID_MON,
+	RESOURCE_ID_AUG,
+	RESOURCE_ID_BYM,
+	RESOURCE_ID_M05,
+	RESOURCE_ID_COL,
+	RESOURCE_ID_WOL,
+	RESOURCE_ID_EIN,
+	RESOURCE_ID_BLEV,
+	RESOURCE_ID_HOF,
+	RESOURCE_ID_HER,
+	RESOURCE_ID_BVB,
+	RESOURCE_ID_BRE,
+	RESOURCE_ID_PAD,
+	RESOURCE_ID_STU,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
 };
 						  
 enum WeatherKey {
@@ -117,6 +203,7 @@ char txtLiveMinutes[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
 char txtStatuses[] = "-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1";
 
 static char jornada[] = "Round ";
+
 
 int intRound = 2;
 char txtRound[]="  ";
@@ -181,132 +268,6 @@ static TextLayer *results_layer;
 
 
 
-/*************************/
-/* CREATE THE MENU LAYER */
-/*************************/
-static SimpleMenuLayer *simple_menu_layer;
-// A simple menu layer can have multiple sections
-static SimpleMenuSection menu_sections[NUM_MENU_SECTIONS];
-// Each section is composed of a number of menu items
-static SimpleMenuItem first_menu_items[NUM_FIRST_MENU_ITEMS];
-static SimpleMenuItem second_menu_items[NUM_SECOND_MENU_ITEMS];
-// Menu items can optionally have icons
-static GBitmap *menu_icon_image;
-static bool special_flag = false;
-static int hit_count = 0;
-
-static const char *Competitions[] = {
-	"Liga BBVA",
-	//"Bundesliga",
-	//"Premier League",
-	"Serie A",
-};
-
-// You can capture when the user selects a menu icon with a menu item select callback
-static void menu_select_callback(int index, void *ctx) {
-  // Select the league
-	i++;
-	if (i>1){i=0;}
-	if(index==1){
-		first_menu_items[index].subtitle = Competitions[i];
-	}
-  
-  // Mark the layer to be updated
-  layer_mark_dirty(simple_menu_layer_get_layer(simple_menu_layer));
-}
-
-/* I don't need this yet, but I'll keep just in case
-
-// You can specify special callbacks to differentiate functionality of a menu item
-static void special_select_callback(int index, void *ctx) {
-  // Of course, you can do more complicated things in a menu item select callback
-  // Here, we have a simple toggle
-  special_flag = !special_flag;
-
-  SimpleMenuItem *menu_item = &second_menu_items[index];
-
-  if (special_flag) {
-    menu_item->subtitle = "Okay, it's not so special.";
-  } else {
-    menu_item->subtitle = "Well, maybe a little.";
-  }
-
-
-	  // Mark the layer to be updated
-  layer_mark_dirty(simple_menu_layer_get_layer(simple_menu_layer));
-}
-
-*/
-
-static void CallMenu(){
-	static Window *Menu_Window;
-// We'll have to load the icon before we can use it
-  //menu_icon_image = gbitmap_create_with_resource(RESOURCE_ID_ATM);
-	  // Although we already defined NUM_FIRST_MENU_ITEMS, you can define
-  // an int as such to easily change the order of menu items later
-	int num_a_items = 0;
-
-  // This is an example of how you'd set a simple menu item
-  first_menu_items[num_a_items++] = (SimpleMenuItem){
-    // You should give each menu item a title and callback
-    .title = "Set Language",
-	.subtitle = "English",
-    .callback = menu_select_callback,
-  };
-  // The menu items appear in the order saved in the menu items array
-  //int i=0;
-  first_menu_items[num_a_items++] = (SimpleMenuItem){
-    .title = "Competition",
-    // You can also give menu items a subtitle
-    .subtitle = "Liga BBVA",
-    .callback = menu_select_callback,
-  };
-
-/* I don't need this yet... I'll keep it Just In case
-	
-  // This initializes the second section
-  second_menu_items[0] = (SimpleMenuItem){
-    .title = "Special Item",
-    // You can use different callbacks for your menu items
-    .callback = special_select_callback,
-  };
-
-*/
-  // Bind the menu items to the corresponding menu sections
-  menu_sections[0] = (SimpleMenuSection){
-    .num_items = NUM_FIRST_MENU_ITEMS,
-    .items = first_menu_items,
-  };
-	
-/*	
-  menu_sections[1] = (SimpleMenuSection){
-    // Menu sections can also have titles as well
-    .title = "Yet Another Section",
-    .num_items = NUM_SECOND_MENU_ITEMS,
-    .items = second_menu_items,
-  };
-  */
-
-	
-  // Now we prepare to initialize the simple menu layer
-  // We need the bounds to specify the simple menu layer's viewport size
-  // In this case, it'll be the same as the window's
-	
-   //Menu_Window = window_create();
-   //window_stack_push(Menu_Window, true /* Animated */);
-	
-  //Layer *window_layer = window_get_root_layer(Menu_Window);
-  Layer *window_layer = window_get_root_layer(s_window);
-  GRect bounds = layer_get_frame(window_layer);
-
-  // Initialize the simple menu layer
-  simple_menu_layer = simple_menu_layer_create(bounds, Menu_Window, menu_sections, NUM_MENU_SECTIONS, NULL);
-
-  // Add it to the window for display
-  layer_add_child(window_layer, simple_menu_layer_get_layer(simple_menu_layer));
-}
-
-
 /////////////////////
 // HANDLE THE TIME //
 /////////////////////
@@ -356,31 +317,58 @@ void LaLiga_FillArrLocal(char* Locals, int intPage)
 	
 
 	//Split the string to get Local 1
-	if (Locals[PageNumbers[intPage]] == '0') {a = 0;}
-	else {a = Locals[PageNumbers[intPage]]-'0';}
-	a=a*10;
+	if (Locals[PageNumbers[intPage]] == 'X'){
+		
+		//clear the labels
+		memset(&local1[0], 0, sizeof(local1));
+		//clears the images
+		if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1); }
+		//add dummy
+		s_res_local1 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);	
 	
-	b = Locals[PageNumbers[intPage]+1] - '0';
+	}
 	
-	intLocal = a+b;
-			
-	memcpy(&local1, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
-	if (s_res_local1!= NULL) {gbitmap_destroy(s_res_local1);}
-	s_res_local1 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);	
+	else{
+		
+		if (Locals[PageNumbers[intPage]] == '0') {a = 0;}
+		else {a = Locals[PageNumbers[intPage]]-'0';}
+		a=a*10;
+
+		b = Locals[PageNumbers[intPage]+1] - '0';
+
+		intLocal = a+b;
+
+		memcpy(&local1, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
+		if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1);}
+		s_res_local1 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);		
+	}
+		
 
 	
 	//Split the string to get Local 2
-	if (Locals[PageNumbers[intPage]+3] == '0') {a = 0;}
-	else {a = Locals[PageNumbers[intPage]+3]-'0';}
-	a=a*10;
-	
-	b = Locals[PageNumbers[intPage]+4] - '0';
-	
-	intLocal = a+b;
-			
-	memcpy(&local2, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
-	if (s_res_local2!= NULL) {gbitmap_destroy(s_res_local2);}
-	s_res_local2 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);
+	if (Locals[PageNumbers[intPage]+3] == 'X') {
+		
+		//clear the labels
+		memset(&local2[0], 0, sizeof(local2));
+		//clears the images
+		if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		//add dummy
+		s_res_local2 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
+		
+	}
+	else {
+		if (Locals[PageNumbers[intPage]+3] == '0') {a = 0;}
+		else {a = Locals[PageNumbers[intPage]+3]-'0';}
+		a=a*10;
+
+		b = Locals[PageNumbers[intPage]+4] - '0';
+
+		intLocal = a+b;
+
+		memcpy(&local2, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
+		if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		s_res_local2 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);
+	}
 		
 }
 
@@ -393,32 +381,56 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 	
 
 	//Split the string to get Visitor 1
-	if (Visitors[PageNumbers[intPage]] == '0') {a = 0;}
-	else {a = Visitors[PageNumbers[intPage]]-'0';}
-	a=a*10;
-	
-	b = Visitors[PageNumbers[intPage]+1] - '0';
-	
-	intVisitor = a+b;
-			
-	memcpy(&visitor1, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-	if (escudo_visitante1!= NULL) {gbitmap_destroy(escudo_visitante1);}
-	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	if (Visitors[PageNumbers[intPage]] == 'X') {
+		
+		//clear the labels
+		memset(&visitor1[0], 0, sizeof(visitor1));
+		//clears the images
+		if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1);}
+		//add dummy
+		escudo_visitante1 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
+		
+	}
+	else{
+		if (Visitors[PageNumbers[intPage]] == '0') {a = 0;}
+		else {a = Visitors[PageNumbers[intPage]]-'0';}
+		a=a*10;
+
+		b = Visitors[PageNumbers[intPage]+1] - '0';
+
+		intVisitor = a+b;
+
+		memcpy(&visitor1, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
+		if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1); }
+		escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	}
+		
 
 
 	//Split the string to get Visitor 2
-	if (Visitors[PageNumbers[intPage]+3] == '0') {a = 0;}
-	else {a = Visitors[PageNumbers[intPage]+3]-'0';}
-	a=a*10;
-	
-	b = Visitors[PageNumbers[intPage]+4] - '0';
-	
-	intVisitor = a+b;
-			
-	memcpy(&visitor2, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-	if (escudo_visitante2!= NULL) {gbitmap_destroy(escudo_visitante2);}
-	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	if (Visitors[PageNumbers[intPage]+3] == 'X') {
+		//clear the labels
+		memset(&visitor2[0], 0, sizeof(visitor2));
+		//clears the images
+		if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		//add dummy
+		escudo_visitante2 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
 		
+	}
+	else{
+		
+		if (Visitors[PageNumbers[intPage]+3] == '0') {a = 0;}
+		else {a = Visitors[PageNumbers[intPage]+3]-'0';}
+		a=a*10;
+
+		b = Visitors[PageNumbers[intPage]+4] - '0';
+
+		intVisitor = a+b;
+
+		memcpy(&visitor2, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
+		if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
+	}
 }
 
 void LaLiga_FillArrLocalGoals(char* LocalGoals, int intPage)
@@ -430,28 +442,44 @@ void LaLiga_FillArrLocalGoals(char* LocalGoals, int intPage)
 	
 
 	//Split the string to get Local 1
-	if (LocalGoals[PageNumbers[intPage]] == '0') {a = 0;}
-	else {a = LocalGoals[PageNumbers[intPage]]-'0';}
-	a=a*10;
-	
-	b = LocalGoals[PageNumbers[intPage]+1] - '0';
-	
-	intLocalGoals = a+b;
-			
-	snprintf(local1goals,2,"%d",intLocalGoals);
-	
-	//Split the string to get Local 2
-	if (LocalGoals[PageNumbers[intPage]+3] == '0') {a = 0;}
-	else {a = LocalGoals[PageNumbers[intPage]+3]-'0';}
-	a=a*10;
-	
-	b = LocalGoals[PageNumbers[intPage]+4] - '0';
-	
-	intLocalGoals = a+b;
-			
-	snprintf(local2goals,2,"%d",intLocalGoals);
-	
+	if (LocalGoals[PageNumbers[intPage]] == 'X') {
+		
+		//clear the labels
+		memset(&local1goals[0], 0, sizeof(local1goals));
+		
+	}
+	else {
+		
+		if (LocalGoals[PageNumbers[intPage]] == '0') {a = 0;}
+		else {a = LocalGoals[PageNumbers[intPage]]-'0';}
+		a=a*10;
 
+		b = LocalGoals[PageNumbers[intPage]+1] - '0';
+
+		intLocalGoals = a+b;
+
+		snprintf(local1goals,2,"%d",intLocalGoals);
+	}
+	
+	if (LocalGoals[PageNumbers[intPage]+3] == 'X') {
+		
+		//clear the labels
+		memset(&local2goals[0], 0, sizeof(local2goals));
+		
+	}
+	else{
+		//Split the string to get Local 2
+		if (LocalGoals[PageNumbers[intPage]+3] == '0') {a = 0;}
+		else {a = LocalGoals[PageNumbers[intPage]+3]-'0';}
+		a=a*10;
+
+		b = LocalGoals[PageNumbers[intPage]+4] - '0';
+
+		intLocalGoals = a+b;
+
+		snprintf(local2goals,2,"%d",intLocalGoals);
+	
+	}
 		
 }
 
@@ -464,26 +492,42 @@ void LaLiga_FillArrVisitorGoals(char* VisitorGoals, int intPage)
 	
 
 	//Split the string to get Local 1
-	if (VisitorGoals[PageNumbers[intPage]] == '0') {a = 0;}
-	else {a = VisitorGoals[PageNumbers[intPage]]-'0';}
-	a=a*10;
-	
-	b = VisitorGoals[PageNumbers[intPage]+1] - '0';
-	
-	intVisitorGoals = a+b;
-			
-	snprintf(visitor1goals,2,"%d",intVisitorGoals);
+	if (VisitorGoals[PageNumbers[intPage]] == 'X') {
+		
+		//clear the labels
+		memset(&visitor1goals[0], 0, sizeof(visitor1goals));
+		
+	}
+	else{
+		if (VisitorGoals[PageNumbers[intPage]] == '0') {a = 0;}
+		else {a = VisitorGoals[PageNumbers[intPage]]-'0';}
+		a=a*10;
+
+		b = VisitorGoals[PageNumbers[intPage]+1] - '0';
+
+		intVisitorGoals = a+b;
+
+		snprintf(visitor1goals,2,"%d",intVisitorGoals);
+	}
 	
 	//Split the string to get Local 2
-	if (VisitorGoals[PageNumbers[intPage]+3] == '0') {a = 0;}
-	else {a = VisitorGoals[PageNumbers[intPage]+3]-'0';}
-	a=a*10;
-	
-	b = VisitorGoals[PageNumbers[intPage]+4] - '0';
-	
-	intVisitorGoals = a+b;
-			
-	snprintf(visitor2goals,2,"%d",intVisitorGoals);
+	if (VisitorGoals[PageNumbers[intPage]+3] == 'X') {
+		
+		//clear the labels
+		memset(&visitor2goals[0], 0, sizeof(visitor2goals));
+		
+	}
+	else{
+		if (VisitorGoals[PageNumbers[intPage]+3] == '0') {a = 0;}
+		else {a = VisitorGoals[PageNumbers[intPage]+3]-'0';}
+		a=a*10;
+
+		b = VisitorGoals[PageNumbers[intPage]+4] - '0';
+
+		intVisitorGoals = a+b;
+
+		snprintf(visitor2goals,2,"%d",intVisitorGoals);
+	}
 
 }
 
@@ -494,46 +538,77 @@ void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage)
 	int a;
 	int b;
 	
+	int intHeader;
+	
+	
+	//Get the right League Header
+	intHeader = Status[1] - '0';
+	
+	if(s_res_liga_bbva!=NULL){gbitmap_destroy(s_res_liga_bbva);}
+	
+	if (intHeader == 0) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_LIGA_BBVA);}
+	else if (intHeader == 1) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_SerieA);}
+	else if (intHeader == 2) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_bundesliga);}
+	
+	
+	
+	
 	//Status: 
 	//-1 = Not Started
 	//00 = In Progress
 	//+1 = Finish
+	if (Status[PageNumbers[intPage]] == 'X'){
+		
+		//clear the labels
+		memset(&txtlive_minute1[0], 0, sizeof(txtlive_minute1));
+		
+	}
+	else{
 
-	if (Status[PageNumbers[intPage]] == '0') {
+		if (Status[PageNumbers[intPage]] == '0') {
+
+			//Split the string to get Local 1
+			if (Matches[PageNumbers[intPage]] == '0') {a = 0;}
+			else {a = Matches[PageNumbers[intPage]]-'0';}
+			a=a*10;
+
+			b = Matches[PageNumbers[intPage]+1] - '0';
+
+			intMinute = a+b;
+
+			snprintf(txtlive_minute1,4,"%d",intMinute);
+			strncat(txtlive_minute1,"'",1);
+
+		} //Match 1 is playing
+		else if (Status[PageNumbers[intPage]] == '-'){memcpy(&txtlive_minute1,"---",3);} //Match 1 didn't start yet
+		else if (Status[PageNumbers[intPage]] == '+'){memcpy(&txtlive_minute1,"FIN",3);} //Matc 1 already finish
+	}
 	
-		//Split the string to get Local 1
-		if (Matches[PageNumbers[intPage]] == '0') {a = 0;}
-		else {a = Matches[PageNumbers[intPage]]-'0';}
-		a=a*10;
+	if (Status[PageNumbers[intPage]+3] == 'X'){
 		
-		b = Matches[PageNumbers[intPage]+1] - '0';
-
-		intMinute = a+b;
-
-		snprintf(txtlive_minute1,4,"%d",intMinute);
-		strncat(txtlive_minute1,"'",1);
+		//clear the labels
+		memset(&txtlive_minute2[0], 0, sizeof(txtlive_minute2));
 		
-	} //Match 1 is playing
-	else if (Status[PageNumbers[intPage]] == '-'){memcpy(&txtlive_minute1,"---",3);} //Match 1 didn't start yet
-	else if (Status[PageNumbers[intPage]] == '+'){memcpy(&txtlive_minute1,"FIN",3);} //Matc 1 already finish
-	
-	if (Status[PageNumbers[intPage]+3] == '0') {
-		//Split the string to get Local 2
-		if (Matches[PageNumbers[intPage]+3] == '0') {a = 0;}
-		else {a = Matches[PageNumbers[intPage]+3]-'0';}		
-		a=a*10;
+	}
+	else{
 
-		b = Matches[PageNumbers[intPage]+4] - '0';
+		if (Status[PageNumbers[intPage]+3] == '0') {
+			//Split the string to get Local 2
+			if (Matches[PageNumbers[intPage]+3] == '0') {a = 0;}
+			else {a = Matches[PageNumbers[intPage]+3]-'0';}		
+			a=a*10;
 
-		intMinute = a+b;
+			b = Matches[PageNumbers[intPage]+4] - '0';
 
-		snprintf(txtlive_minute2,4,"%d",intMinute);
-		strncat(txtlive_minute2,"'",1);
-		
-	} //Match 2 is playing
-	else if (Status[PageNumbers[intPage]+3] == '-'){memcpy(&txtlive_minute2,"---",3);} //Match 2 didn't start yet
-	else if (Status[PageNumbers[intPage]+3] == '+'){memcpy(&txtlive_minute2,"FIN",3);} //Match 2 already finish
+			intMinute = a+b;
 
+			snprintf(txtlive_minute2,4,"%d",intMinute);
+			strncat(txtlive_minute2,"'",1);
+
+		} //Match 2 is playing
+		else if (Status[PageNumbers[intPage]+3] == '-'){memcpy(&txtlive_minute2,"---",3);} //Match 2 didn't start yet
+		else if (Status[PageNumbers[intPage]+3] == '+'){memcpy(&txtlive_minute2,"FIN",3);} //Match 2 already finish
+	}
 }
 
 /********************************/
@@ -607,7 +682,7 @@ static void send_cmd(void) {
 
 	void config_provider(Window *window) {
 	 // SELECT BUTTON
-	  window_single_click_subscribe(BUTTON_ID_SELECT, CallMenu);
+	  //window_single_click_subscribe(BUTTON_ID_SELECT, CallMenu);
 	  //window_long_click_subscribe(BUTTON_ID_SELECT,700,toggle_setting_mode,select_long_release_handler);
 	  window_multi_click_subscribe(BUTTON_ID_SELECT,2,2,0,false,RefreshData);	
 	  
@@ -819,6 +894,7 @@ void handle_init(void)
 	//Developer Hardcode - REMOVE!!
 	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[18]);
 	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[19]);
+
 	
 	//Initialize the Message Service
 	SetupMessages();
@@ -856,7 +932,7 @@ void handle_init(void)
 	layer_add_child(window_get_root_layer(s_window), dial_layer);
 
 
-	  s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_LIGA_BBVA);
+	  //s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_SerieA);
 	  s_res_gothic_14 = fonts_get_system_font(FONT_KEY_GOTHIC_14);
 	  s_res_gothic_28_bold = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
 	
