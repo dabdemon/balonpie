@@ -18,330 +18,939 @@
     "resources": {
         "media": [
             {
-                "file": "images/HOF_bw.png",
-                "name": "HOF",
-                "type": "png"
+                "file": "images/Academica",
+                "name": "ACA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/S04_bw.png",
-                "name": "S04",
-                "type": "png"
+                "file": "images/Almeria",
+                "name": "ALM",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/STU_bw.png",
-                "name": "STU",
-                "type": "png"
+                "file": "images/Arouca",
+                "name": "ARO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/BRE_bw.png",
-                "name": "BRE",
-                "type": "png"
+                "file": "images/Arsenal",
+                "name": "ARS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/BVB_bw.png",
-                "name": "BVB",
-                "type": "png"
+                "file": "images/Athletic de Bilbao",
+                "name": "ATH",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/bundesliga_bw.png",
-                "name": "bundesliga",
-                "type": "png"
-            },
-            {
-                "file": "images/HSV_bw.png",
-                "name": "HSV",
-                "type": "png"
-            },
-            {
-                "file": "images/BYM_bw.png",
-                "name": "BYM",
-                "type": "png"
-            },
-            {
-                "file": "images/dummy_bw.png",
-                "name": "DUMMY",
-                "type": "png"
-            },
-            {
-                "file": "images/SAS_bw.png",
-                "name": "SAS",
-                "type": "png"
-            },
-            {
-                "file": "images/CHI_bw.png",
-                "name": "CHI",
-                "type": "png"
-            },
-            {
-                "file": "images/EMP_bw.png",
-                "name": "EMP",
-                "type": "png"
-            },
-            {
-                "file": "images/CES.png",
-                "name": "CES",
-                "type": "png"
-            },
-            {
-                "file": "images/PAL_bw.png",
-                "name": "PAL",
-                "type": "png"
-            },
-            {
-                "file": "images/HLL_bw.png",
-                "name": "HLL",
-                "type": "png"
-            },
-            {
-                "file": "images/PAR_bw.png",
-                "name": "PAR",
-                "type": "png"
-            },
-            {
-                "file": "images/CAG_bw.png",
-                "name": "CAG",
-                "type": "png"
-            },
-            {
-                "file": "images/UDI_bw.png",
-                "name": "UDI",
-                "type": "png"
-            },
-            {
-                "file": "images/ATL_bw.png",
+                "file": "images/Atalanta",
                 "name": "ATL",
-                "type": "png"
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/GEN_bw.png",
-                "name": "GEN",
-                "type": "png"
+                "file": "images/Atletico de Madrid",
+                "name": "ATM",
+                "storageFormat": "pbi",
+                "targetPlatforms": [
+                    "aplite",
+                    "basalt",
+                    "chalk"
+                ],
+                "type": "bitmap"
             },
             {
-                "file": "images/SAM_bw.png",
-                "name": "SAM",
-                "type": "png"
+                "file": "images/FC Augsburg",
+                "name": "AUG",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/TOR_bw.png",
-                "name": "TOR",
-                "type": "png"
+                "file": "images/Aston Villa",
+                "name": "AVL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/LAZ_bw.png",
-                "name": "LAZ",
-                "type": "png"
+                "file": "images/Belenenses",
+                "name": "BEL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/SerieA_color.png",
-                "name": "SerieA",
-                "type": "png"
+                "file": "images/Benfica",
+                "name": "BEN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/FIO_bw.png",
-                "name": "FIO",
-                "type": "png"
+                "file": "images/Betis",
+                "name": "BET",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/NAP_bw.png",
-                "name": "NAP",
-                "type": "png"
+                "file": "images/Boavista",
+                "name": "BOA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/ROM_bw.png",
-                "name": "ROM",
-                "type": "png"
+                "file": "images/Bologna",
+                "name": "BOL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/MIL_bw.png",
-                "name": "ACM",
-                "type": "png"
+                "file": "images/AFC Bournemouth",
+                "name": "BOU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/INT_bw.png",
-                "name": "INT",
-                "type": "png"
+                "file": "images/Sporting Braga",
+                "name": "BRA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/JUV_bw.png",
-                "name": "JUV",
-                "type": "png"
+                "file": "images/Werder Bremen",
+                "name": "BRE",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/GRA40x40.png",
-                "name": "GRA",
-                "type": "png"
+                "file": "images/Bundesliga",
+                "name": "bundesliga",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/ELC40x40.png",
-                "name": "ELC",
-                "type": "png"
+                "file": "images/Borussia Dortmund",
+                "name": "BVB",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/RAY40x40.png",
-                "name": "RAY",
-                "type": "png"
+                "file": "images/Bayern Munchen",
+                "name": "BYM",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/DEP40x40.png",
+                "file": "images/Carpi",
+                "name": "CAR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Celta de Vigo",
+                "name": "CEL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Chicago Fire",
+                "name": "CFS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Chievo",
+                "name": "CHI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Chelsea",
+                "name": "CHE",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Columbus Crew",
+                "name": "COC",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Koln",
+                "name": "COL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Cordoba",
+                "name": "COR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Colorado Rapids",
+                "name": "CORA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Crystal Palace",
+                "name": "CRY",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/FC Dallas",
+                "name": "DAL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Darmstadt 98",
+                "name": "DAR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/DC United",
+                "name": "DCU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Deportivo de la Coruna",
                 "name": "DEP",
-                "type": "png"
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/RSO40x40.png",
-                "name": "RSO",
-                "type": "png"
+                "file": "images/dummy",
+                "memoryFormat": "1Bit",
+                "name": "DUMMY",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/VIL40x40.png",
-                "name": "VIL",
-                "type": "png"
+                "file": "images/Eibar",
+                "name": "EIB",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/ESP40x40.png",
-                "name": "ESP",
-                "type": "png"
-            },
-            {
-                "file": "images/EIN_bw.png",
+                "file": "images/Eintracht Frankfurt",
                 "name": "EIN",
-                "type": "png"
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Elche",
+                "name": "ELC",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Empoli",
+                "name": "EMP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Espanyol",
+                "name": "ESP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Estoril",
+                "name": "EST",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Everton",
+                "name": "EVE",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Barcelona",
+                "name": "FCB",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Pasos de Ferreira",
+                "name": "FER",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Fiorentina",
+                "name": "FIO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Football Pal icon",
+                "menuIcon": true,
+                "name": "menu_icon",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Frosinone",
+                "name": "FRO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Los Angeles Galaxy",
+                "name": "GAL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Genova",
+                "name": "GEN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Getafe",
+                "name": "GET",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Granada",
+                "name": "GRA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Hannover 96",
+                "name": "HAN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Hertha BSC",
+                "name": "HER",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Hellas Verona",
+                "name": "HLL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Houston Dynamo",
+                "name": "HOD",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Hoffenheim",
+                "name": "HOF",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Hamburger SV",
+                "name": "HSV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/FC Ingolstadt",
+                "name": "ING",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Inter",
+                "name": "INT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Juventus",
+                "name": "JUV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Kansas City Sporting",
+                "name": "KCW",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Lazio",
+                "name": "LAZ",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Leicester",
+                "name": "LEI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Levante",
+                "name": "LEV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/B. Leverkusen",
+                "name": "BLEV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/LIGA BBVA",
+                "name": "LIGA_BBVA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Liga Nos",
+                "name": "LigaNOS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Liverpool",
+                "name": "LIV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Mainz 05",
+                "name": "M05",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Malaga",
+                "name": "MAL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Maritimo",
+                "name": "MAR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Manchester City",
+                "name": "MCI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Milan",
+                "name": "ACM",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Major League Soccer",
+                "name": "MLS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Montreal Impact",
+                "name": "MONT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Borussia Monchengladbach",
+                "name": "MON",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Moreirense",
+                "name": "MOR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Manchester United",
+                "name": "UNT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Nacional",
+                "name": "NAC",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Napoli",
+                "name": "NAP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/New England Revolution",
+                "name": "NER",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/NewCastle",
+                "name": "NEW",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Norwich City",
+                "name": "NOR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/New York City",
+                "name": "NYC",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Orlando City",
+                "name": "ORL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Palermo",
+                "name": "PAL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Parma",
+                "name": "PAR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Philadelphia Union",
+                "name": "PHU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Oporto",
+                "name": "POR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Portland Timbers",
+                "name": "PORT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Barcleys Premier League",
+                "name": "premier",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Rio Ave",
+                "name": "RAV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Rayo Vallecano",
+                "name": "RAY",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/New York Red Bull",
+                "name": "RBN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Real Madrid",
+                "name": "RMA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Roma",
+                "name": "ROM",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Real Salt Lake",
+                "name": "RSL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Real Sociedad",
+                "name": "RSO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Schalke 04",
+                "name": "S04",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sampdoria",
+                "name": "SAM",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sassuolo Calcio",
+                "name": "SAS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Serie A",
+                "name": "SerieA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Seattle Sounders",
+                "name": "SES",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sevilla",
+                "name": "SEV",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/San Jose Earthquakes",
+                "name": "SJE",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Southampton",
+                "name": "SOU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sporting CP",
+                "name": "SPOP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sporting de Gijon",
+                "name": "SPO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Stoke City",
+                "name": "STK",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Stuttgart",
+                "name": "STU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Sunderland",
+                "name": "SUN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Swansea City",
+                "name": "SWA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Tondela",
+                "name": "TON",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Tottenham",
+                "name": "TOT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Wolfsburg",
+                "name": "WOL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/West Ham",
+                "name": "WHU",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/West Bromwich Albion",
+                "name": "WBA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Watford",
+                "name": "WAT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Vitoria Setubal",
+                "name": "VIT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Villareal",
+                "name": "VIL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Vitoria Guimaraes",
+                "name": "GUI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Vancouver Whitecaps",
+                "name": "VAN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Valencia",
+                "name": "VCF",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Union Deportiva Las Palmas",
+                "name": "UDL",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Udinese",
+                "name": "UDI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Toronto",
+                "name": "TORO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/Torino",
+                "name": "TOR",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/MAD_bw.png",
+                "name": "UNI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
                 "file": "images/PAD_bw.png",
                 "name": "PAD",
-                "type": "png"
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/AUG_bw.png",
-                "name": "AUG",
-                "type": "png"
+                "file": "images/CES.png",
+                "name": "CES",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
-                "file": "images/M05_bw.png",
-                "name": "M05",
-                "type": "png"
-            },
-            {
-                "file": "images/WOL_bw.png",
-                "name": "WOL",
-                "type": "png"
+                "file": "images/CAG_bw.png",
+                "name": "CAG",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
                 "file": "images/FRE_color.png",
                 "name": "FRE",
-                "type": "png"
-            },
-            {
-                "file": "images/HAN_bw.png",
-                "name": "HAN",
-                "type": "png"
-            },
-            {
-                "file": "images/HER_bw.png",
-                "name": "HER",
-                "type": "png"
-            },
-            {
-                "file": "images/COL_bw.png",
-                "name": "COL",
-                "type": "png"
-            },
-            {
-                "file": "images/MON.png",
-                "name": "MON",
-                "type": "png"
-            },
-            {
-                "file": "images/LEV_bw.png",
-                "name": "BLEV",
-                "type": "png"
-            },
-            {
-                "file": "images/EIB40x40.png",
-                "name": "EIB",
-                "type": "png"
-            },
-            {
-                "file": "images/COR40x40.png",
-                "name": "COR",
-                "type": "png"
-            },
-            {
-                "file": "images/CEL40x40.png",
-                "name": "CEL",
-                "type": "png"
-            },
-            {
-                "file": "images/LEV40x40.png",
-                "name": "LEV",
-                "type": "png"
-            },
-            {
-                "file": "images/ATH40x40.png",
-                "name": "ATH",
-                "type": "png"
-            },
-            {
-                "file": "images/VAL40x40.png",
-                "name": "VCF",
-                "type": "png"
-            },
-            {
-                "file": "images/ALM40x40.png",
-                "name": "ALM",
-                "type": "png"
-            },
-            {
-                "file": "images/GET40x40.png",
-                "name": "GET",
-                "type": "png"
-            },
-            {
-                "file": "images/MAL40x40.png",
-                "name": "MAL",
-                "type": "png"
-            },
-            {
-                "file": "images/SEV40x40.png",
-                "name": "SEV",
-                "type": "png"
-            },
-            {
-                "file": "images/RMA40x40.png",
-                "name": "RMA",
-                "type": "png"
-            },
-            {
-                "file": "images/FCB40x40.png",
-                "name": "FCB",
-                "type": "png"
-            },
-            {
-                "file": "images/ATM40x40.png",
-                "name": "ATM",
-                "type": "png"
-            },
-            {
-                "file": "images/LIGA BBVA.png",
-                "name": "LIGA_BBVA",
-                "type": "png"
-            },
-            {
-                "file": "images/Football Pal icon.png",
-                "menuIcon": true,
-                "name": "menu_icon",
-                "type": "png"
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
             },
             {
                 "characterRegex": "[0-9: ]",
                 "file": "fonts/futura_condensed_bold-webfont.ttf",
                 "name": "FUTURA_CONDENSED_53",
-                "type": "font"
-            },
-            {
-                "file": "fonts/futura.ttf",
-                "name": "FUTURA_17",
                 "type": "font"
             }
         ]
@@ -350,10 +959,11 @@
     "shortName": "Football Pal",
     "targetPlatforms": [
         "aplite",
-        "basalt"
+        "basalt",
+        "chalk"
     ],
     "uuid": "1f6720ca-a410-48b9-9135-ee57b4da4ee4",
-    "versionLabel": "3.2",
+    "versionLabel": "3.5",
     "watchapp": {
         "watchface": false
     }
