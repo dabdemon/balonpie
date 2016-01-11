@@ -20,7 +20,7 @@
                 <div data-role='content'>
 
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" align="center">
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="ZSAMATFK3GRAL">
@@ -63,6 +63,7 @@
                     
                      <div class='ui-body ui-body-b'>
                         <fieldset class='ui-grid-a'>
+                            <button class="btn btn-warning" type="submit" id="b-support">Support</button>
                             <div class='ui-block-a'><button type='submit' data-theme='d' id='b-cancel'>Cancel</button></div>
                             <div class='ui-block-b'><button type='submit' data-theme='b' id='b-submit'>Submit</button></div>
                         </fieldset>
@@ -71,6 +72,10 @@
                     <br>
                     <div align = "center">
                         <h4 class = "text-default">Made with <span class="text-danger"><b>&hearts;</b></span> in Spain</h4>
+                    </div>
+                    
+                    <div align = "center">
+                        <img src="img/logo-rf-2.png">
                     </div>
 
                 </div>
@@ -255,6 +260,15 @@
                     $('#b-submit').click(function() {
                         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(saveOptions()));
                     });
+                      $('#b-support').click(function() {
+                        var body = '***** %0D%0A Please, explain as accurate as you could what your problem is  %0D%0A*****%0D%0A %0D%0A %0D%0A ***** %0D%0A  DO NOT REMOVE THIS  %0D%0A *****%0D%0A';
+                        var settings = encodeURIComponent(JSON.stringify(saveOptions()));
+                        var to = 'pebbleweather@gmail.com';
+                        var subject = 'Support Required - Football Pal Settings';
+
+                        document.location.href = "mailto:"+to+"?subject="+subject+"&body="+body + settings;
+                    });
+                    
                     $('#league_id').val(getQueryVariable('league_id')).change();
                     $('#my_team').val(getQueryVariable('my_team')).change();
                     $('#timeline_pins').val(getQueryVariable('timeline_pins')).change();
