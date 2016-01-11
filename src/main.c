@@ -10,14 +10,14 @@
 
 static const char *LigaBBVA[] = {
 	//Liga BBVA (Spain)
-	NULL,
+	"", //DUMMY
 	"MAL", //Málaga
 	"ATH", //Athletic de Bilbao
 	"SEV", //Sevilla
 	"VCF", //Valencia
 	"GRA", //Granada
 	"DEP", //Deportivo
-	"ALM", //Almeria
+	"SPO", //Sporting de Gijón
 	"ESP", //Español
 	"EIB", //Eibar
 	"RSO", //Real Sociedad
@@ -26,11 +26,11 @@ static const char *LigaBBVA[] = {
 	"LEV", //Levante
 	"VIL", //Villareal
 	"RMA", //Real Madrid
-	"COR", //Córdoba
+	"BET", //Betis
 	"RAY", //Rayo Vallecano
 	"ATM", //Atlético de Madrid
 	"FCB", //Barça
-	"ELC", //Elche
+	"UDL", //Las Palmas
 	//Serie A (Italy)
 	"EMP", //Empoli
 	"ROM", //Roma
@@ -40,15 +40,15 @@ static const char *LigaBBVA[] = {
 	"TOR", //Torino
 	"FIO", //Fiorentina
 	"GEN", //Genoa
-	"CAG", //Cagliari
+	"CAR", //Carpi
 	"ATL", //Atalanta
 	"INT", //Inter
 	"SAS", //Sassuolo Calcio
 	"NAP", //Napoli
 	"CHI", //Chievo
 	"LAZ", //Lazio
-	"CES", //Cesena
-	"PAR", //Parma
+	"BOL", //Bologna
+	"FRO", //Frosinone
 	"ACM", //Milan
 	"HLL", //Hellas Verona
 	"PAL", //Palermo
@@ -56,7 +56,7 @@ static const char *LigaBBVA[] = {
 	"HSV", // "Hamburger SV"
 	"S04", //"Schalke 04"
 	"HAN", //"Hannover 96"
-	"SCF", //"SC Freiburg"
+	"ING", //"FC Ingolstadt "
 	"MON", // "Borussia Monchengladbach"
 	"AUG", //"FC Augsburg"
 	"BYM", //"Bayern Munchen"
@@ -69,12 +69,74 @@ static const char *LigaBBVA[] = {
 	"HER", //Hertha BSC
 	"BVB", //B. Dortmund
 	"BRE", //Werder Bremen
-	"PAD", //Paderborn 
+	"DAR", //Darmstadt 98 
 	"STU", //Stuttgart 
 	"",//DUMMY
 	"",//DUMMY
+	//MLS (USA)
+	"SKC", //Kansas City Sporting
+	"TFC", //Toronto FC
+	"CHI", //Chicago Fire
+	"ORL", //Orlando City
+	"LAG", //Los Angeles Galaxy
+	"VAN", //Vancouver Whitecaps
+	"POR", //Portland Timbers
+	"NER", //New England Revolution
+	"RSL", //Real Salt Lake
+	"COL", //Colorado Rapids
+	"SJE", //San Jose Earthquakes
+	"FCD", //FC Dallas
+	"NYC", //New York City
+	"MTL", //Montreal Impact
+	"CLB", //Columbus Crew
+	"SEA", //Seattle Sounders
+	"DCU", //DC United
+	"PHI", //Philadelphia Union
+	"NYR", //New York RB
+	"HOU", //Houston Dynamo
+	//Liga Nos (Portugal) - (2016)
+	"BEL", //Belenenses 
+	"RAV", //Rio Ave
+	"BEN", //Benfica
+	"EST", //Estoril
+	"BRA", //Sporting Braga
+	"NAC", //Nacional
+	"PFE", //Paços de Ferreira
+	"ACA", //Academica
+	"MOR", //Moreirense
+	"ARO", //Arouca
+	"SET", //Vitória Setúbal
+	"BOA", //Boavista
+	"POR", //Porto
+	"GUI", //Vitória Guimarães
+	"UNI", //União Madeira
+	"MAR", //Marítimo 
+	"TON", //Tondela
+	"SPO", //Sporting CP
+	"",//DUMMY
+	"",//DUMMY
+	//Barclays Premier League (England)
+	"MUN", //Manchester United
+	"TOT", //Tottenham Hotspur
+	"EVE", //Everton
+	"WAT", //Watford
+	"BOU", //AFC Bournemouth
+	"AVL", //Aston Villa
+	"LEI", //Leicester
+	"SUN", //Sunderland
+	"NOR", //Norwich City
+	"CRY", //Crystal Palace
+	"CHE", //Chelsea
+	"SWA", //Swansea City
+	"NEW", //NewCastle
+	"SOU", //Southampton
+	"ARS", //Arsenal
+	"WHU", //West Ham
+	"STK", //Stoke City
+	"LIV", //Liverpool
+	"WBA", //West Bromwich Albion
+	"MCI", //Manchester City
 };
-
 static const int PageNumbers[6] = {
 	0,
 	3, // Page 1
@@ -83,18 +145,16 @@ static const int PageNumbers[6] = {
 	21, //Page 4
 	27, //Page 5
 };
-
-
 static const char LigaBBVA_escudos[] = {
 	//Liga BBVA (Spain)
-	RESOURCE_ID_MAL, //Dummy (0 is not a valid identifier in the code)
+	RESOURCE_ID_DUMMY, //Dummy (0 is not a valid identifier in the code)
 	RESOURCE_ID_MAL,
 	RESOURCE_ID_ATH,
 	RESOURCE_ID_SEV,
 	RESOURCE_ID_VCF,
 	RESOURCE_ID_GRA,
 	RESOURCE_ID_DEP,
-	RESOURCE_ID_ALM,
+	RESOURCE_ID_SPO,
 	RESOURCE_ID_ESP,
 	RESOURCE_ID_EIB,
 	RESOURCE_ID_RSO,
@@ -103,11 +163,11 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_LEV,
 	RESOURCE_ID_VIL,
 	RESOURCE_ID_RMA,
-	RESOURCE_ID_COR,
+	RESOURCE_ID_BET,
 	RESOURCE_ID_RAY,
 	RESOURCE_ID_ATM,
 	RESOURCE_ID_FCB,
-	RESOURCE_ID_ELC,
+	RESOURCE_ID_UDL,
 	//Serie A (Italy)
 	RESOURCE_ID_EMP,
 	RESOURCE_ID_ROM,
@@ -117,15 +177,15 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_TOR,
 	RESOURCE_ID_FIO,
 	RESOURCE_ID_GEN,
-	RESOURCE_ID_CAG,
+	RESOURCE_ID_CAR,
 	RESOURCE_ID_ATL,
 	RESOURCE_ID_INT,
 	RESOURCE_ID_SAS,
 	RESOURCE_ID_NAP,
 	RESOURCE_ID_CHI,
 	RESOURCE_ID_LAZ,
-	RESOURCE_ID_CES,
-	RESOURCE_ID_PAR,
+	RESOURCE_ID_BOL,
+	RESOURCE_ID_FRO,
 	RESOURCE_ID_ACM,
 	RESOURCE_ID_HLL,
 	RESOURCE_ID_PAL,
@@ -133,7 +193,7 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_HSV,
 	RESOURCE_ID_S04,
 	RESOURCE_ID_HAN,
-	RESOURCE_ID_FRE,
+	RESOURCE_ID_ING,
 	RESOURCE_ID_MON,
 	RESOURCE_ID_AUG,
 	RESOURCE_ID_BYM,
@@ -146,11 +206,83 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_HER,
 	RESOURCE_ID_BVB,
 	RESOURCE_ID_BRE,
-	RESOURCE_ID_PAD,
+	RESOURCE_ID_DAR,
 	RESOURCE_ID_STU,
 	RESOURCE_ID_DUMMY,
 	RESOURCE_ID_DUMMY,
+	//MLS (USA) 
+	RESOURCE_ID_KCW,
+	RESOURCE_ID_TORO,
+	RESOURCE_ID_CFS,
+	RESOURCE_ID_ORL,
+	RESOURCE_ID_GAL,
+	RESOURCE_ID_VAN,
+	RESOURCE_ID_PORT,
+	RESOURCE_ID_NER,
+	RESOURCE_ID_RSL,
+	RESOURCE_ID_CORA,
+	RESOURCE_ID_SJE,
+	RESOURCE_ID_DAL,
+	RESOURCE_ID_NYC,
+	RESOURCE_ID_MONT,
+	RESOURCE_ID_COC,
+	RESOURCE_ID_SES,
+	RESOURCE_ID_DCU,
+	RESOURCE_ID_PHU,
+	RESOURCE_ID_RBN,
+	RESOURCE_ID_HOD,
+	//Liga Nos (Portugal)
+	RESOURCE_ID_BEL,
+	RESOURCE_ID_RAV,
+	RESOURCE_ID_BEN,
+	RESOURCE_ID_EST,
+	RESOURCE_ID_BRA,
+	RESOURCE_ID_NAC,
+	RESOURCE_ID_FER,
+	RESOURCE_ID_ACA,
+	RESOURCE_ID_MOR,
+	RESOURCE_ID_ARO,
+	RESOURCE_ID_VIT,
+	RESOURCE_ID_BOA,
+	RESOURCE_ID_POR,
+	RESOURCE_ID_GUI,
+	RESOURCE_ID_UNI,
+	RESOURCE_ID_MAR,
+	RESOURCE_ID_TON,
+	RESOURCE_ID_SPOP,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	//Barclays Premier League (England)
+	RESOURCE_ID_UNT,
+	RESOURCE_ID_TOT,
+	RESOURCE_ID_EVE,
+	RESOURCE_ID_WAT,
+	RESOURCE_ID_BOU,
+	RESOURCE_ID_AVL,
+	RESOURCE_ID_LEI,
+	RESOURCE_ID_SUN,
+	RESOURCE_ID_NOR,
+	RESOURCE_ID_CRY,
+	RESOURCE_ID_CHE,
+	RESOURCE_ID_SWA,
+	RESOURCE_ID_NEW,
+	RESOURCE_ID_SOU,
+	RESOURCE_ID_ARS,
+	RESOURCE_ID_WHU,
+	RESOURCE_ID_STK,
+	RESOURCE_ID_LIV,
+	RESOURCE_ID_WBA,
+	RESOURCE_ID_MCI,
 };
+static const char Liga_Banner[] ={
+	RESOURCE_ID_LIGA_BBVA, //Liga BBVA (Spain)
+	RESOURCE_ID_SerieA, //Serie A (Italy)
+	RESOURCE_ID_bundesliga, //Bundesliga (Germany)
+	RESOURCE_ID_MLS, //Major League Soccer (USA)
+	RESOURCE_ID_LigaNOS, //Liga Nos (Portugal)
+	RESOURCE_ID_premier, //Barcleys Premier League (England)
+};
+
 						  
 enum WeatherKey {
 	LOCAL_KEY = 0x0,        // TUPLE_STRING
@@ -195,12 +327,15 @@ char txtlive_minute1[] = "   ";
 char txtlive_minute2[] = "   ";
 
 //Variables to get the data from the net
-char txtLocals[] = "01|01|02|03|04|05|06|07|08|09|10";
-char txtVisitors[] = "11|11|12|13|14|15|16|17|18|19|20";
+char txtLocals[] = "00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
+//char txtLocals[] = "00|01|02|03|04|05|06|07|08|09|10"; //Initialize to dummy (test)
+char txtVisitors[] = "00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
+//char txtVisitors[] = "00|11|12|13|14|15|16|17|18|19|20"; //Initialize to dummy (test)
 char txtLocalGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
 char txtVisitorGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
 char txtLiveMinutes[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
-char txtStatuses[] = "-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1";
+char txtStatuses[] = "00|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1"; //PRODUCTION
+//char txtStatuses[] = "01|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1"; //TEST
 
 static char jornada[] = "Round ";
 
@@ -224,11 +359,34 @@ int intLeague_Id = 1;
 
 						 
 
-//#define WEEKDAY_FRAME    (GRect(5, 2, 102, 168-145)) //,,95,
-//#define TIME_FRAME       (GRect(0, 15, 144, 168-16))
-//#define DATE_FRAME       (GRect(1, 69, 139, 168-62))
-//#define RESULTS_FRAME    (GRect(1, 70, 144, 198))
-//#define BANNER_FRAME        (GRect(0, 154, 144, 14)) 
+#define HEADER_FRAME		PBL_IF_ROUND_ELSE(GRect(0, 0, 188, 57),GRect(0, 0, 144, 57))
+#define WINDOW_BOUNDS		PBL_IF_ROUND_ELSE(GRect(0, 0, 188, 188),GRect(0, 0, 144, 168))
+#define LEAGUE_FRAME		PBL_IF_ROUND_ELSE(GRect(95, 35, 67, 18),GRect(75, 35, 67, 18))
+#define	ROUND_FRAME			PBL_IF_ROUND_ELSE(GRect(21, 35, 40, 20),GRect(1, 35, 40, 20))
+#define ROUND_NUMBER_FRAME	PBL_IF_ROUND_ELSE(GRect(66, 35, 15, 20),GRect(46, 35, 15, 20))
+#define DATE_FRAME			PBL_IF_ROUND_ELSE(GRect(1000, 14, 74, 20),GRect(65, 14, 74, 20))
+#define WEEKDAY_FRAME		PBL_IF_ROUND_ELSE(GRect(1000, 1, 74, 20),GRect(65, 1, 74, 20))
+#define TIME_FRAME			PBL_IF_ROUND_ELSE(GRect(0, 2, 188, 28),GRect(2, 2, 66, 28))
+#define LOCAL1_FRAME		PBL_IF_ROUND_ELSE(GRect(59, 61, 30, 16),GRect(39, 61, 30, 16))
+#define LOCAL2_FRAME		PBL_IF_ROUND_ELSE(GRect(59, 110, 30, 16),GRect(39, 110, 30, 16))
+#define VISITANT1_FRAME		PBL_IF_ROUND_ELSE(GRect(92, 61, 30, 16),GRect(72, 61, 30, 16))
+#define VISITANT2_FRAME		PBL_IF_ROUND_ELSE(GRect(92, 110, 30, 16),GRect(72, 110, 30, 16))
+#define LOCAL1_GOALS		PBL_IF_ROUND_ELSE(GRect(57, 73, 28, 28),GRect(37, 73, 28, 28))
+#define LOCAL2_GOALS		PBL_IF_ROUND_ELSE(GRect(57, 121, 28, 28),GRect(37, 121, 28, 28))
+#define VISITANT1_GOALS		PBL_IF_ROUND_ELSE(GRect(95, 73, 28, 28),GRect(75, 73, 28, 28))
+#define VISITANT2_GOALS		PBL_IF_ROUND_ELSE(GRect(95, 121, 28, 28),GRect(75, 121, 28, 28))
+#define LIVE_MINUTE1		PBL_IF_ROUND_ELSE(GRect(80, 81, 20, 15),GRect(60, 81, 20, 15))
+#define LIVE_MINUTE2		PBL_IF_ROUND_ELSE(GRect(80, 129, 20, 15),GRect(60, 129, 20, 15))
+#define LOCAL1_IMAGE		PBL_IF_ROUND_ELSE(GRect(21, 62, 40, 40),GRect(1, 62, 40, 40))
+#define VISITANT1_IMAGE		PBL_IF_ROUND_ELSE(GRect(120, 62, 40, 40),GRect(100, 62, 40, 40))
+#define LOCAL2_IMAGE		PBL_IF_ROUND_ELSE(GRect(21, 111, 40, 40),GRect(1, 111, 40, 40))
+#define VISITANT2_IMAGE		PBL_IF_ROUND_ELSE(GRect(120, 111, 40, 40),GRect(100, 111, 40, 40))
+
+#define Center1Point	PBL_IF_ROUND_ELSE(GPoint(70, 165),GPoint(50, 160))
+#define Center2Point	PBL_IF_ROUND_ELSE(GPoint(80, 165),GPoint(60, 160))
+#define Center3Point	PBL_IF_ROUND_ELSE(GPoint(90, 165),GPoint(70, 160))
+#define Center4Point	PBL_IF_ROUND_ELSE(GPoint(100, 165),GPoint(80, 160))
+#define Center5Point 	PBL_IF_ROUND_ELSE(GPoint(110, 165),GPoint(90, 160))
 
 static Window *s_window;
 static GBitmap *s_res_visitor1;
@@ -307,14 +465,27 @@ void handle_tick(struct tm *tick_time, TimeUnits units_changed)
 //////////////////
 // LA LIGA BBVA //
 //////////////////
-void LaLiga_FillArrLocal(char* Locals, int intPage)
+//Get the LeagueID
+int getLeague(char* Array)
 {
+	int intLeagueID;
+	//Get the right League Header
+	intLeagueID = Array[1] - '0';
 	
+	return intLeagueID;
+}
+
+void LaLiga_FillArrLocal(char* Locals, int intPage, int intLeague)
+{
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "LaLiga_FillArrLocal: Heap free is %u bytes", heap_bytes_free());
 	
 	int intLocal;
 	int a;
 	int b;
 	
+	int intArrayStartPos = intLeague * 20;
+	
+
 
 	//Split the string to get Local 1
 	if (Locals[PageNumbers[intPage]] == 'X'){
@@ -322,7 +493,8 @@ void LaLiga_FillArrLocal(char* Locals, int intPage)
 		//clear the labels
 		memset(&local1[0], 0, sizeof(local1));
 		//clears the images
-		if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1); }
+		//if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1); }
+		gbitmap_destroy(s_res_local1);
 		//add dummy
 		s_res_local1 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);	
 	
@@ -336,10 +508,11 @@ void LaLiga_FillArrLocal(char* Locals, int intPage)
 
 		b = Locals[PageNumbers[intPage]+1] - '0';
 
-		intLocal = a+b;
+		intLocal = a+b+intArrayStartPos;
 
 		memcpy(&local1, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
-		if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1);}
+		//if (s_res_local1!=NULL) {gbitmap_destroy(s_res_local1);}
+		gbitmap_destroy(s_res_local1);
 		s_res_local1 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);		
 	}
 		
@@ -351,7 +524,8 @@ void LaLiga_FillArrLocal(char* Locals, int intPage)
 		//clear the labels
 		memset(&local2[0], 0, sizeof(local2));
 		//clears the images
-		if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		//if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		gbitmap_destroy(s_res_local2);
 		//add dummy
 		s_res_local2 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
 		
@@ -363,22 +537,25 @@ void LaLiga_FillArrLocal(char* Locals, int intPage)
 
 		b = Locals[PageNumbers[intPage]+4] - '0';
 
-		intLocal = a+b;
+		intLocal = a+b+intArrayStartPos;
 
 		memcpy(&local2, LigaBBVA[intLocal], strlen(LigaBBVA[intLocal])+1);
-		if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		//if (s_res_local2!=NULL) {gbitmap_destroy(s_res_local2);}
+		gbitmap_destroy(s_res_local2);
 		s_res_local2 = gbitmap_create_with_resource(LigaBBVA_escudos[intLocal]);
 	}
 		
 }
 
-void LaLiga_FillArrVisitor(char* Visitors, int intPage)
+void LaLiga_FillArrVisitor(char* Visitors, int intPage, int intLeague)
 {
+	//APP_LOG(APP_LOG_LEVEL_DEBUG, "LaLiga_FillArrVisitor: Heap free is %u bytes", heap_bytes_free());
 	
 	int intVisitor;
 	int a;
 	int b;
 	
+	int intArrayStartPos = intLeague * 20;
 
 	//Split the string to get Visitor 1
 	if (Visitors[PageNumbers[intPage]] == 'X') {
@@ -386,7 +563,8 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 		//clear the labels
 		memset(&visitor1[0], 0, sizeof(visitor1));
 		//clears the images
-		if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1);}
+		//if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1);}
+		gbitmap_destroy(escudo_visitante1);
 		//add dummy
 		escudo_visitante1 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
 		
@@ -398,10 +576,11 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 
 		b = Visitors[PageNumbers[intPage]+1] - '0';
 
-		intVisitor = a+b;
+		intVisitor = a+b+intArrayStartPos;
 
 		memcpy(&visitor1, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-		if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1); }
+		//if (escudo_visitante1!=NULL) {gbitmap_destroy(escudo_visitante1); }
+		gbitmap_destroy(escudo_visitante1);
 		escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
 	}
 		
@@ -412,7 +591,8 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 		//clear the labels
 		memset(&visitor2[0], 0, sizeof(visitor2));
 		//clears the images
-		if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		//if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		gbitmap_destroy(escudo_visitante2);
 		//add dummy
 		escudo_visitante2 = gbitmap_create_with_resource(RESOURCE_ID_DUMMY);
 		
@@ -425,10 +605,11 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage)
 
 		b = Visitors[PageNumbers[intPage]+4] - '0';
 
-		intVisitor = a+b;
+		intVisitor = a+b+intArrayStartPos;
 
 		memcpy(&visitor2, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-		if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		//if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
+		gbitmap_destroy(escudo_visitante2);
 		escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
 	}
 }
@@ -531,25 +712,25 @@ void LaLiga_FillArrVisitorGoals(char* VisitorGoals, int intPage)
 
 }
 
-void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage)
+void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage, int intLeague)
 {
 
 	int intMinute;
 	int a;
 	int b;
 	
-	int intHeader;
-	
-	
-	//Get the right League Header
-	intHeader = Status[1] - '0';
-	
+
 	if(s_res_liga_bbva!=NULL){gbitmap_destroy(s_res_liga_bbva);}
+	s_res_liga_bbva = gbitmap_create_with_resource(Liga_Banner[intLeague]);
 	
+	/*
 	if (intHeader == 0) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_LIGA_BBVA);}
 	else if (intHeader == 1) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_SerieA);}
 	else if (intHeader == 2) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_bundesliga);}
-	
+	else if (intHeader == 3) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_MLS);}
+	else if (intHeader == 4) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_LigaNOS);}
+	else if (intHeader == 5) {s_res_liga_bbva = gbitmap_create_with_resource(RESOURCE_ID_LigaNOS);}
+	*/
 	
 	
 	
@@ -616,12 +797,15 @@ void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage)
 /********************************/
 
 static void SplitDateFromArrays(void) {
+	
+	        int intLeague;
+	        intLeague = getLeague(txtStatuses);
 			
-			LaLiga_FillArrLocal(txtLocals,intPage);
-			LaLiga_FillArrVisitor(txtVisitors,intPage);
+			LaLiga_FillArrLocal(txtLocals,intPage, intLeague);
+			LaLiga_FillArrVisitor(txtVisitors,intPage, intLeague);
 			LaLiga_FillArrLocalGoals(txtLocalGoals,intPage);
 			LaLiga_FillArrVisitorGoals(txtVisitorGoals,intPage);
-			LaLiga_FillArrLiveMinute(txtLiveMinutes,txtStatuses,intPage);
+			LaLiga_FillArrLiveMinute(txtLiveMinutes,txtStatuses,intPage, intLeague);
 }
 
 
@@ -750,6 +934,9 @@ static void sync_tuple_changed_callback(const uint32_t key,
       		break; 
 	  
 	  	case ROUND_KEY:
+	  //First clear the previously saved values to avoid overlaps
+	        memset(&txtRound[0], 0, sizeof(txtRound));
+	  //Then fill the Round value
  			memcpy(&txtRound,  new_tuple->value->cstring, strlen( new_tuple->value->cstring));    
 	  //Fill Locals array
 	SplitDateFromArrays();
@@ -762,7 +949,7 @@ static void sync_tuple_changed_callback(const uint32_t key,
 void DrawPageIndicator(Layer *me, GContext *ctx)
 {
 	//Page 1
-	Center1 = GPoint(50, 160);
+	Center1 = Center1Point;
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -781,7 +968,7 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 	}
 
 	//Page 2
-	Center2 = GPoint(60, 160);
+	Center2 = Center2Point;
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -800,7 +987,7 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 	}
 	
 	//Page 3
-	Center3 = GPoint(70, 160);
+	Center3 = Center3Point;
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -820,7 +1007,7 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
     	graphics_fill_circle(ctx, Center3, DIAL_RADIUS);
 	}
 	//Page 4
-	Center4 = GPoint(80, 160);
+	Center4 = Center4Point;
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -838,7 +1025,7 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
     	graphics_fill_circle(ctx, Center4, DIAL_RADIUS);
 	}
 	//Page 5
-	Center5 = GPoint(90, 160);
+	Center5 = Center5Point;
 	
 	
 		#ifdef PBL_COLOR
@@ -892,8 +1079,10 @@ void handle_init(void)
 	setlocale(LC_ALL, i18n_get_system_locale());
 	
 	//Developer Hardcode - REMOVE!!
-	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[18]);
-	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[19]);
+	escudo_visitante1 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
+	escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
+	s_res_local1 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
+	s_res_local2 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
 
 	
 	//Initialize the Message Service
@@ -904,9 +1093,6 @@ void handle_init(void)
 	
 	//Create the main window
 	s_window = window_create(); 
-	#ifdef PBL_PLATFORM_APLITE
-		window_set_fullscreen(s_window,true);
-	#endif
 	window_stack_push(s_window, true /* Animated */);
 
 		#ifdef PBL_COLOR
@@ -916,7 +1102,7 @@ void handle_init(void)
 		#endif
 	
 	// HEADER
-	  	header_layer = text_layer_create(GRect(0, 0, 144, 57));
+	  	header_layer = text_layer_create(HEADER_FRAME);
 	  	
 	  	layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(header_layer));
 		#ifdef PBL_COLOR
@@ -926,7 +1112,7 @@ void handle_init(void)
 		#endif
 	
 	//Draw the page indicator
-	GRect window_bounds = GRect(0, 0, 144, 168);
+	GRect window_bounds = WINDOW_BOUNDS;
     dial_layer = layer_create(window_bounds);
 	layer_set_update_proc(dial_layer, DrawPageIndicator);
 	layer_add_child(window_get_root_layer(s_window), dial_layer);
@@ -940,19 +1126,15 @@ void handle_init(void)
 	
 
 	  // league_img
-		#ifdef PBL_PLATFORM_APLITE
-			league_img = bitmap_layer_create(GRect(95, 35, 43, 18));
-			bitmap_layer_set_compositing_mode(league_img, GCompOpAssign);
-		#elif PBL_PLATFORM_BASALT
-			league_img = bitmap_layer_create(GRect(75, 35, 67, 18));
-			bitmap_layer_set_compositing_mode(league_img, GCompOpSet);
-		#endif
+		league_img = bitmap_layer_create(LEAGUE_FRAME);
+		bitmap_layer_set_compositing_mode(league_img, GCompOpSet);
+
 			
 		bitmap_layer_set_bitmap(league_img, s_res_liga_bbva);
 	  	layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(league_img));
 
 	  // jornada_layer
-	  jornada_layer = text_layer_create(GRect(1, 35, 40, 20));
+	  jornada_layer = text_layer_create(ROUND_FRAME);
 	  text_layer_set_background_color(jornada_layer, GColorClear);
 	  
 		#ifdef PBL_COLOR
@@ -968,7 +1150,7 @@ void handle_init(void)
 	
 	  // RoundNumber_layer
 	  //snprintf(txtRound,2,"%d",intRound);
-	  RoundNumber_layer = text_layer_create(GRect(46, 35, 15, 20));
+	  RoundNumber_layer = text_layer_create(ROUND_NUMBER_FRAME);
 	  text_layer_set_background_color(RoundNumber_layer, GColorClear);
 	  #ifdef PBL_COLOR
 		  text_layer_set_text_color(RoundNumber_layer, GColorWhite);
@@ -981,7 +1163,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(RoundNumber_layer));
 
 	  // date_layer
-	  date_layer = text_layer_create(GRect(65, 14, 74, 20));
+	  date_layer = text_layer_create(DATE_FRAME);
 	  text_layer_set_background_color(date_layer, GColorClear);
 	  #ifdef PBL_COLOR
 		  text_layer_set_text_color(date_layer, GColorWhite);
@@ -994,7 +1176,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(date_layer));
 
 	  // weekday_layer
-	  weekday_layer = text_layer_create(GRect(65, 1, 74, 20));
+	  weekday_layer = text_layer_create(WEEKDAY_FRAME);
 	  text_layer_set_background_color(weekday_layer, GColorClear);
 	  #ifdef PBL_COLOR
 		  text_layer_set_text_color(weekday_layer, GColorWhite);
@@ -1007,7 +1189,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(weekday_layer));
 
 	  // time_layer
-	  time_layer = text_layer_create(GRect(2, 2, 66, 28));
+	  time_layer = text_layer_create(TIME_FRAME);
 	  text_layer_set_background_color(time_layer, GColorClear);
 	  #ifdef PBL_COLOR
 		  text_layer_set_text_color(time_layer, GColorWhite);
@@ -1020,7 +1202,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(time_layer));
 
 	  // local1_layer
-	  local1_layer = text_layer_create(GRect(39, 61, 30, 16));
+	  local1_layer = text_layer_create(LOCAL1_FRAME);
 	  text_layer_set_background_color(local1_layer, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(local1_layer, GColorBlack);
@@ -1032,7 +1214,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(local1_layer));
 
 	  // local2_layer
-	  local2_layer = text_layer_create(GRect(39, 110, 30, 16));
+	  local2_layer = text_layer_create(LOCAL2_FRAME);
 	  text_layer_set_background_color(local2_layer, GColorClear);
 		#ifdef PBL_COLOR
 		  text_layer_set_text_color(local2_layer, GColorBlack);
@@ -1045,7 +1227,7 @@ void handle_init(void)
 
 	  // visitant1_layer
 	
-	  visitant1_layer = text_layer_create(GRect(74, 61, 30, 16));
+	  visitant1_layer = text_layer_create(VISITANT1_FRAME);
 	  text_layer_set_background_color(visitant1_layer, GColorClear);
 		#ifdef PBL_COLOR
 		  text_layer_set_text_color(visitant1_layer, GColorBlack);
@@ -1059,7 +1241,7 @@ void handle_init(void)
 
 	  // visitant2_layer
 	
-	  visitant2_layer = text_layer_create(GRect(74, 110, 30, 16));
+	  visitant2_layer = text_layer_create(VISITANT2_FRAME);
 	  text_layer_set_background_color(visitant2_layer, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(visitant2_layer, GColorBlack);
@@ -1072,7 +1254,7 @@ void handle_init(void)
 	  
 
 	  // local1_goals
-	  local1_goals = text_layer_create(GRect(37, 73, 28, 28));
+	  local1_goals = text_layer_create(LOCAL1_GOALS);
 	  text_layer_set_background_color(local1_goals, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(local1_goals, GColorMidnightGreen );
@@ -1087,7 +1269,7 @@ void handle_init(void)
 	  // visitor1_goals
 	
 	
-	  visitor1_goals = text_layer_create(GRect(75, 73, 28, 28));
+	  visitor1_goals = text_layer_create(VISITANT1_GOALS);
 	  text_layer_set_background_color(visitor1_goals, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(visitor1_goals, GColorMidnightGreen );
@@ -1101,7 +1283,7 @@ void handle_init(void)
 	  
 
 	  // local2_goals
-	  local2_goals = text_layer_create(GRect(37, 121, 28, 28));
+	  local2_goals = text_layer_create(LOCAL2_GOALS);
 	  text_layer_set_background_color(local2_goals, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(local2_goals, GColorMidnightGreen );
@@ -1117,7 +1299,7 @@ void handle_init(void)
 	  // visitor2_goals
 	
 	
-	  visitor2_goals = text_layer_create(GRect(75, 121, 28, 28));
+	  visitor2_goals = text_layer_create(VISITANT2_GOALS);
 	  text_layer_set_background_color(visitor2_goals, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(visitor2_goals, GColorMidnightGreen );
@@ -1131,7 +1313,7 @@ void handle_init(void)
 	
 
 	  // live_minute1
-	  live_minute1 = text_layer_create(GRect(60, 81, 20, 15));
+	  live_minute1 = text_layer_create(LIVE_MINUTE1);
 	  text_layer_set_background_color(live_minute1, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(live_minute1, GColorBlack);
@@ -1144,7 +1326,7 @@ void handle_init(void)
 	  layer_add_child(window_get_root_layer(s_window), text_layer_get_layer(live_minute1));
 
 	  // live_minute2
-	  live_minute2 = text_layer_create(GRect(60, 129, 20, 15));
+	  live_minute2 = text_layer_create(LIVE_MINUTE2);
 	  text_layer_set_background_color(live_minute2, GColorClear);
 	  	#ifdef PBL_COLOR
 		  text_layer_set_text_color(live_minute2, GColorBlack);
@@ -1158,23 +1340,23 @@ void handle_init(void)
 	
 	  
 	  // local1_img
-	  local1_img = bitmap_layer_create(GRect(1, 62, 40, 40));
+	  local1_img = bitmap_layer_create(LOCAL1_IMAGE);
 	  bitmap_layer_set_bitmap(local1_img, s_res_local1);
 	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local1_img));
 			
 		// visitor1_img
-	  visitor1_layer = bitmap_layer_create(GRect(100, 62, 40, 40));
+	  visitor1_layer = bitmap_layer_create(VISITANT1_IMAGE);
 	  bitmap_layer_set_bitmap(visitor1_layer, escudo_visitante1);
 	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor1_layer));
 	
 	  // local2_img
-	  local2_img = bitmap_layer_create(GRect(1, 111, 40, 40));
+	  local2_img = bitmap_layer_create(LOCAL2_IMAGE);
 	  bitmap_layer_set_bitmap(local2_img, s_res_local2);
 	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(local2_img));
 		
 
 	  // visitor2_img
-	  visitor2_layer = bitmap_layer_create(GRect(100, 111, 40, 40));
+	  visitor2_layer = bitmap_layer_create(VISITANT2_IMAGE);
 	  bitmap_layer_set_bitmap(visitor2_layer, escudo_visitante2);
 	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor2_layer));
 			
@@ -1185,17 +1367,11 @@ void handle_init(void)
 		
 	
 		//check the Pebble model to determine if the image is colored or not
-		#ifdef PBL_PLATFORM_APLITE
-			bitmap_layer_set_compositing_mode(local1_img, GCompOpAssign);
-			bitmap_layer_set_compositing_mode(visitor1_layer, GCompOpAssign);
-			bitmap_layer_set_compositing_mode(local2_img, GCompOpAssign);
-			bitmap_layer_set_compositing_mode(visitor2_layer, GCompOpAssign);
-		#elif PBL_PLATFORM_BASALT
 			bitmap_layer_set_compositing_mode(local1_img, GCompOpSet);
 			bitmap_layer_set_compositing_mode(visitor1_layer, GCompOpSet);
 			bitmap_layer_set_compositing_mode(visitor2_layer, GCompOpSet);
 			bitmap_layer_set_compositing_mode(local2_img, GCompOpSet);
-		#endif
+
 	
         // Ensures time is displayed immediately (will break if NULL tick event accessed).
          // (This is why it's a good idea to have a separate routine to do the update itself.)
