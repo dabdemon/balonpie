@@ -913,41 +913,6 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/MAD_bw.png",
-                "name": "UNI",
-                "storageFormat": "pbi",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            },
-            {
-                "file": "images/PAD_bw.png",
-                "name": "PAD",
-                "storageFormat": "pbi",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            },
-            {
-                "file": "images/CES.png",
-                "name": "CES",
-                "storageFormat": "pbi",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            },
-            {
-                "file": "images/CAG_bw.png",
-                "name": "CAG",
-                "storageFormat": "pbi",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            },
-            {
-                "file": "images/FRE_color.png",
-                "name": "FRE",
-                "storageFormat": "pbi",
-                "targetPlatforms": null,
-                "type": "bitmap"
-            },
-            {
                 "characterRegex": "[0-9: ]",
                 "file": "fonts/futura_condensed_bold-webfont.ttf",
                 "name": "FUTURA_CONDENSED_53",
