@@ -40,6 +40,7 @@
                             <option value="7">Serie A</option>
                             <option value="8">Bundesliga</option>
                             <option value="10">Barclays Premier League</option>
+                            <option value="16">Ligue 1</option>
                             <option value="19">Liga Nos</option>
                             <option value="1">MLS (back on March 2016)</option>
                         </select>
@@ -224,6 +225,30 @@
                                                 "<option value='SET'>Vitória Setúbal</option>"
                                               );
                             
+                        }
+                        else if ($('#league_id').val() == "16"){
+                            //League 1
+                            $("#my_team").html("<option value='SCO'> Angers SCO</option>" + 
+                                                "<option value='SCB'> Bastia</option>" + 
+                                                "<option value='SMC'> Caen </option>" + 
+                                                "<option value='GFC'> Gazélec Ajaccio</option>" + 
+                                                "<option value='BOR'> Girondins Bordeaux</option>" + 
+                                                "<option value='EAG'> Guingamp</option>" + 
+                                                "<option value='LIL'> Lille</option>" + 
+                                                "<option value='FCL'> Lorient</option>" + 
+                                                "<option value='ASM'> Monaco</option>" + 
+                                                "<option value='MON'> Montpellier</option>" + 
+                                                "<option value='FCN'> Nantes</option>" + 
+                                                "<option value='NIC'> Nice</option>" + 
+                                                "<option value='OL'> Olympique Lyonnais</option>" + 
+                                                "<option value='OM'> Olympique Marsella</option>" + 
+                                                "<option value='REN'> Rennes</option>" + 
+                                                "<option value='STE'> Saint Etienne</option>" + 
+                                                "<option value='SDR'> Stade de Reims</option>" + 
+                                                "<option value='TFC'> Toulouse</option>" + 
+                                                "<option value='EST'> Troyes</option>" + 
+                                                "<option value='PSG'>Paris Saint-Germain</option>"
+                                            );
                         }
                         else if ($('#league_id').val() == "69"){
                             //MLS
