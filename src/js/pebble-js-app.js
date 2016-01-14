@@ -5,7 +5,7 @@ var league_id = "1"; // 1 = Liga BBVA, 7 = Serie A, 8 = Bundesliga,
 					// 18 = Liga Noruega, 19 = Liga Portuguesa, 20 = Liga Rumana
 					// 21 = Liga Sudafricana, 22 = Liga Sueca, 24 = Liga Brasil
 					// 31 = Liga Finlandia, 107 = CHAMPIONS LEAGUE
-					// 69 = MLS (USA)
+					// 69 = MLS (USA), 675 - Argentina
 
 
 //key de widgets = 41d55642f6613d82dae41eac2ecc4d65
@@ -77,26 +77,26 @@ var LigaBBVA = {
 	//59 : dummy
 	//60 : dummy
 	//MLS (USA) (2015) [League 3]
-	141950 : "01", //Kansas City Sporting
-	141941 : "02", //Toronto FC
-	141932 : "03", //Chicago Fire
-	141939 : "04", //Orlando City
-	141945 : "05", //Los Angeles Galaxy
-	141951 : "06", //Vancouver Whitecaps
-	141946 : "07", //Portland Timbers
-	141936 : "08", //New England Revolution
-	141947 : "09", //Real Salt Lake
-	141942 : "10", //Colorado Rapids
-	141948 : "11", //San Jose Earthquakes
-	141943 : "12", //FC Dallas
-	141937 : "13", //New York City
-	141935 : "14", //Montreal Impact
-	141933 : "15", //Columbus Crew
-	141949 : "16", //Seattle Sounders
-	141934 : "17", //DC United
-	141940 : "18", //Philadelphia Union
-	141938 : "19", //New York RB
-	141944 : "20", //Houston Dynamo
+	581486 : "01", //Kansas City Sporting
+	581482 : "02", //Toronto FC
+	581473 : "03", //Chicago Fire
+	581480 : "04", //Orlando City
+	581487 : "05", //Los Angeles Galaxy
+	581492 : "06", //Vancouver Whitecaps
+	581488 : "07", //Portland Timbers
+	581477 : "08", //New England Revolution
+	581489 : "09", //Real Salt Lake
+	581483 : "10", //Colorado Rapids
+	581490 : "11", //San Jose Earthquakes
+	581484 : "12", //FC Dallas
+	581478 : "13", //New York City
+	581476 : "14", //Montreal Impact
+	581474 : "15", //Columbus Crew
+	581491 : "16", //Seattle Sounders
+	581475 : "17", //DC United
+	581481 : "18", //Philadelphia Union
+	581479 : "19", //New York RB
+	581485 : "20", //Houston Dynamo
 	//Liga Nos (Portugal) - (2016) [League 4]
 	214934 : "01", //Belenenses 
 	214943 : "02", //Rio Ave
@@ -139,6 +139,59 @@ var LigaBBVA = {
 	210920 : "18", //Liverpool
 	210929 : "19", //West Bromwich Albion
 	210921 : "20", //Manchester City
+	//Ligue 1 (France) [League 6]
+	210445 : "01", //PSG
+	210433 : "02", //Bastia
+	210443 : "03", //Olympique Lyonnais
+	210451 : "04", //Troyes
+	210452 : "05", //Angers SCO
+	210434 : "06", //Caen
+	210448 : "07", //Stade de Reims
+	210449 : "08", //Toulouse
+	210440 : "09", //Montpellier
+	210435 : "10", //Girondins Bordeaux
+	210439 : "11", //Monaco
+	210450 : "12", //Gazélec Ajaccio
+	210446 : "13", //Rennes
+	210438 : "14", //Lorient
+	210441 : "15", //Nantes
+	210447 : "16", //Saint Etienne
+	210437 : "17", //Lille
+	210442 : "18", //Nice
+	210444 : "19", //Olympique Marsella
+	210436 : "20", //Guingamp
+	//Primera División Argentina [League 7]
+	582087 : "01", //Sarmiento
+	582088 : "02", //Vélez Sarsfield
+	582103 : "03", //Atl.Tucumán
+	582098 : "04", //Racing Club
+	582100 : "05", //Temperley
+	582093 : "06", //Boca Juniors
+	582094 : "07", //Defensa y Justicia
+	582102 : "08", //Unión Santa Fé
+	582095 : "09", //Estudiantes La Plata
+	582096 : "10", //Lanus
+	582104 : "11", //CA Huracán
+	582092 : "12", //Atlético Rafaela
+	582091 : "13", //Argentinos Juniors
+	582101 : "14", //Tigre
+	582090 : "15", //Aldosivi
+	582082 : "16", //Olimpo
+	582085 : "17", //Rosario Central
+	582080 : "18", //Godoy Cruz
+	582081 : "19", //Independiente
+	582077 : "20", //Belgrano
+	582084 : "21", //River Plate
+	582083 : "22", //Quilmes
+	582078 : "23", //Colón
+	582075 : "24", //Arsenal de Sarandi
+	582076 : "25", //Banfield
+	582079 : "26", //Gimnasia La Plata
+	582089 : "27", //Patronato
+	582086 : "28", //San Lorenzo
+	582099 : "29", //San Martín San Juan
+	582097 : "30", //Newell's Old Boys
+	
 };
 
 var TeamShortName = {
@@ -209,26 +262,26 @@ var TeamShortName = {
 	210699  : "DAR", //Darmstadt 98
 	210695 : "STU", //Stuttgart 
 	//MLS (USA)
-	141950 : "SKC", //Kansas City Sporting
-	141941 : "TFC", //Toronto FC
-	141932 : "CHI", //Chicago Fire
-	141939 : "ORL", //Orlando City
-	141945 : "LAG", //Los Angeles Galaxy
-	141951 : "VAN", //Vancouver Whitecaps
-	141946 : "POR", //Portland Timbers
-	141936 : "NER", //New England Revolution
-	141947 : "RSL", //Real Salt Lake
-	141942 : "COL", //Colorado Rapids
-	141948 : "SJE", //San Jose Earthquakes
-	141943 : "FCD", //FC Dallas
-	141937 : "NYC", //New York City
-	141935 : "MTL", //Montreal Impact
-	141933 : "CLB", //Columbus Crew
-	141949 : "SEA", //Seattle Sounders
-	141934 : "DCU", //DC United
-	141940 : "PHI", //Philadelphia Union
-	141938 : "NYR", //New York RB
-	141944 : "HOU", //Houston Dynamo
+	581486 : "SKC", //Kansas City Sporting
+	581482 : "TFC", //Toronto FC
+	581473 : "CHI", //Chicago Fire
+	581480 : "ORL", //Orlando City
+	581487 : "LAG", //Los Angeles Galaxy
+	581492 : "VAN", //Vancouver Whitecaps
+	581488 : "POR", //Portland Timbers
+	581477 : "NER", //New England Revolution
+	581489 : "RSL", //Real Salt Lake
+	581483 : "COL", //Colorado Rapids
+	581490 : "SJE", //San Jose Earthquakes
+	581484 : "FCD", //FC Dallas
+	581478 : "NYC", //New York City
+	581476 : "MTL", //Montreal Impact
+	581474 : "CLB", //Columbus Crew
+	581491 : "SEA", //Seattle Sounders
+	581475 : "DCU", //DC United
+	581481 : "PHI", //Philadelphia Union
+	581479 : "NYR", //New York RB
+	581485 : "HOU", //Houston Dynamo
 	//Liga Nos (Portugal) - (2016)
 	214934 : "BEL", //Belenenses 
 	214943 : "RAV", //Rio Ave
@@ -269,6 +322,58 @@ var TeamShortName = {
 	210920 : "LIV", //Liverpool
 	210929 : "WBA", //West Bromwich Albion
 	210921 : "MCI", //Manchester City
+	//Ligue 1 (France) 
+	210445 : "PSG", //PSG (Parc des Princes)
+	210433 : "SCB", //Bastia (Armand-Cesari-Furiani)
+	210443 : "OL", //Olympique Lyonnais (Parc OL)
+	210451 : "EST", //Troyes (de L'Aube)
+	210452 : "SCO", //Angers SCO (Jean-Bouin)
+	210434 : "SMC", //Caen (Michel d'Ornano)
+	210448 : "SR", //Stade de Reims (Auguste Delaune)
+	210449 : "TFC", //Toulouse (Stadium Municipal)
+	210440 : "MH", //Montpellier (Stade de la Mosson)
+	210435 : "GB", //Girondins Bordeaux (Stade Bordeaux-Atlantique)
+	210439 : "ASM", //Monaco (Louis II)
+	210450 : "GFA", //Gazélec Ajaccio (Ange Casanova)
+	210446 : "SRF", //Rennes (Roazhon Park)
+	210438 : "FCL", //Lorient (Moustoir)
+	210441 : "FCN", //Nantes (La Beaujoire)
+	210447 : "SE", //Saint Etienne (Geoffroy-Guichard)
+	210437 : "OSC", //Lille (Stade Pierre Mauroy)
+	210442 : "OGC", //Nice (Stade Pierre Mauroy)
+	210444 : "OM", //Olympique Marsella (Vélodrome)
+	210436 : "EAG", //Guingamp (Roudourou)
+	//Primera División Argentina [League 7]
+	582087 : "SAR", //Sarmiento (Eva Peron de Junin)
+	582088 : "VEL", //Vélez Sarsfield
+	582103 : "ATT", //Atl.Tucumán (Monumental Presidente Jose Fierro)
+	582098 : "RAC", //Racing Club (Presidente Juan Domingo Peron, Avellaneda)
+	582100 : "TEM", //Temperley (Alfredo Beranger)
+	582093 : "BOC", //Boca Juniors (Alberto Jacinto Armando)
+	582094 : "DYJ", //Defensa y Justicia (Norberto Tito Tomaghello)
+	582102 : "UNI", //Unión Santa Fé (Leonardo Carol Madelon)
+	582095 : "EST", //Estudiantes La Plata (Ciudad de La Plata)
+	582096 : "LAN", //Lanus (Ciudad de Lanus - Nestor Diaz Perez)
+	582104 : "HUR", //CA Huracán (Tomas Adolfo Duco)
+	582092 : "RAF", //Atlético Rafaela (Nuevo Monumental, Rafaela)
+	582091 : "ARG", //Argentinos Juniors (Diego Armando Maradona)
+	582101 : "TIG", //Tigre (Jose Dellagiovanna)
+	582090 : "ALD", //Aldosivi (Jose Maria Minella)
+	582082 : "OLI", //Olimpo (Roberto Natalio Carminatti)
+	582085 : "CEN", //Rosario Central (Dr. Lisandro de la Torre)
+	582080 : "GOD", //Godoy Cruz (Malvinas Argentinas, Mendoza)
+	582081 : "IND", //Independiente (Libertadores de America)
+	582077 : "BEL", //Belgrano (Mario Alberto Kempes)
+	582084 : "RIV", //River Plate (Monumental Antonio Vespucio Liberti)
+	582083 : "QUI", //Quilmes (Estadio Centenario Dr. Jose Luis Meiszner)
+	582078 : "COL", //Colón (Brigadier General Estanislao Lopez)
+	582075 : "ARS", //Arsenal de Sarandi (Julio Humberto Grondona)
+	582076 : "BAN", //Banfield (Florencio Sola)
+	582079 : "GLP", //Gimnasia La Plata (Juan Carlos Zerillo)
+	582089 : "PAT", //Patronato (Presbitero Bartolome Grella)
+	582086 : "SLO", //San Lorenzo (Pedro Bidegain)
+	582099 : "SMA", //San Martín San Juan (Ingeniero Hilario Sanchez)
+	582097 : "NOB", //Newell's Old Boys (Marcelo Alberto Bielsa)
 };
 
 var FieldName = {
@@ -334,26 +439,26 @@ var FieldName = {
 	210699  : "Stadion am Bollenfalltor", //Darmstadt 98
 	210695 : "Mercedes-Benz-Arena", //Stuttgart 
 	//MLS (USA)
-	141950 : "Sporting Park", //Kansas City Sporting
-	141941 : "BMO Field", //Toronto FC
-	141932 : "Toyota Park", //Chicago Fire
-	141939 : "ESPN Wide World of Sports Complex Field 17", //Orlando City
-	141945 : "Stubhub Center", //Los Angeles Galaxy
-	141951 : "BC Place", //Vancouver Whitecaps
-	141946 : "Providence Park", //Portland Timbers
-	141936 : "Gillette Stadium", //New England Revolution
-	141947 : "Rio Tinto Stadium", //Real Salt Lake
-	141942 : "Dick's Sporting Goods Park", //Colorado Rapids
-	141948 : "Avaya Stadium", //San Jose Earthquakes
-	141943 : "Toyota Stadium", //FC Dallas
-	141937 : "Yankee Stadium", //New York City
-	141935 : "Saputo Stadium", //Montreal Impact
-	141933 : "Columbus Crew Stadium", //Columbus Crew
-	141949 : "CenturyLink Field", //Seattle Sounders
-	141934 : "Robert F. Kennedy Memorial Stadium", //DC United
-	141940 : "PPL Park", //Philadelphia Union
-	141938 : "Red Bull Arena", //New York RB
-	141944 : "BBVA Compass Stadium", //Houston Dynamo
+	581486 : "Sporting Park", //Kansas City Sporting
+	581482 : "BMO Field", //Toronto FC
+	581473 : "Toyota Park", //Chicago Fire
+	581480 : "ESPN Wide World of Sports Complex Field 17", //Orlando City
+	581487 : "Stubhub Center", //Los Angeles Galaxy
+	581492 : "BC Place", //Vancouver Whitecaps
+	581488 : "Providence Park", //Portland Timbers
+	581477 : "Gillette Stadium", //New England Revolution
+	581489 : "Rio Tinto Stadium", //Real Salt Lake
+	581483 : "Dick's Sporting Goods Park", //Colorado Rapids
+	581490 : "Avaya Stadium", //San Jose Earthquakes
+	581484 : "Toyota Stadium", //FC Dallas
+	581478 : "Yankee Stadium", //New York City
+	581476 : "Saputo Stadium", //Montreal Impact
+	581474 : "Columbus Crew Stadium", //Columbus Crew
+	581491 : "CenturyLink Field", //Seattle Sounders
+	581475 : "Robert F. Kennedy Memorial Stadium", //DC United
+	581481 : "PPL Park", //Philadelphia Union
+	581479 : "Red Bull Arena", //New York RB
+	581485 : "BBVA Compass Stadium", //Houston Dynamo
 	//Liga Nos (Portugal)
 	214934 : "Estadio do Restelo", //Belenenses 
 	214943 : "Estadio do Rio Ave Futebol Clube", //Rio Ave
@@ -394,6 +499,58 @@ var FieldName = {
 	210920 : "Anfield", //Liverpool
 	210929 : "The Hawthorns", //West Bromwich Albion
 	210921 : "Etihad Stadium", //Manchester City
+	//Ligue 1 (France) 
+	210445 : "Parc des Princes", //PSG 
+	210433 : "Armand-Cesari-Furiani", //Bastia 
+	210443 : "Parc OL", //Olympique Lyonnais 
+	210451 : "de L'Aube", //Troyes 
+	210452 : "Jean-Bouin", //Angers SCO 
+	210434 : "Michel d'Ornano", //Caen
+	210448 : "Auguste Delaune", //Stade de Reims
+	210449 : "Stadium Municipal", //Toulouse
+	210440 : "Stade de la Mosson", //Montpellier
+	210435 : "Stade Bordeaux-Atlantique", //Girondins Bordeaux
+	210439 : "Louis II", //Monaco
+	210450 : "Ange Casanova", //Gazélec Ajaccio
+	210446 : "Roazhon Park", //Rennes
+	210438 : "Moustoir", //Lorient
+	210441 : "La Beaujoire", //Nantes
+	210447 : "Geoffroy-Guichard", //Saint Etienne
+	210437 : "Stade Pierre Mauroy", //Lille
+	210442 : "Stade Pierre Mauroy", //Nice
+	210444 : "Velodrome", //Olympique Marsella
+	210436 : "Roudourou", //Guingamp
+	//Primera División Argentina [League 7]
+	582087 : "Eva Peron de Junin", //Sarmiento 
+	582088 : "Jose Amalfitani", //Vélez Sarsfield
+	582103 : "Monumental Presidente Jose Fierro", //Atl.Tucumán 
+	582098 : "Presidente Juan Domingo Peron, Avellaneda", //Racing Club 
+	582100 : "Alfredo Beranger", //Temperley 
+	582093 : "Alberto Jacinto Armando", //Boca Juniors 
+	582094 : "Norberto Tito Tomaghello", //Defensa y Justicia 
+	582102 : "Leonardo Carol Madelon", //Unión Santa Fé 
+	582095 : "Ciudad de La Plata", //Estudiantes La Plata 
+	582096 : "Ciudad de Lanus - Nestor Diaz Perez", //Lanus 
+	582104 : "Tomas Adolfo Duco", //CA Huracán 
+	582092 : "Nuevo Monumental, Rafaela", //Atlético Rafaela 
+	582091 : "Diego Armando Maradona", //Argentinos Juniors 
+	582101 : "Jose Dellagiovanna", //Tigre 
+	582090 : "Jose Maria Minella", //Aldosivi 
+	582082 : "Roberto Natalio Carminatti", //Olimpo 
+	582085 : "Dr. Lisandro de la Torre", //Rosario Central 
+	582080 : "Malvinas Argentinas, Mendoza", //Godoy Cruz 
+	582081 : "Libertadores de America", //Independiente 
+	582077 : "Mario Alberto Kempes", //Belgrano 
+	582084 : "Monumental Antonio Vespucio Liberti", //River Plate 
+	582083 : "Estadio Centenario Dr. Jose Luis Meiszner", //Quilmes 
+	582078 : "Brigadier General Estanislao Lopez", //Colón 
+	582075 : "Julio Humberto Grondona", //Arsenal de Sarandi 
+	582076 : "Florencio Sola", //Banfield 
+	582079 : "Juan Carlos Zerillo", //Gimnasia La Plata 
+	582089 : "Presbitero Bartolome Grella", //Patronato 
+	582086 : "Pedro Bidegain", //San Lorenzo 
+	582099 : "Ingeniero Hilario Sanchez", //San Martín San Juan 
+	582097 : "Marcelo Alberto Bielsa", //Newell's Old Boys 
 };
 
 //Formatting Functions
@@ -438,205 +595,238 @@ function getLigaBBVA(){
 	//Use the right API key based on league ID
 	if (league_id == 10){APIkey = "177007e17672d129c6c750794630592e";}
 	else{APIkey = "721430254d3a0ca7684955899533eb08";}
-
-	//Define variables
-	var resultados = "";
-	var response;
-	//var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?tz=Europe/Madrid&format=json&req=matchs&key=721430254d3a0ca7684955899533eb08&league=1&round=&order=twin&twolegged=1&year=2014");
-	var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?tz=GMT&format=json&req=matchs&key="+APIkey+"&league="+league_id+"&round=&order=twin&twolegged=1");
-	//var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?key=721430254d3a0ca7684955899533eb08&format=json&req=matchsday&country=es");
-	var req = new XMLHttpRequest();
-	var i;
-	var j;
-	var local;
-	var visitor;
-	var round;
-	var local_goals;
-	var visitor_goals;
-	var status;
-	var live_min;
-	//create the "arrays"
-	var arrLocal = "00";
-	var arrVisitor= "00";
-	var arrLocalGoals = "00";
-	var arrVisitorGoals = "00";
-	var arrLiveMinute = "00";
-	var arrStatus;
-	var arrSchedules;
 	
+	//capture not available leagues
+	if (league_id == 0){
+
 		
-	console.log(query);
-	req.open('GET', query, true);
-	req.onload = function(e) {
-    if (req.readyState == 4) {
-      if (req.status == 200) {
+		var status = "-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00";
+		console.log("Not active league");
+		console.log("Status: " + status);
 
-        response = JSON.parse(req.responseText);
-        if (response) {
-          var matches = response.match;
-			
-			//try to retrieve something to check if connection worked
-			console.log("local: " + matches[0].local + " visitante: " + matches[0].visitor);
-			//Get Static Data
-			round = matches[0].round;
-			//initialize the arrStatus to include the League ID as the first input
-			if (league_id=="1"){arrStatus="00";}
-			else if(league_id=="7"){arrStatus="01";}
-			else if (league_id=="8"){arrStatus="02";}
-			else if (league_id=="69"){arrStatus="03";}
-			else if (league_id=="19"){arrStatus="04";}
-			else if (league_id=="10"){arrStatus="05";}
-			else{arrStatus = "-1";}
-			
-			//Read the values from the API
-			for (i=0;i<matches.length;i++){
-				local = LigaBBVA[matches[i].team1];
-				visitor = LigaBBVA[matches[i].team2];
-				
-				local_goals = matches[i].local_goals;
-				if (local_goals == "x"){local_goals="00";}
-				if (local_goals.length == 1) {local_goals = "0"+local_goals;}
-				
-				visitor_goals = matches[i].visitor_goals;
-				if (visitor_goals == "x"){visitor_goals="00";}
-				if (visitor_goals.length == 1) {visitor_goals = "0"+visitor_goals;}
-				
-				status = matches[i].status;
-				if (status=="0"){status="00";}
-				else if(status=="1"){status="+1";}
-				
-				live_min = matches[i].live_minute;
-				if (live_min===""){live_min="00";} //if blank set to 00
-				if (live_min.length == 1) {live_min = "0"+live_min;} //ensure it is always 2 digits length
-				//if (live_min.length > 2) {live_min = "99";} //truncate to 2 digits
-					
-				//TRIM to just 3 chars
-				//local = local.substring(0, 3);
-				//visitor = visitor.substring(0, 3);
-				//UPPERCASE
-				//local = local.toUpperCase();
-				//visitor = visitor.toUpperCase();
-				
-				//Concatenate the results to the output chain
-				resultados = resultados+ "\n" + local +" "+ matches[i].result + " "+ visitor + " (" + matches[i].live_minute+"')";
-				
-				//Create Timeline PIN (if user selected to create them)
-				if ((typeof Pebble.getTimelineToken === 'function') && 
-					((options.timeline_pins == "1") || 
-					 ((options.timeline_pins == "2") && ((TeamShortName[matches[i].team1] == options.my_team) || 
-														 (TeamShortName[matches[i].team2] == options.my_team))))) {
-					
-					var TimelineTime;
-					var matchtime = (matches[i].hour) + ":" + matches[i].minute;
-					TimelineTime = Left(matches[i].schedule,10) + "T" +  matchtime  + ":00Z";
-					var shortLocal = TeamShortName[matches[i].team1];
-					var shortVisitor = TeamShortName[matches[i].team2];
-					var pinTitle = shortLocal+ " - " + shortVisitor;
+		//send dummy values to Pebble
+		Pebble.sendAppMessage({
+			"local":"-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00",
+			"visitor":"-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00",
+			"local_goals":"-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00",
+			"visitor_goals":"-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00",
+			"live_minute":"-1|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00",
+			"status":status,
+			"round":"1",});
+		
+	}
+	else{
+
+		//Define variables
+		var resultados = "";
+		var response;
+		//var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?tz=Europe/Madrid&format=json&req=matchs&key=721430254d3a0ca7684955899533eb08&league=1&round=&order=twin&twolegged=1&year=2014");
+		var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?tz=GMT&format=json&req=matchs&key="+APIkey+"&league="+league_id+"&round=&order=twin&twolegged=1");
+		//var query = encodeURI("http://www.resultados-futbol.com/scripts/api/api.php?key=721430254d3a0ca7684955899533eb08&format=json&req=matchsday&country=es");
+		var req = new XMLHttpRequest();
+		var i;
+		var j;
+		var local;
+		var visitor;
+		var round;
+		var local_goals;
+		var visitor_goals;
+		var status;
+		var live_min;
+		//create the "arrays"
+		var arrLocal = "00";
+		var arrVisitor= "00";
+		var arrLocalGoals = "00";
+		var arrVisitorGoals = "00";
+		var arrLiveMinute = "00";
+		var arrStatus;
+		var arrSchedules;
 
 
-					var estadio = FieldName[matches[i].team1];
-					
-					var d = new Date();
-					var lastUpdate = d.toISOString(); 
-					
-					var State;
-					var Subtitle;
-					if (status==-1){State="pre-game";
-								   Subtitle="Not Started";}
-					else{State="in-game";
-						 	//update the Subtitle for the timeline pin
-						 	if(status==1){Subtitle="Final";}
-							else{
-								if (live_min == "Des"){Subtitle = "Half-Time";}
-								else{Subtitle = "In game - " + live_min + "'";}
-								}
+		console.log(query);
+		req.open('GET', query, true);
+		req.onload = function(e) {
+		if (req.readyState == 4) {
+		  if (req.status == 200) {
+
+			response = JSON.parse(req.responseText);
+			if (response) {
+			  var matches = response.match;
+
+				//try to retrieve something to check if connection worked
+				console.log("local: " + matches[0].local + " visitante: " + matches[0].visitor);
+				//Get Static Data
+				round = matches[0].round;
+				//initialize the arrStatus to include the League ID as the first input
+				if (league_id=="1"){arrStatus="00";}
+				else if(league_id=="7"){arrStatus="01";}
+				else if (league_id=="8"){arrStatus="02";}
+				else if (league_id=="69"){arrStatus="03";}
+				else if (league_id=="19"){arrStatus="04";}
+				else if (league_id=="10"){arrStatus="05";}
+				else if (league_id=="16"){arrStatus="06";}
+				else if (league_id=="675"){arrStatus="07";}
+				else{arrStatus = "-1";}
+
+				//Read the values from the API
+				for (i=0;i<matches.length;i++){
+					local = LigaBBVA[matches[i].team1];
+					visitor = LigaBBVA[matches[i].team2];
+
+					local_goals = matches[i].local_goals;
+					if (local_goals == "x"){local_goals="00";}
+					if (local_goals.length == 1) {local_goals = "0"+local_goals;}
+
+					visitor_goals = matches[i].visitor_goals;
+					if (visitor_goals == "x"){visitor_goals="00";}
+					if (visitor_goals.length == 1) {visitor_goals = "0"+visitor_goals;}
+
+					status = matches[i].status;
+					if (status=="0"){status="00";}
+					else if(status=="1"){status="+1";}
+
+					live_min = matches[i].live_minute;
+					if (live_min===""){live_min="00";} //if blank set to 00
+					if (live_min.length == 1) {live_min = "0"+live_min;} //ensure it is always 2 digits length
+					//if (live_min.length > 2) {live_min = "99";} //truncate to 2 digits
+
+					//TRIM to just 3 chars
+					//local = local.substring(0, 3);
+					//visitor = visitor.substring(0, 3);
+					//UPPERCASE
+					//local = local.toUpperCase();
+					//visitor = visitor.toUpperCase();
+
+					//Concatenate the results to the output chain
+					resultados = resultados+ "\n" + local +" "+ matches[i].result + " "+ visitor + " (" + matches[i].live_minute+"')";
+
+					//Create Timeline PIN (if user selected to create them)
+					if ((typeof Pebble.getTimelineToken === 'function') && 
+						((options.timeline_pins == "1") || 
+						 ((options.timeline_pins == "2") && ((TeamShortName[matches[i].team1] == options.my_team) || 
+															 (TeamShortName[matches[i].team2] == options.my_team))))) {
+
+						var TimelineTime;
+						var matchtime = (matches[i].hour) + ":" + matches[i].minute;
+						TimelineTime = Left(matches[i].schedule,10) + "T" +  matchtime  + ":00Z";
+						var shortLocal = TeamShortName[matches[i].team1];
+						var shortVisitor = TeamShortName[matches[i].team2];
+						var pinTitle = shortLocal+ " - " + shortVisitor;
+
+
+						var estadio = FieldName[matches[i].team1];
+
+						var d = new Date();
+						var lastUpdate = d.toISOString(); 
+
+						var State;
+						var Subtitle;
+						if (status==-1){State="pre-game";
+									   Subtitle="Not Started";}
+						else{State="in-game";
+								//update the Subtitle for the timeline pin
+								if(status==1){Subtitle="Final";}
+								else{
+									if (live_min == "Des"){Subtitle = "Half-Time";}
+									else{Subtitle = "In game - " + live_min + "'";}
+									}
+							}
+
+
+						//Concatenate the "Round" in the right language
+						var jornada;
+						if (league_id== "1"){jornada = "Liga BBVA - Jornada " + round;}
+						else if (league_id =="7"){jornada = "Serie A - Giornate " + round;}
+						else if (league_id =="8"){jornada = "Bundesliga - Spieltag " + round;}
+						else if (league_id =="10"){jornada = "Barcleys Premier League - Round " + round;}
+						else if (league_id =="16"){jornada = "Ligue 1 - Journee " + round;}
+						else if (league_id =="19"){jornada = "Liga Nos - Jornada " + round;}
+						else if (league_id =="69"){jornada = "MLS - Round " + round;}
+						else if (league_id =="675"){jornada = "Primera División - Jornada " + round;}
+						else {jornada = "Round " + round;}
+
+						console.log("PIN ID: "+matches[i].id);
+						console.log("TimelineTime: "+TimelineTime);
+						console.log("pinTitle: "+pinTitle);
+
+						var blnReminder;
+						//Hardcode to Atlético de Madrid (best team ever) but will be customizable from settings.
+						if ((shortLocal == options.my_team) || (shortVisitor == options.my_team)){
+							blnReminder = true;
 						}
-					
-					
-					//Concatenate the "Round" in the right language
-					var jornada;
-					if (league_id== "1"){jornada = "Liga BBVA - Jornada " + round;}
-					else if (league_id =="7"){jornada = "Serie A - Giornate " + round;}
-					else if (league_id =="8"){jornada = "Bundesliga - Spieltag " + round;}
-					else {jornada = "Round " + round;}
+						else{
+							blnReminder = false;
+						}
 
-					console.log("PIN ID: "+matches[i].id);
-					console.log("TimelineTime: "+TimelineTime);
-					console.log("pinTitle: "+pinTitle);
-					
-					var blnReminder;
-					//Hardcode to Atlético de Madrid (best team ever) but will be customizable from settings.
-					if ((shortLocal == options.my_team) || (shortVisitor == options.my_team)){
-						blnReminder = true;
-					}
-					else{
-						blnReminder = false;
+						createPIN(matches[i].id, TimelineTime, pinTitle, Subtitle, jornada, estadio, lastUpdate, 
+								  shortVisitor,shortLocal, visitor_goals,local_goals,State, blnReminder, matches[i].local, matches[i].visitor, estadio );
+
 					}
 
-					createPIN(matches[i].id, TimelineTime, pinTitle, Subtitle, jornada, estadio, lastUpdate, shortVisitor,shortLocal, visitor_goals,local_goals,State, blnReminder );
+					arrLocal = arrLocal + "|" + local;
+					arrVisitor = arrVisitor + "|" + visitor;
+					arrLocalGoals = arrLocalGoals + "|" + local_goals;
+					arrVisitorGoals = arrVisitorGoals + "|" + visitor_goals;
+					arrLiveMinute = arrLiveMinute + "|" + live_min;
+					arrStatus = arrStatus + "|" + status;
+					//arrSchedules = arrSchedules + "|" + matches[i].schedule;
+				}
 
-				}
+				//fix bundesliga, Liga Nos and Primera División Argentina
+				if (league_id==8 || league_id==19 || league_id == 675) {
+					arrLocal = arrLocal + "|XX";
+					arrVisitor = arrVisitor + "|XX";
+					arrLocalGoals = arrLocalGoals + "|XX";
+					arrVisitorGoals = arrVisitorGoals + "|XX";
+					arrLiveMinute = arrLiveMinute + "|XX";
+					//arrStatus = arrStatus + "|XX";
+					//arrSchedules = arrSchedules + "|" + matches[i].schedule;
+					}
+
+				//fix odd scenarios with more than one match per round (will be better fixed in a later release)
+				//if more matches than expected, truncate to 10 matches per week (for now...)
 				
-				arrLocal = arrLocal + "|" + local;
-				arrVisitor = arrVisitor + "|" + visitor;
-				arrLocalGoals = arrLocalGoals + "|" + local_goals;
-				arrVisitorGoals = arrVisitorGoals + "|" + visitor_goals;
-				arrLiveMinute = arrLiveMinute + "|" + live_min;
-				arrStatus = arrStatus + "|" + status;
-				//arrSchedules = arrSchedules + "|" + matches[i].schedule;
-			}
-			
-			//fix bundesliga and Liga Nos
-			if (league_id==8 || league_id==19) {
-				arrLocal = arrLocal + "|XX";
-				arrVisitor = arrVisitor + "|XX";
-				arrLocalGoals = arrLocalGoals + "|XX";
-				arrVisitorGoals = arrVisitorGoals + "|XX";
-				arrLiveMinute = arrLiveMinute + "|XX";
-				//arrStatus = arrStatus + "|XX";
-				//arrSchedules = arrSchedules + "|" + matches[i].schedule;
+				if(league_id == 69){
+					if (arrLocal.length > 32){
+						arrLocal = arrLocal.substring(0, 32);
+						arrVisitor = arrVisitor.substring(0, 32);
+						arrLocalGoals = arrLocalGoals.substring(0, 32);
+						arrVisitorGoals = arrVisitorGoals.substring(0, 32);
+						arrLiveMinute = arrLiveMinute.substring(0, 32);
+						arrStatus = arrStatus.substring(0, 32);	
+					}
+	
 				}
-			
-			//fix odd scenarios with more than one match per round (will be better fixed in a later release)
-			//if more matches than expected, truncate to 10 matches per week (for now...)
-				
-				if (arrLocal.length > 32){
-					arrLocal = arrLocal.substring(0, 32);
-					arrVisitor = arrVisitor.substring(0, 32);
-					arrLocalGoals = arrLocalGoals.substring(0, 32);
-					arrVisitorGoals = arrVisitorGoals.substring(0, 32);
-					arrLiveMinute = arrLiveMinute.substring(0, 32);
-					arrStatus = arrStatus.substring(0, 32);	
-				}
-				
-			
-		//developer trace
-			console.log("Jornada: "+round);
-			console.log("Local: " + arrLocal);
-			console.log("Visitante: " + arrVisitor);
-			console.log("Goles Local: " + arrLocalGoals);
-			console.log("Goles Visitante: " + arrVisitorGoals);
-			console.log("Minuto: " + arrLiveMinute);
-			console.log("Estado: " + arrStatus);
-			//console.log("Horarios: " + arrSchedules);
-			
-			//Send the info to the Pebble
-          Pebble.sendAppMessage({
-			"local":arrLocal,
-			"visitor":arrVisitor,
-			"local_goals":arrLocalGoals,
-			"visitor_goals":arrVisitorGoals,
-			"live_minute":arrLiveMinute,
-			"status":arrStatus,
-			"round":round,});
-					}//Pebble.sendAppMessage
-					}//If(Response)
-      }//If req.status ==200 
-	else {
-        console.log("Error WFW");
-      } //else
-    };//if req.status == 4
-  req.send(null);
+
+
+			//developer trace
+				console.log("Jornada: "+round);
+				console.log("Local: " + arrLocal);
+				console.log("Visitante: " + arrVisitor);
+				console.log("Goles Local: " + arrLocalGoals);
+				console.log("Goles Visitante: " + arrVisitorGoals);
+				console.log("Minuto: " + arrLiveMinute);
+				console.log("Estado: " + arrStatus);
+				//console.log("Horarios: " + arrSchedules);
+
+				//Send the info to the Pebble
+			  Pebble.sendAppMessage({
+				"local":arrLocal,
+				"visitor":arrVisitor,
+				"local_goals":arrLocalGoals,
+				"visitor_goals":arrVisitorGoals,
+				"live_minute":arrLiveMinute,
+				"status":arrStatus,
+				"round":round,});
+						}//Pebble.sendAppMessage
+						}//If(Response)
+		  }//If req.status ==200 
+		else {
+			console.log("Error WFW");
+		  } //else
+		};//if req.status == 4
+	  req.send(null);
+	}
 }//gerWorldCupMatchs
 
 
@@ -645,7 +835,8 @@ function getLigaBBVA(){
 ///////////////////////////////////////
 //Displays the configuration page in the phone
 Pebble.addEventListener('showConfiguration', function(e) {
-  var uri = 'http://yweather.es/fpsettings35.html?' + //Here you need to enter your configuration webservice
+  //var uri = 'http://yweather.es/fpsettings35.html?' + //PRO
+	var uri = 'http://dabdemon.github.io/balonpie/development.html?' + //DEV
 	'&league_id=' + encodeURIComponent(options.league_id)+
 	'&my_team=' + encodeURIComponent(options.my_team)+
 	'&timeline_pins=' + encodeURIComponent(options.timeline_pins);
@@ -681,7 +872,7 @@ Pebble.addEventListener("ready", function(e) {
 });
 
 //CREATE A NEW PIN
-function createPIN(id, time, title, subtitle, body, locationName, lastUpdate, nameHome,nameAway,scoreHome , scoreAway, State, blnReminder){
+function createPIN(id, time, title, subtitle, body, locationName, lastUpdate, nameHome,nameAway,scoreHome , scoreAway, State, blnReminder, local_long, visitor_long, fieldName){
 
 
   // Create the pin
@@ -736,8 +927,8 @@ function createPIN(id, time, title, subtitle, body, locationName, lastUpdate, na
 				  "layout": {
 					"type": "genericReminder",
 					"tinyIcon": "system://images/SOCCER_GAME",
-					"title": title,
-					"subtitle": subtitle,
+					"title": local_long + " vs. " + visitor_long,//title,
+					"subtitle": fieldName,//subtitle,
 					"body": body
 				  }
 				}

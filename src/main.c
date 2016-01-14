@@ -136,14 +136,69 @@ static const char *LigaBBVA[] = {
 	"LIV", //Liverpool
 	"WBA", //West Bromwich Albion
 	"MCI", //Manchester City
+	//Ligue 1 (France) 
+	"PSG", //PSG (Parc des Princes)
+	"SCB", //Bastia (Armand-Cesari-Furiani)
+	"OL", //Olympique Lyonnais (Parc OL)
+	"EST", //Troyes (de L'Aube)
+	"SCO", //Angers SCO (Jean-Bouin)
+	"SMC", //Caen (Michel d'Ornano)
+	"SR", //Stade de Reims (Auguste Delaune)
+	"TFC", //Toulouse (Stadium Municipal)
+	"MH", //Montpellier (Stade de la Mosson)
+	"GB", //Girondins Bordeaux (Stade Bordeaux-Atlantique)
+	"ASM", //Monaco (Louis II)
+	"GFA", //Gazélec Ajaccio (Ange Casanova)
+	"SRF", //Rennes (Roazhon Park)
+	"FCL", //Lorient (Moustoir)
+	"FCN", //Nantes (La Beaujoire)
+	"SE", //Saint Etienne (Geoffroy-Guichard)
+	"OSC", //Lille (Stade Pierre Mauroy)
+	"OGC", //Nice (Stade Pierre Mauroy)
+	"OM", //Olympique Marsella (Vélodrome)
+	"EAG", //Guingamp (Roudourou)
+	//Primera División Argentina [League 7]
+	"SAR", //Sarmiento (Eva Peron de Junin)
+	"VEL", //Vélez Sarsfield
+	"ATT", //Atl.Tucumán (Monumental Presidente Jose Fierro)
+	"RAC", //Racing Club (Presidente Juan Domingo Peron, Avellaneda)
+	"TEM", //Temperley (Alfredo Beranger)
+	"BOC", //Boca Juniors (Alberto Jacinto Armando)
+	"DYJ", //Defensa y Justicia (Norberto Tito Tomaghello)
+	"UNI", //Unión Santa Fé (Leonardo Carol Madelon)
+	"EST", //Estudiantes La Plata (Ciudad de La Plata)
+	"LAN", //Lanus (Ciudad de Lanus - Nestor Diaz Perez)
+	"HUR", //CA Huracán (Tomas Adolfo Duco)
+	"RAF", //Atlético Rafaela (Nuevo Monumental, Rafaela)
+	"ARG", //Argentinos Juniors (Diego Armando Maradona)
+	"TIG", //Tigre (Jose Dellagiovanna)
+	"ALD", //Aldosivi (Jose Maria Minella)
+	"OLI", //Olimpo (Roberto Natalio Carminatti)
+	"CEN", //Rosario Central (Dr. Lisandro de la Torre)
+	"GOD", //Godoy Cruz (Malvinas Argentinas, Mendoza)
+	"IND", //Independiente (Libertadores de America)
+	"BEL", //Belgrano (Mario Alberto Kempes)
+	"RIV", //River Plate (Monumental Antonio Vespucio Liberti)
+	"QUI", //Quilmes (Estadio Centenario Dr. Jose Luis Meiszner)
+	"COL", //Colón (Brigadier General Estanislao Lopez)
+	"ARS", //Arsenal de Sarandi (Julio Humberto Grondona)
+	"BAN", //Banfield (Florencio Sola)
+	"GLP", //Gimnasia La Plata (Juan Carlos Zerillo)
+	"PAT", //Patronato (Presbitero Bartolome Grella)
+	"SLO", //San Lorenzo (Pedro Bidegain)
+	"SMA", //San Martín San Juan (Ingeniero Hilario Sanchez)
+	"NOB", //Newell's Old Boys (Marcelo Alberto Bielsa)
 };
-static const int PageNumbers[6] = {
+static const int PageNumbers[9] = {
 	0,
 	3, // Page 1
 	9, // Page 2
 	15, //Page 3
 	21, //Page 4
 	27, //Page 5
+	33, //Page 6
+	39, //Page 7
+	45, //Page 8
 };
 static const char LigaBBVA_escudos[] = {
 	//Liga BBVA (Spain)
@@ -273,6 +328,58 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_LIV,
 	RESOURCE_ID_WBA,
 	RESOURCE_ID_MCI,
+	//Ligue 1 (France)
+	RESOURCE_ID_PSG,
+	RESOURCE_ID_SCB,
+	RESOURCE_ID_OL,
+	RESOURCE_ID_ESTAC,
+	RESOURCE_ID_SCO,
+	RESOURCE_ID_SMC,
+	RESOURCE_ID_SR,
+	RESOURCE_ID_TFC,
+	RESOURCE_ID_MH,
+	RESOURCE_ID_GB,
+	RESOURCE_ID_ASM,
+	RESOURCE_ID_GFC,
+	RESOURCE_ID_SRF,
+	RESOURCE_ID_FCL,
+	RESOURCE_ID_FCN,
+	RESOURCE_ID_SE,
+	RESOURCE_ID_OSC,
+	RESOURCE_ID_NIC,
+	RESOURCE_ID_OM,
+	RESOURCE_ID_EAG,
+	//Primera División Argentina
+	RESOURCE_ID_SAR,
+	RESOURCE_ID_VEL,
+	RESOURCE_ID_ATT,
+	RESOURCE_ID_RAC,
+	RESOURCE_ID_TEM,
+	RESOURCE_ID_BOC,
+	RESOURCE_ID_DYJ,
+	RESOURCE_ID_CAU,
+	RESOURCE_ID_EDLP,
+	RESOURCE_ID_LAN,
+	RESOURCE_ID_HUR,
+	RESOURCE_ID_RAF,
+	RESOURCE_ID_ARG,
+	RESOURCE_ID_TIG,
+	RESOURCE_ID_ALD,
+	RESOURCE_ID_OLI,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_DUMMY,
 };
 static const char Liga_Banner[] ={
 	RESOURCE_ID_LIGA_BBVA, //Liga BBVA (Spain)
@@ -281,6 +388,8 @@ static const char Liga_Banner[] ={
 	RESOURCE_ID_MLS, //Major League Soccer (USA)
 	RESOURCE_ID_LigaNOS, //Liga Nos (Portugal)
 	RESOURCE_ID_premier, //Barcleys Premier League (England)
+	RESOURCE_ID_Ligue1, //Ligue 1 (France)
+	RESOURCE_ID_LIGA_BBVA, //Primera División (Argentina)
 };
 
 						  
@@ -302,10 +411,10 @@ enum WeatherKey {
 /***************************/
 						  
 // Setup messaging
-const int inbound_size = 256;
-const int outbound_size = 256;
+const int inbound_size = 512;
+const int outbound_size = 512;
 						  
-GPoint Center1, Center2, Center3, Center4, Center5;
+GPoint Center1, Center2, Center3, Center4, Center5, Center6, Center7, Center8;
 Layer *dial_layer;
 
 static char strResults[100];
@@ -327,14 +436,14 @@ char txtlive_minute1[] = "   ";
 char txtlive_minute2[] = "   ";
 
 //Variables to get the data from the net
-char txtLocals[] = "00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
+char txtLocals[] = "00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
 //char txtLocals[] = "00|01|02|03|04|05|06|07|08|09|10"; //Initialize to dummy (test)
-char txtVisitors[] = "00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
+char txtVisitors[] = "00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00|00"; //Initialize to dummy (production)
 //char txtVisitors[] = "00|11|12|13|14|15|16|17|18|19|20"; //Initialize to dummy (test)
-char txtLocalGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
-char txtVisitorGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
-char txtLiveMinutes[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
-char txtStatuses[] = "00|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1"; //PRODUCTION
+char txtLocalGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
+char txtVisitorGoals[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
+char txtLiveMinutes[] = "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX|XX";
+char txtStatuses[] = "00|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1"; //PRODUCTION
 //char txtStatuses[] = "01|-1|-1|-1|-1|-1|-1|-1|-1|-1|-1"; //TEST
 
 static char jornada[] = "Round ";
@@ -382,11 +491,22 @@ int intLeague_Id = 1;
 #define LOCAL2_IMAGE		PBL_IF_ROUND_ELSE(GRect(21, 111, 40, 40),GRect(1, 111, 40, 40))
 #define VISITANT2_IMAGE		PBL_IF_ROUND_ELSE(GRect(120, 111, 40, 40),GRect(100, 111, 40, 40))
 
+#define NOT_AVAILABLE		PBL_IF_ROUND_ELSE(GRect(0, 57, 188, 188-57),GRect(0, 57, 144, 168-57))
+
 #define Center1Point	PBL_IF_ROUND_ELSE(GPoint(70, 165),GPoint(50, 160))
 #define Center2Point	PBL_IF_ROUND_ELSE(GPoint(80, 165),GPoint(60, 160))
 #define Center3Point	PBL_IF_ROUND_ELSE(GPoint(90, 165),GPoint(70, 160))
 #define Center4Point	PBL_IF_ROUND_ELSE(GPoint(100, 165),GPoint(80, 160))
 #define Center5Point 	PBL_IF_ROUND_ELSE(GPoint(110, 165),GPoint(90, 160))
+
+#define Center1P	PBL_IF_ROUND_ELSE(GPoint(60, 165),GPoint(40, 160))
+#define Center2P	PBL_IF_ROUND_ELSE(GPoint(70, 165),GPoint(50, 160))
+#define Center3P	PBL_IF_ROUND_ELSE(GPoint(80, 165),GPoint(60, 160))
+#define Center4P	PBL_IF_ROUND_ELSE(GPoint(90, 165),GPoint(70, 160))
+#define Center5P 	PBL_IF_ROUND_ELSE(GPoint(100, 165),GPoint(80, 160))
+#define Center6P 	PBL_IF_ROUND_ELSE(GPoint(110, 165),GPoint(90, 160))
+#define Center7P 	PBL_IF_ROUND_ELSE(GPoint(120, 165),GPoint(100, 160))
+#define Center8P 	PBL_IF_ROUND_ELSE(GPoint(130, 165),GPoint(110, 160))
 
 static Window *s_window;
 static GBitmap *s_res_visitor1;
@@ -419,6 +539,8 @@ static TextLayer *visitor2_goals;
 static TextLayer *live_minute1;
 static TextLayer *live_minute2;
 static TextLayer *header_layer;
+
+static TextLayer *not_available;
 
 static TextLayer *Weekday_Layer;
 static TextLayer *results_layer;
@@ -470,7 +592,10 @@ int getLeague(char* Array)
 {
 	int intLeagueID;
 	//Get the right League Header
-	intLeagueID = Array[1] - '0';
+
+		intLeagueID = Array[1] - '0';
+
+	
 	
 	return intLeagueID;
 }
@@ -800,12 +925,21 @@ static void SplitDateFromArrays(void) {
 	
 	        int intLeague;
 	        intLeague = getLeague(txtStatuses);
-			
-			LaLiga_FillArrLocal(txtLocals,intPage, intLeague);
-			LaLiga_FillArrVisitor(txtVisitors,intPage, intLeague);
-			LaLiga_FillArrLocalGoals(txtLocalGoals,intPage);
-			LaLiga_FillArrVisitorGoals(txtVisitorGoals,intPage);
-			LaLiga_FillArrLiveMinute(txtLiveMinutes,txtStatuses,intPage, intLeague);
+	
+		if ((intPage > 5) && (intLeague != 7)){
+			//if the active page is not valid, reset to first page. 
+			intPage = 1;
+		} 
+	
+	if (intLeague != -1){
+		LaLiga_FillArrLocal(txtLocals,intPage, intLeague);
+		LaLiga_FillArrVisitor(txtVisitors,intPage, intLeague);
+		LaLiga_FillArrLocalGoals(txtLocalGoals,intPage);
+		LaLiga_FillArrVisitorGoals(txtVisitorGoals,intPage);
+		LaLiga_FillArrLiveMinute(txtLiveMinutes,txtStatuses,intPage, intLeague);
+
+	}	
+
 }
 
 
@@ -848,10 +982,18 @@ static void send_cmd(void) {
 	void PageDown(ClickRecognizerRef recognizer, void *context)
 		{
 		
+			int intLeague;
+	        intLeague = getLeague(txtStatuses);
+		
+			//Default Page Limit to 5 (regular league with 20 teams)
+			int intPageLimit = 5;
+			//Primera División Argenitina has 30 teams, so we need 8 pages
+			if (intLeague == 7){intPageLimit = 8;}
+			
 			//Decrease the Page Number
 			intPage = intPage + 1;
 			//But... Hey! There must be a page limit!! (in La Liga BBVA there are just 5 pages per round)
-			if (intPage > 5) {intPage = 5;}
+			if (intPage > intPageLimit) {intPage = intPageLimit;}
 		
 			//and... refresh the screen data
 			SplitDateFromArrays();
@@ -885,7 +1027,7 @@ static void send_cmd(void) {
 
 
 static AppSync sync;
-static uint8_t sync_buffer[256];
+static uint8_t sync_buffer[512];
 
 
 
@@ -948,15 +1090,19 @@ static void sync_tuple_changed_callback(const uint32_t key,
 
 void DrawPageIndicator(Layer *me, GContext *ctx)
 {
-	//Page 1
-	Center1 = Center1Point;
+	int intLeague;
+	intLeague = getLeague(txtStatuses);
 	
+	//Page 1
+	if (intLeague == 7){Center1 = Center1P;}
+	else {Center1 = Center1Point;}
+
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
 		#else
 		  graphics_context_set_stroke_color(ctx, GColorWhite);
 		#endif
-    graphics_draw_circle(ctx, Center1, DIAL_RADIUS);
+    	graphics_draw_circle(ctx, Center1, DIAL_RADIUS);
 	
 	if(intPage == 1){
 		#ifdef PBL_COLOR
@@ -968,7 +1114,8 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 	}
 
 	//Page 2
-	Center2 = Center2Point;
+	if (intLeague == 7){Center2 = Center2P;}
+	else {Center2 = Center2Point;}
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -987,7 +1134,8 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 	}
 	
 	//Page 3
-	Center3 = Center3Point;
+	if (intLeague == 7){Center3 = Center3P;}
+	else {Center3 = Center3Point;}
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -1007,7 +1155,8 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
     	graphics_fill_circle(ctx, Center3, DIAL_RADIUS);
 	}
 	//Page 4
-	Center4 = Center4Point;
+	if (intLeague == 7){Center4 = Center4P;}
+	else {Center4 = Center4Point;}
 	
 		#ifdef PBL_COLOR
 		  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
@@ -1025,7 +1174,8 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
     	graphics_fill_circle(ctx, Center4, DIAL_RADIUS);
 	}
 	//Page 5
-	Center5 = Center5Point;
+	if (intLeague == 7){Center5 = Center5P;}
+	else {Center5 = Center5Point;}
 	
 	
 		#ifdef PBL_COLOR
@@ -1044,6 +1194,76 @@ void DrawPageIndicator(Layer *me, GContext *ctx)
 		#endif
 			
     	graphics_fill_circle(ctx, Center5, DIAL_RADIUS);
+	}
+	
+	
+	if (intLeague == 7){
+		
+			//Page 6
+			Center6 = Center6P;
+
+
+			#ifdef PBL_COLOR
+			  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+			#else
+			  graphics_context_set_stroke_color(ctx, GColorWhite);
+			#endif
+			graphics_draw_circle(ctx, Center6, DIAL_RADIUS);
+
+			if(intPage == 6){
+
+				#ifdef PBL_COLOR
+				  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+				#else
+				  graphics_context_set_fill_color(ctx, GColorWhite);
+				#endif
+
+				graphics_fill_circle(ctx, Center6, DIAL_RADIUS);
+			}
+		
+					//Page 6
+			Center7 = Center7P;
+
+
+			#ifdef PBL_COLOR
+			  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+			#else
+			  graphics_context_set_stroke_color(ctx, GColorWhite);
+			#endif
+			graphics_draw_circle(ctx, Center7, DIAL_RADIUS);
+
+			if(intPage == 7){
+
+				#ifdef PBL_COLOR
+				  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+				#else
+				  graphics_context_set_fill_color(ctx, GColorWhite);
+				#endif
+
+				graphics_fill_circle(ctx, Center7, DIAL_RADIUS);
+			}
+		
+			//Page 8
+			Center8 = Center8P;
+
+
+			#ifdef PBL_COLOR
+			  graphics_context_set_stroke_color(ctx, GColorJaegerGreen);
+			#else
+			  graphics_context_set_stroke_color(ctx, GColorWhite);
+			#endif
+			graphics_draw_circle(ctx, Center8, DIAL_RADIUS);
+
+			if(intPage == 8){
+
+				#ifdef PBL_COLOR
+				  graphics_context_set_fill_color(ctx, GColorJaegerGreen);
+				#else
+				  graphics_context_set_fill_color(ctx, GColorWhite);
+				#endif
+
+				graphics_fill_circle(ctx, Center8, DIAL_RADIUS);
+			}
 	}
 	  
 	
@@ -1084,12 +1304,12 @@ void handle_init(void)
 	s_res_local1 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
 	s_res_local2 = gbitmap_create_with_resource(LigaBBVA_escudos[0]);
 
-	
 	//Initialize the Message Service
 	SetupMessages();
 	
 	//Fill Locals array
 	SplitDateFromArrays();
+
 	
 	//Create the main window
 	s_window = window_create(); 
@@ -1360,12 +1580,7 @@ void handle_init(void)
 	  bitmap_layer_set_bitmap(visitor2_layer, escudo_visitante2);
 	  layer_add_child(window_get_root_layer(s_window),  bitmap_layer_get_layer(visitor2_layer));
 			
-	
-		//Invert layer for date and time
-		//inv_layer = inverter_layer_create(GRect(0, 0, 144, 57));
-		//layer_add_child(window_get_root_layer(s_window), (Layer*) inv_layer);
-		
-	
+
 		//check the Pebble model to determine if the image is colored or not
 			bitmap_layer_set_compositing_mode(local1_img, GCompOpSet);
 			bitmap_layer_set_compositing_mode(visitor1_layer, GCompOpSet);
