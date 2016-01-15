@@ -18,6 +18,83 @@
     "resources": {
         "media": [
             {
+                "file": "images/newellsOldBoys.png",
+                "name": "NOB",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/sanMartin.png",
+                "name": "SMA",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/sanLorenzo.png",
+                "name": "SLO",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/patronato.png",
+                "name": "PAT",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/gimnasiaLaPlata.png",
+                "name": "GLP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/banfield.png",
+                "name": "BAN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/arsenalSarandi.png",
+                "name": "ARSS",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/colon.png",
+                "name": "COLON",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/quilmes.png",
+                "name": "QUI",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/primeraDivisionArgentina.png",
+                "name": "primeraDivisionArgentina",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/riverPlate.png",
+                "name": "CARP",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
                 "file": "images/belgrano.png",
                 "name": "BELG",
                 "storageFormat": "pbi",
@@ -1266,7 +1343,7 @@
         "chalk"
     ],
     "uuid": "1f6720ca-a410-48b9-9135-ee57b4da4ee4",
-    "versionLabel": "3.5",
+    "versionLabel": "3.6",
     "watchapp": {
         "watchface": false
     }

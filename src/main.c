@@ -370,16 +370,16 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_GOD,
 	RESOURCE_ID_IND,
 	RESOURCE_ID_BELG,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
-	RESOURCE_ID_DUMMY,
+	RESOURCE_ID_CARP,
+	RESOURCE_ID_QUI,
+	RESOURCE_ID_COLON,
+	RESOURCE_ID_ARSS,
+	RESOURCE_ID_BAN,
+	RESOURCE_ID_GLP,
+	RESOURCE_ID_PAT,
+	RESOURCE_ID_SLO,
+	RESOURCE_ID_SMA,
+	RESOURCE_ID_NOB,
 };
 static const char Liga_Banner[] ={
 	RESOURCE_ID_LIGA_BBVA, //Liga BBVA (Spain)
@@ -389,7 +389,7 @@ static const char Liga_Banner[] ={
 	RESOURCE_ID_LigaNOS, //Liga Nos (Portugal)
 	RESOURCE_ID_premier, //Barcleys Premier League (England)
 	RESOURCE_ID_Ligue1, //Ligue 1 (France)
-	RESOURCE_ID_LIGA_BBVA, //Primera División (Argentina)
+	RESOURCE_ID_primeraDivisionArgentina, //Primera División (Argentina)
 };
 
 						  
@@ -462,6 +462,7 @@ int intVisitor;
 int intPage = 1;
 int i=0;
 int intLeague_Id = 1;
+int intLeague;
 
 //InverterLayer *inv_layer;
 
@@ -499,14 +500,14 @@ int intLeague_Id = 1;
 #define Center4Point	PBL_IF_ROUND_ELSE(GPoint(100, 165),GPoint(80, 160))
 #define Center5Point 	PBL_IF_ROUND_ELSE(GPoint(110, 165),GPoint(90, 160))
 
-#define Center1P	PBL_IF_ROUND_ELSE(GPoint(60, 165),GPoint(40, 160))
-#define Center2P	PBL_IF_ROUND_ELSE(GPoint(70, 165),GPoint(50, 160))
-#define Center3P	PBL_IF_ROUND_ELSE(GPoint(80, 165),GPoint(60, 160))
-#define Center4P	PBL_IF_ROUND_ELSE(GPoint(90, 165),GPoint(70, 160))
-#define Center5P 	PBL_IF_ROUND_ELSE(GPoint(100, 165),GPoint(80, 160))
-#define Center6P 	PBL_IF_ROUND_ELSE(GPoint(110, 165),GPoint(90, 160))
-#define Center7P 	PBL_IF_ROUND_ELSE(GPoint(120, 165),GPoint(100, 160))
-#define Center8P 	PBL_IF_ROUND_ELSE(GPoint(130, 165),GPoint(110, 160))
+#define Center1P	PBL_IF_ROUND_ELSE(GPoint(60, 160),GPoint(40, 160))
+#define Center2P	PBL_IF_ROUND_ELSE(GPoint(70, 160),GPoint(50, 160))
+#define Center3P	PBL_IF_ROUND_ELSE(GPoint(80, 160),GPoint(60, 160))
+#define Center4P	PBL_IF_ROUND_ELSE(GPoint(90, 160),GPoint(70, 160))
+#define Center5P 	PBL_IF_ROUND_ELSE(GPoint(100, 160),GPoint(80, 160))
+#define Center6P 	PBL_IF_ROUND_ELSE(GPoint(110, 160),GPoint(90, 160))
+#define Center7P 	PBL_IF_ROUND_ELSE(GPoint(120, 160),GPoint(100, 160))
+#define Center8P 	PBL_IF_ROUND_ELSE(GPoint(130, 160),GPoint(110, 160))
 
 static Window *s_window;
 static GBitmap *s_res_visitor1;
@@ -590,14 +591,14 @@ void handle_tick(struct tm *tick_time, TimeUnits units_changed)
 //Get the LeagueID
 int getLeague(char* Array)
 {
-	int intLeagueID;
+
 	//Get the right League Header
 
-		intLeagueID = Array[1] - '0';
+		intLeague = Array[1] - '0';
 
 	
 	
-	return intLeagueID;
+	return intLeague;
 }
 
 void LaLiga_FillArrLocal(char* Locals, int intPage, int intLeague)
@@ -733,7 +734,6 @@ void LaLiga_FillArrVisitor(char* Visitors, int intPage, int intLeague)
 		intVisitor = a+b+intArrayStartPos;
 
 		memcpy(&visitor2, LigaBBVA[intVisitor], strlen(LigaBBVA[intVisitor])+1);
-		//if (escudo_visitante2!=NULL) {gbitmap_destroy(escudo_visitante2);}
 		gbitmap_destroy(escudo_visitante2);
 		escudo_visitante2 = gbitmap_create_with_resource(LigaBBVA_escudos[intVisitor]);
 	}
@@ -923,8 +923,7 @@ void LaLiga_FillArrLiveMinute(char* Matches, char* Status, int intPage, int intL
 
 static void SplitDateFromArrays(void) {
 	
-	        int intLeague;
-	        intLeague = getLeague(txtStatuses);
+	 intLeague = getLeague(txtStatuses);
 	
 		if ((intPage > 5) && (intLeague != 7)){
 			//if the active page is not valid, reset to first page. 
@@ -982,8 +981,6 @@ static void send_cmd(void) {
 	void PageDown(ClickRecognizerRef recognizer, void *context)
 		{
 		
-			int intLeague;
-	        intLeague = getLeague(txtStatuses);
 		
 			//Default Page Limit to 5 (regular league with 20 teams)
 			int intPageLimit = 5;
@@ -1090,8 +1087,6 @@ static void sync_tuple_changed_callback(const uint32_t key,
 
 void DrawPageIndicator(Layer *me, GContext *ctx)
 {
-	int intLeague;
-	intLeague = getLeague(txtStatuses);
 	
 	//Page 1
 	if (intLeague == 7){Center1 = Center1P;}
