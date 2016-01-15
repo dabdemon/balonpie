@@ -18,6 +18,34 @@
     "resources": {
         "media": [
             {
+                "file": "images/belgrano.png",
+                "name": "BELG",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/atleticoIndependiente.png",
+                "name": "IND",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/godoyCruz.png",
+                "name": "GOD",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
+                "file": "images/rosarioCentral.png",
+                "name": "CEN",
+                "storageFormat": "pbi",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            }, 
+            {
                 "file": "images/olimpo.png",
                 "name": "OLI",
                 "storageFormat": "pbi",
