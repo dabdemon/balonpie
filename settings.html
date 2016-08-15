@@ -20,7 +20,7 @@
                 <div data-role='content'>
 
 
-                        <div class="col-sm-4">
+                        <div class="col-sm-4" align="center">
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="ZSAMATFK3GRAL">
@@ -36,16 +36,40 @@
                     <div data-role="fieldcontain">
                         <label for="league_id">Select League:</label>
                         <select name="league_id" id="league_id" data-theme="c" data-track-theme="d">
-                            <option value="1">Liga BBVA</option>
+                            <option value="1">La Liga</option>
                             <option value="7">Serie A</option>
                             <option value="8">Bundesliga</option>
+                            <option value="10">Premier League</option>
+                            <!--
+                            <option value="16">Ligue 1</option>
+                            -->
+                            <option value="19">Liga Nos</option>
                             <option value="69">MLS</option>
+                            <!--
+                            <option value="675">Primera División Argentina</option>
+                            -->
+                        </select>
+                    </div>
+                    
+                    <div data-role="fieldcontain">
+                        <label for="my_team">My Team:</label>
+                        <select name="my_team" id="my_team" data-theme="c" data-track-theme="d">
+                        </select>
+                    </div>
+                    
+                    <div data-role="fieldcontain">
+                        <label for="timeline_pins">Enable Timeline Pins for:</label>
+                        <select name="timeline_pins" id="timeline_pins" data-theme="c" data-track-theme="d">
+                            <option value="0">No Timeline Pins</option>
+                            <option value="1">League</option>
+                            <option value="2">My Team</option>
                         </select>
                     </div>
                     
                     
                      <div class='ui-body ui-body-b'>
                         <fieldset class='ui-grid-a'>
+                            <button class="btn btn-warning" type="submit" id="b-support">Support</button>
                             <div class='ui-block-a'><button type='submit' data-theme='d' id='b-cancel'>Cancel</button></div>
                             <div class='ui-block-b'><button type='submit' data-theme='b' id='b-submit'>Submit</button></div>
                         </fieldset>
@@ -54,6 +78,10 @@
                     <br>
                     <div align = "center">
                         <h4 class = "text-default">Made with <span class="text-danger"><b>&hearts;</b></span> in Spain</h4>
+                    </div>
+                    
+                    <div align = "center">
+                        <img src="img/logo-rf-2.png">
                     </div>
 
                 </div>
@@ -74,11 +102,223 @@
                 function saveOptions() {
                     var options = {
                         'league_id': $('#league_id').val(),
-                        'version' : "3.1"
+                        'my_team' : $('#my_team').val(),
+                        'timeline_pins' : $('#timeline_pins').val(),
+                        'version' : "3.7"
                     }
                     return options;
                 }
                 $().ready(function() {
+                    
+                    $('#league_id').change(function(){
+                        //fill the "My Team" options based on the selected league.
+                        if ($('#league_id').val() == "1"){
+                            //La Liga BBVA
+                            $("#my_team").html("<option value='ALA'>Alavés</option>" + 
+                                               "<option value='ATH'>Athletic de Bilbao</option> " + 
+                                               "<option value='ATM'>Atlético de Madrid</option>" +
+                                               "<option value='FCB'>Barcelona</option>" + 
+                                               "<option value='BET'>Betis</option>" + 
+                                               "<option value='CEL'>Celta de Vigo</option>" + 
+                                               "<option value='DEP'>Deportivo de la Coruña</option>" + 
+                                               "<option value='EIB'>Eibar</option>" + 
+                                               "<option value='ESP'>Espanyol</option>" + 
+                                               "<option value='GRA'>Granada</option>" + 
+                                               "<option value='UDL'>Las Palmas</option>" +
+                                               "<option value='LEG'>Leganés</option>" + 
+                                               "<option value='MAL'>Málaga</option>" + 
+                                               "<option value='OSA'>Osasuna</option>" + 
+                                               "<option value='RMA'>Real Madrid</option>" + 
+                                               "<option value='RSO'>Real Sociedad</option>" + 
+                                               "<option value='SEV'>Sevilla</option>" + 
+                                               "<option value='SPO'>Sporting de Gijón</option>" + 
+                                               "<option value='VCF'>Valencia</option>" + 
+                                               "<option value='VIL'>Villareal</option>" 
+                                              );
+                        }
+                        else if ($('#league_id').val() == "7"){
+                            //Serie A
+                            $("#my_team").html("<option value='ATL'>Atalanta</option> " + 
+                                                "<option value='BOL'>Bologna</option>" +
+                                               "<option value='CAG'>Cagliari</option>" +
+                                               "<option value='CHI'>Chievo</option>" + 
+                                               "<option value='CRO'>Crotone</option>" + 
+                                               "<option value='EMP'>Empoli</option>" + 
+                                               "<option value='FIO'>Fiorentina</option>" + 
+                                               "<option value='GEN'>Genoa</option>" + 
+                                               "<option value='INT'>Inter</option>" + 
+                                               "<option value='JUV'>Juventus</option>" + 
+                                               "<option value='LAZ'>Lazio</option>" + 
+                                               "<option value='ACM'>Milan</option>" + 
+                                               "<option value='NAP'>Napoli</option>" + 
+                                               "<option value='PAL'>Palermo</option>" + 
+                                               "<option value='PES'>Pescara</option>" + 
+                                               "<option value='ROM'>Roma</option>" + 
+                                               "<option value='SAM'>Sampdoria</option>" + 
+                                               "<option value='SAS'>Sassuolo Calcio</option>" + 
+                                               "<option value='TOR'>Torino</option>" + 
+                                               "<option value='UDI'>Udinese</option>" 
+                                              );
+                            
+                         }
+                        else if ($('#league_id').val() == "8"){
+                            //Bundesliga
+                            $("#my_team").html("<option value='LEV'>B. Leverkusen</option>" + 
+                                               "<option value='BYM'>Bayern Munchen</option>" + 
+                                               "<option value='BVB'>B. Dortmund</option>" + 
+                                               "<option value='MON'>Borussia Monchengladbach</option>" + 
+                                               "<option value='DAR'>Darmstadt 98</option>" + 
+                                               "<option value='EIN'>Eintracht Frankfurt</option>" + 
+                                               "<option value='AUG'>FC Augsburg</option>" + 
+                                               "<option value='ING'>FC Ingolstadt</option>" +
+                                               "<option value='SCF'>Freiburg</option> " + 
+                                               "<option value='COL'>Köln</option>" + 
+                                               "<option value='HSV'>Hamburger SV</option> " + 
+                                               "<option value='HOF'>Hoffenheim</option>" + 
+                                               "<option value='HER'>Hertha BSC</option>" + 
+                                               "<option value='M05'>Mainz 05</option>" + 
+                                               "<option value='RBL'>RB Leipzig</option>" +
+                                               "<option value='S04'>Schalke 04</option>" +
+                                               "<option value='BRE'>Werder Bremen</option>" +                                            
+                                               "<option value='WOL'>Wolfsburg</option>" 
+                                              );
+                        }
+                        else if ($('#league_id').val() == "10"){
+                            //Premier League
+                            $("#my_team").html("<option value='BOU'>AFC Bournemouth</option>"+
+                                                "<option value='ARS'>Arsenal</option>"+
+                                                "<option value='BUR'>Burnley</option>"+
+                                                "<option value='CHE'>Chelsea</option>"+
+                                                "<option value='CRY'>Crystal Palace</option>"+
+                                                "<option value='EVE'>Everton</option>"+
+                                                "<option value='HUL'>Hull City</option>"+
+                                                "<option value='LEI'>Leicester</option>"+
+                                                "<option value='LIV'>Liverpool</option>"+
+                                                "<option value='MCI'>Manchester City</option>"+
+                                                "<option value='MUN'>Manchester United</option>"+
+                                                "<option value='MID'>Middlesbrough</option>"+
+                                                "<option value='SOU'>Southampton</option>"+
+                                                "<option value='STK'>Stoke City</option>"+
+                                                "<option value='SUN'>Sunderland</option>"+
+                                                "<option value='SWA'>Swansea City</option>"+
+                                                "<option value='TOT'>Tottenham Hotspur</option>"+
+                                                "<option value='WAT'>Watford</option>"+
+                                                "<option value='WBA'>West Bromwich Albion</option>"+
+                                                "<option value='WHU'>West Ham</option>"
+                                              );
+                            
+                        }
+                        else if ($('#league_id').val() == "19"){
+                            //Liga Nos
+                            $("#my_team").html(
+                                                "<option value='ARO'>Arouca</option>"+
+                                                "<option value='BEL'>Belenenses</option>"+
+                                                "<option value='BEN'>Benfica</option>"+
+                                                "<option value='BOA'>Boavista</option>"+
+                                                "<option value='CHA'>Chaves</option>"+
+                                                "<option value='EST'>Estoril</option>"+
+                                                "<option value='FEI'>Feirense</option>"+
+                                                "<option value='MAR'>Marítimo</option>"+
+                                                "<option value='MOR'>Moreirense</option>"+
+                                                "<option value='NAC'>Nacional</option>"+
+                                                "<option value='PFE'>Paços de Ferreira</option>"+
+                                                "<option value='POR'>Porto</option>"+
+                                                "<option value='RAV'>Rio Ave</option>"+
+                                                "<option value='BRA'>Sporting Braga</option>"+
+                                                "<option value='SPO'>Sporting CP</option>"+
+                                                "<option value='TON'>Tondela</option>"+
+                                                "<option value='GUI'>Vitória Guimarães</option>"+
+                                                "<option value='SET'>Vitória Setúbal</option>"
+                                              );
+                            
+                        }
+                        else if ($('#league_id').val() == "16"){
+                            //League 1
+                            $("#my_team").html("<option value='SCO'> Angers SCO</option>" + 
+                                                "<option value='SCB'> Bastia</option>" + 
+                                                "<option value='SMC'> Caen </option>" + 
+                                                "<option value='GFC'> Gazélec Ajaccio</option>" + 
+                                                "<option value='BOR'> Girondins Bordeaux</option>" + 
+                                                "<option value='EAG'> Guingamp</option>" + 
+                                                "<option value='LIL'> Lille</option>" + 
+                                                "<option value='FCL'> Lorient</option>" + 
+                                                "<option value='ASM'> Monaco</option>" + 
+                                                "<option value='MON'> Montpellier</option>" + 
+                                                "<option value='FCN'> Nantes</option>" + 
+                                                "<option value='NIC'> Nice</option>" + 
+                                                "<option value='OL'> Olympique Lyonnais</option>" + 
+                                                "<option value='OM'> Olympique de Marseille</option>" + 
+                                                "<option value='REN'> Rennes</option>" + 
+                                                "<option value='STE'> Saint Etienne</option>" + 
+                                                "<option value='SDR'> Stade de Reims</option>" + 
+                                                "<option value='TFC'> Toulouse</option>" + 
+                                                "<option value='EST'> Troyes</option>" + 
+                                                "<option value='PSG'>Paris Saint-Germain</option>"
+                                            );
+                        }
+                        else if ($('#league_id').val() == "69"){
+                            //MLS
+                            $("#my_team").html("<option value='CHI'>Chicago Fire</option>"+
+                                                "<option value='COL'>Colorado Rapids</option>"+
+                                                "<option value='CLB'>Columbus Crew</option>"+
+                                                "<option value='DCU'>DC United</option>"+
+                                                "<option value='FCD'>FC Dallas</option>"+
+                                                "<option value='HOU'>Houston Dynamo</option>"+
+                                                "<option value='SKC'>Kansas City Sporting</option>"+
+                                                "<option value='LAG'>Los Angeles Galaxy</option>"+
+                                                "<option value='MTL'>Montreal Impact</option>"+
+                                                "<option value='NER'>New England Revolution</option>"+
+                                                "<option value='NYC'>New York City</option>"+
+                                                "<option value='NYR'>New York RB</option>"+
+                                                "<option value='ORL'>Orlando City</option>"+
+                                                "<option value='PHI'>Philadelphia Union</option>"+
+                                                "<option value='POR'>Portland Timbers</option>"+
+                                                "<option value='RSL'>Real Salt Lake</option>"+
+                                                "<option value='SJE'>San Jose Earthquakes</option>"+
+                                                "<option value='SEA'>Seattle Sounders</option>"+
+                                                "<option value='TFC'>Toronto FC</option>"+
+                                                "<option value='VAN'>Vancouver Whitecaps</option>"
+                                              );
+                            
+                        }
+                        else if ($('#league_id').val() == "675"){
+                            //Primera División Argentina
+                            $("#my_team").html("<option value='ALD'>Aldosivi</option>"+
+                                                "<option value='ARG'>Argentinos Juniors</option>"+
+                                                "<option value='ARS'>Arsenal de Sarandi</option>"+
+                                                "<option value='ATT'>Atl.Tucumán</option>"+
+                                                "<option value='RAF'>Atlético Rafaela</option>"+
+                                                "<option value='BAN'>Banfield</option>"+
+                                                "<option value='BEL'>Belgrano</option>"+
+                                                "<option value='BOC'>Boca Juniors</option>"+
+                                                "<option value='HUR'>CA Huracán</option>"+
+                                                "<option value='COL'>Colón</option>"+
+                                                "<option value='DYJ'>Defensa y Justicia</option>"+
+                                                "<option value='EST'>Estudiantes La Plata</option>"+
+                                                "<option value='GLP'>Gimnasia La Plata</option>"+
+                                                "<option value='GOD'>Godoy Cruz</option>"+
+                                                "<option value='IND'>Independiente</option>"+
+                                                "<option value='LAN'>Lanús</option>"+
+                                                "<option value='NOB'>Newell's Old Boys</option>"+
+                                                "<option value='OLI'>Olimpo</option>"+
+                                                "<option value='PAT'>Patronato</option>"+
+                                                "<option value='QUI'>Quilmes</option>"+
+                                                "<option value='RAC'>Racing Club</option>"+
+                                                "<option value='RIV'>River Plate</option>"+
+                                                "<option value='CEN'>Rosario Central</option>"+
+                                                "<option value='SLO'>San Lorenzo</option>"+
+                                                "<option value='SMA'>San Martín San Juan</option>"+
+                                                "<option value='SAR'>Sarmiento</option>"+
+                                                "<option value='TEM'>Temperley</option>"+
+                                                "<option value='TIG'>Tigre</option>"+
+                                                "<option value='UNI'>Unión Santa Fé</option>"+
+                                                "<option value='VEL'>Velez Sarsfield</option>"
+                                              );
+                            
+                        }
+                        //refresh and force rebuild
+                        $("#my_team").selectmenu('refresh', true);
+                    });
                   
                     $('#b-cancel').click(function() {
                         document.location = 'pebblejs://close#';
@@ -86,7 +326,17 @@
                     $('#b-submit').click(function() {
                         document.location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(saveOptions()));
                     });
+                      $('#b-support').click(function() {
+                        var body = '***** %0D%0A Please, explain as accurate as you could what your problem is  %0D%0A*****%0D%0A %0D%0A %0D%0A ***** %0D%0A  DO NOT REMOVE THIS  %0D%0A *****%0D%0A';
+                        var settings = encodeURIComponent(JSON.stringify(saveOptions()));
+                        var to = 'pebbleweather@gmail.com';
+                        var subject = 'Support Required - Football Pal Settings';
+                        document.location.href = "mailto:"+to+"?subject="+subject+"&body="+body + settings;
+                    });
+                    
                     $('#league_id').val(getQueryVariable('league_id')).change();
+                    $('#my_team').val(getQueryVariable('my_team')).change();
+                    $('#timeline_pins').val(getQueryVariable('timeline_pins')).change();
                 });
             </script>
             </body>
