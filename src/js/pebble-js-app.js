@@ -13,70 +13,73 @@ var league_id = "1"; // 1 = Liga BBVA, 7 = Serie A, 8 = Bundesliga,
 //key original = 721430254d3a0ca7684955899533eb08
 
 var LigaBBVA = {
-	//Liga BBVA (Spain) (2016) [LEAGUE 0]
-	214628 : "01", // "MAL", //Málaga
-	214626 : "02", //"ATH", //Athletic de Bilbao
-	214624 : "03", //"SEV", //Sevilla
-	214623 : "04", //"VCF", //Valencia
-	214635 : "05", //"GRA", //Granada
-	214634 : "06", //"DEP", //Deportivo
-	214619 : "07", //Sporting de Gijón
-	214629 : "08", //"ESP", //Español
-	214636 : "09", //"EIB", //Eibar
-	214631 : "10", //"RSO", //Real Sociedad
-	214627 : "11", //"CEL", //Celta de Vigo
-	214633 : "12", //"GET", //Getafe
-	214632 : "13", //"LEV", //Levante
-	214625 : "14", //"VIL", //Villareal
-	214621 : "15", //"RMA", //Real Madrid
-	214618 : "16", //Betis
-	214630 : "17", //"RAY", //Rayo Vallecano
-	214622 : "18", //"ATM", //Atlético de Madrid
-	214620 : "19", //"FCB", //Barça
-	218388 : "20", //Las Palmas
-	//Serie A (Italy) (2015) [LEAGUE 1]
-	212687 : "01", // "EMP", //Empoli
-	212697 : "02", //"ROM", //Roma
-	212692 : "03", //"JUV", //Juventus
-	212701 : "04", //"UDI", //Udinese
-	212698 : "05", //"SAM", //Sampdoria
-	212700 : "06", //"TOR", //Torino
-	212688 : "07", //"FIO", //Fiorentina
-	212689 : "08", //"GEN", //Genoa
-	212703 : "09", //"CAR", //Carpi
-	212685 : "10", //"ATL", //Atalanta
-	212691 : "11", //"INT", //Inter
-	212699 : "12", //"SAS", //Sassuolo Calcio
-	212695 : "13", //"NAP", //Napoli
-	212686 : "14", //"CHI", //Chievo
-	212693 : "15", //"LAZ", //Lazio
-	212702 : "16", //"BOL", //Bologna
-	212704 : "17", //"FRO", //Frosinone
-	212694 : "18", //"ACM", //Milan
-	212690 : "19", //"HLL", //Hellas Verona
-	212696 : "20", //"PAL", //Palermo
-	//Bundesliga (Germany) (2016) [League 2]
-	210688  : "01", // "Hamburger SV"
-	210694  : "02", //"Schalke 04"
-	210689  : "03", //"Hannover 96"
-	210698  : "04", //FC Ingolstadt 
-	210685  : "05", // "Borussia Monchengladbach"
-	210687  : "06", //"FC Augsburg"
-	210684  : "07", //"Bayern Munchen"
-	210693  : "08", //"Mainz 05"
-	210692  : "09", //"Köln""
-	210697  : "10", //"Wolfsburg"
-	210686  : "11", //Eintracht Frankfurt
-	210683  : "12", //B. Leverkusen
-	210691  : "13", //Hoffenheim 
-	210690  : "14", //Hertha BSC
-	210682  : "15", //B. Dortmund
-	210696  : "16", //Werder Bremen
-	210699  : "17", //Darmstadt 98
-	210695  : "18", //Stuttgart 
+	//Liga BBVA (Spain) (2017) [LEAGUE 0]
+	704143 : "01", // "MAL", //Málaga
+	704134 : "02", //"ATH", //Athletic de Bilbao
+	704147 : "03", //"SEV", //Sevilla
+	704149 : "04", //"VCF", //Valencia
+	704141 : "05", //"GRA", //Granada
+	704138 : "06", //"DEP", //Deportivo
+	704148 : "07", //Sporting de Gijón
+	704140 : "08", //"ESP", //Español
+	704139 : "09", //"EIB", //Eibar
+	704144 : "10", //"RSO", //Real Sociedad
+	704137 : "11", //"CEL", //Celta de Vigo
+	710097 : "12", //"OSA", //Osasuna --
+	704151 : "13", //"ALA", Alavés --
+	704150 : "14", //"VIL", //Villareal
+	704146 : "15", //"RMA", //Real Madrid
+	704145 : "16", //Betis
+	710098 : "17", //"LEG", Leganés --
+	704135 : "18", //"ATM", //Atlético de Madrid
+	704136 : "19", //"FCB", //Barça
+	704142 : "20", //Las Palmas
+
+	//Serie A (Italy) (2017) [LEAGUE 1]
+	706182 : "01", // "EMP", //Empoli
+	706191 : "02", //"ROM", //Roma
+	706186 : "03", //"JUV", //Juventus
+	706195 : "04", //"UDI", //Udinese
+	706192 : "05", //"SAM", //Sampdoria
+	706194 : "06", //"TOR", //Torino
+	706183 : "07", //"FIO", //Fiorentina
+	706184 : "08", //"GEN", //Genoa
+	709864 : "09", //"CAG", //Cagliari
+	706179 : "10", //"ATL", //Atalanta
+	706185 : "11", //"INT", //Inter
+	706193 : "12", //"SAS", //Sassuolo Calcio
+	706189 : "13", //"NAP", //Napoli
+	706181 : "14", //"CHI", //Chievo
+	706187 : "15", //"LAZ", //Lazio
+	706180 : "16", //"BOL", //Bologna
+	709865 : "17", //"CRO", //Crotone
+	706188 : "18", //"ACM", //Milan
+	709866 : "19", //"PES", //Pescara
+	706190 : "20", //"PAL", //Palermo
+
+	//Bundesliga (Germany) (2017) [League 2]
+	701941  : "01", // "Hamburger SV"
+	701947  : "02", //"Schalke 04"
+	701950 : "03", //SC Freiburg
+	701944  : "04", //FC Ingolstadt 
+	701937  : "05", // "Borussia Monchengladbach"
+	701940  : "06", //"FC Augsburg"
+	701936  : "07", //"Bayern Munchen"
+	701946  : "08", //"Mainz 05"
+	701945  : "09", //"Köln""
+	701949  : "10", //"Wolfsburg"
+	701939  : "11", //Eintracht Frankfurt
+	701935  : "12", //B. Leverkusen
+	701943  : "13", //Hoffenheim 
+	701942  : "14", //Hertha BSC
+	701934  : "15", //B. Dortmund
+	701948  : "16", //Werder Bremen
+	701938  : "17", //Darmstadt 98
+	701951 : "18", //RB Leipzig
 	//59 : dummy
 	//60 : dummy
-	//MLS (USA) (2015) [League 3]
+
+	//MLS (USA) (2016) [League 3]
 	581486 : "01", //Kansas City Sporting
 	581482 : "02", //Toronto FC
 	581473 : "03", //Chicago Fire
@@ -97,48 +100,50 @@ var LigaBBVA = {
 	581481 : "18", //Philadelphia Union
 	581479 : "19", //New York RB
 	581485 : "20", //Houston Dynamo
-	//Liga Nos (Portugal) - (2016) [League 4]
-	214934 : "01", //Belenenses 
-	214943 : "02", //Rio Ave
-	214935 : "03", //Benfica
-	214937 : "04", //Estoril
-	214944 : "05", //Sporting Braga
-	214940 : "06", //Nacional
-	214941 : "07", //Paços de Ferreira
-	214932 : "08", //Academica
-	214939 : "09", //Moreirense
-	214933 : "10", //Arouca
-	214954 : "11", //Vitória Setúbal
-	214936 : "12", //Boavista
-	214942 : "13", //Porto
-	214953 : "14", //Vitória Guimarães
-	214951 : "15", //União Madeira
-	214938 : "16", //Marítimo 
-	214948 : "17", //Tondela
-	214947 : "18", //Sporting CP
+
+	//Liga Nos (Portugal) - (2017) [League 4]
+	707538 : "01", //Belenenses 
+	707547 : "02", //Rio Ave
+	707539 : "03", //Benfica
+	707541 : "04", //Estoril
+	707548 : "05", //Sporting Braga
+	707544 : "06", //Nacional
+	707545 : "07", //Paços de Ferreira
+	707581 : "08", //Feirense
+	707543 : "09", //Moreirense
+	707537 : "10", //Arouca
+	707552 : "11", //Vitória Setúbal
+	707540 : "12", //Boavista
+	707546 : "13", //Porto
+	707551 : "14", //Vitória Guimarães
+	707580 : "15", //Chaves
+	707542 : "16", //Marítimo 
+	707550 : "17", //Tondela
+	707549 : "18", //Sporting CP
 	//"99": Dummy
 	//"100": Dummy
-	//Barclays Premier League (England) [League 5]
-	210922 : "01", //Manchester United
-	210928 : "02", //Tottenham Hotspur
-	210918 : "03", //Everton
-	210931 : "04", //Watford
-	210932 : "05", //AFC Bournemouth
-	210915 : "06", //Aston Villa
-	210919 : "07", //Leicester
-	210926 : "08", //Sunderland
-	210933 : "09", //Norwich City
-	210917 : "10", //Crystal Palace
-	210916 : "11", //Chelsea
-	210927 : "12", //Swansea City
-	210923 : "13", //NewCastle
-	210924 : "14", //Southampton
-	210914 : "15", //Arsenal
-	210930 : "16", //West Ham
-	210925 : "17", //Stoke City
-	210920 : "18", //Liverpool
-	210929 : "19", //West Bromwich Albion
-	210921 : "20", //Manchester City
+	//Premier League (England) - (2017) [League 5]
+	702058 : "01", //Manchester United
+	702063 : "02", //Tottenham Hotspur
+	702054 : "03", //Everton
+	702064 : "04", //Watford
+	702050 : "05", //AFC Bournemouth
+	703228: "06", //Hull City
+	702055 : "07", //Leicester
+	702061 : "08", //Sunderland
+	702067 : "09", //Burnley
+	702053 : "10", //Crystal Palace
+	702052 : "11", //Chelsea
+	702062 : "12", //Swansea City
+	//210923 : "13", //NewCastle
+	702068 : "13", //Middlesbrough
+	702059 : "14", //Southampton
+	702051 : "15", //Arsenal
+	702066 : "16", //West Ham
+	702060 : "17", //Stoke City
+	702056 : "18", //Liverpool
+	702065 : "19", //West Bromwich Albion
+	702057 : "20", //Manchester City
 	//Ligue 1 (France) [League 6]
 	210445 : "01", //PSG
 	210433 : "02", //Bastia
@@ -196,71 +201,66 @@ var LigaBBVA = {
 
 var TeamShortName = {
 	//Liga BBVA (Spain)
-	214628  : "MAL", //Málaga
-	214626  : "ATH", //Athletic de Bilbao
-	214624  : "SEV", //Sevilla
-	214623  : "VCF", //Valencia
-	214635  : "GRA", //Granada
-	214634  : "DEP", //Deportivo
-	//69606 : "ALM", //Almeria
-	214619 : "SPO", //Sporting de Gijón
-	214629  : "ESP", //Español
-	214636  : "EIB", //Eibar
-	214631  : "RSO", //Real Sociedad
-	214627  : "CEL", //Celta de Vigo
-	214633  : "GET", //Getafe
-	214632  : "LEV", //Levante
-	214625  : "VIL", //Villareal
-	214621  : "RMA", //Real Madrid
-	//69894 : "COR", //Córdoba
-	214618  : "BET", //Betis
-	214630  : "RAY", //Rayo Vallecano
-	214622  : "ATM", //Atlético de Madrid
-	214620  : "FCB", //Barça
-	//69605 : "ELC", //Elche
-	218388 : "UDL", //Las Palmas
+	704143 : "MAL", //Málaga
+	704134 : "ATH", //Athletic de Bilbao
+	704147 : "SEV", //Sevilla
+	704149 : "VCF", //Valencia
+	704141 : "GRA", //Granada
+	704138 : "DEP", //Deportivo
+	704148 : "SPO", //Sporting de Gijón
+	704140 : "ESP", //Español
+	704139 : "EIB", //Eibar
+	704144 : "RSO", //Real Sociedad
+	704137 : "CEL", //Celta de Vigo
+	710097 : "OSA", //Osasuna --
+	704151 : "ALA", //Alavés --
+	704150 : "VIL", //Villareal
+	704146 : "RMA", //Real Madrid
+	704145 : "BET", //Betis
+	710098 : "LEG", //Leganés --
+	704135 : "ATM", //Atlético de Madrid
+	704136 : "FCB", //Barça
+	704142 : "UDL", //Las Palmas
 	//Serie A (Italy)
-	212687 : "EMP", //Empoli
-	212697 : "ROM", //Roma
-	212692 : "JUV", //Juventus
-	212701 : "UDI", //Udinese
-	212698 : "SAM", //Sampdoria
-	212700 : "TOR", //Torino
-	212688 : "FIO", //Fiorentina
-	212689 : "GEN", //Genoa
-	212703 : "CAR", //Carpi
-	212685 : "ATL", //Atalanta
-	212691 : "INT", //Inter
-	212699 : "SAS", //Sassuolo Calcio
-	212695 : "NAP", //Napoli
-	212686 : "CHI", //Chievo
-	212693 : "LAZ", //Lazio
-	212702 : "BOL", //Bologna
-	212704 : "FRO", //Frosinone
-	212694 : "ACM", //Milan
-	212690 : "HLL", //Hellas Verona
-	212696 : "PAL", //Palermo
+	706182 : "EMP", //Empoli
+	706191 : "ROM", //Roma
+	706186 : "JUV", //Juventus
+	706195 : "UDI", //Udinese
+	706192 : "SAM", //Sampdoria
+	706194 : "TOR", //Torino
+	706183 : "FIO", //Fiorentina
+	706184 : "GEN", //Genoa
+	709864 : "CAG", //Cagliari
+	706179 : "ATL", //Atalanta
+	706185 : "INT", //Inter
+	706193 : "SAS", //Sassuolo Calcio
+	706189 : "NAP", //Napoli
+	706181 : "CHI", //Chievo
+	706187 : "LAZ", //Lazio
+	706180 : "BOL", //Bologna
+	709865 : "CRO", //Crotone
+	706188 : "ACM", //Milan
+	709866 : "PES", //Pescara
+	706190 : "PAL", //Palermo
 	//Bundesliga (Germany)
-	210688 : "HSV", // "Hamburger SV"
-	210694 : "S04", //"Schalke 04"
-	210689 : "HAN", //"Hannover 96"
-	//69546 : "SCF", //"SC Freiburg"
-	210698 : "ING", //FC Ingolstadt 
-	210685 : "MON", // "Borussia Monchengladbach"
-	210687 : "AUG", //"FC Augsburg"
-	210684 : "BYM", //"Bayern Munchen"
-	210693 : "M05", //"Mainz 05"
-	210692 : "COL", //"Köln""
-	210697 : "WOL", //"Wolfsburg"
-	210686 : "EIN", //Eintracht Frankfurt
-	210683 : "LEV", //B. Leverkusen
-	210691 : "HOF", //Hoffenheim 
-	210690 : "HER", //Hertha BSC
-	210682 : "BVB", //B. Dortmund
-	210696 : "BRE", //Werder Bremen
-	//69552 : "PAD", //Paderborn 
-	210699  : "DAR", //Darmstadt 98
-	210695 : "STU", //Stuttgart 
+	701941 : "HSV", // "Hamburger SV"
+	701947 : "S04", //"Schalke 04"
+	701950 : "SCF", //"SC Freiburg"
+	701944 : "ING", //FC Ingolstadt 
+	701937 : "MON", // "Borussia Monchengladbach"
+	701940 : "AUG", //"FC Augsburg"
+	701936 : "BYM", //"Bayern Munchen"
+	701946 : "M05", //"Mainz 05"
+	701945 : "COL", //"Köln""
+	701949 : "WOL", //"Wolfsburg"
+	701939 : "EIN", //Eintracht Frankfurt
+	701935 : "LEV", //B. Leverkusen
+	701943 : "HOF", //Hoffenheim 
+	701942 : "HER", //Hertha BSC
+	701934 : "BVB", //B. Dortmund
+	701948 : "BRE", //Werder Bremen
+	701938  :"DAR", //Darmstadt 98
+	701951 : "RBL", //RB Leipzig 
 	//MLS (USA)
 	581486 : "SKC", //Kansas City Sporting
 	581482 : "TFC", //Toronto FC
@@ -283,45 +283,45 @@ var TeamShortName = {
 	581479 : "NYR", //New York RB
 	581485 : "HOU", //Houston Dynamo
 	//Liga Nos (Portugal) - (2016)
-	214934 : "BEL", //Belenenses 
-	214943 : "RAV", //Rio Ave
-	214935 : "BEN", //Benfica
-	214937 : "EST", //Estoril
-	214944 : "BRA", //Sporting Braga
-	214940 : "NAC", //Nacional
-	214941 : "PFE", //Paços de Ferreira
-	214932 : "ACA", //Academica
-	214939 : "MOR", //Moreirense
-	214933 : "ARO", //Arouca
-	214954 : "SET", //Vitória Setúbal
-	214936 : "BOA", //Boavista
-	214942 : "POR", //Porto
-	214953 : "GUI", //Vitória Guimarães
-	214951 : "UNI", //União Madeira
-	214938 : "MAR", //Marítimo 
-	214948 : "TON", //Tondela
-	214947 : "SPO", //Sporting CP
+	707538 : "BEL", //Belenenses 
+	707547 : "RAV", //Rio Ave
+	707539 : "BEN", //Benfica
+	707541 : "EST", //Estoril
+	707548 : "BRA", //Sporting Braga
+	707544 : "NAC", //Nacional
+	707545 : "PFE", //Paços de Ferreira
+	707581 : "FEI", //Feirense
+	707543 : "MOR", //Moreirense
+	707537 : "ARO", //Arouca
+	707552 : "SET", //Vitória Setúbal
+	707540 : "BOA", //Boavista
+	707546 : "POR", //Porto
+	707551 : "GUI", //Vitória Guimarães
+	707580 : "CHA", //Chaves
+	707542 : "MAR", //Marítimo 
+	707550 : "TON", //Tondela
+	707549 : "SPO", //Sporting CP
 	//Barclays Premier League (England)
-	210922 : "MUN", //Manchester United
-	210928 : "TOT", //Tottenham Hotspur
-	210918 : "EVE", //Everton
-	210931 : "WAT", //Watford
-	210932 : "BOU", //AFC Bournemouth
-	210915 : "AVL", //Aston Villa
-	210919 : "LEI", //Leicester
-	210926 : "SUN", //Sunderland
-	210933 : "NOR", //Norwich City
-	210917 : "CRY", //Crystal Palace
-	210916 : "CHE", //Chelsea
-	210927 : "SWA", //Swansea City
-	210923 : "NEW", //NewCastle
-	210924 : "SOU", //Southampton
-	210914 : "ARS", //Arsenal
-	210930 : "WHU", //West Ham
-	210925 : "STK", //Stoke City
-	210920 : "LIV", //Liverpool
-	210929 : "WBA", //West Bromwich Albion
-	210921 : "MCI", //Manchester City
+	702058 : "MUN", //Manchester United
+	702063 : "TOT", //Tottenham Hotspur
+	702054 : "EVE", //Everton
+	702064 : "WAT", //Watford
+	702050 : "BOU", //AFC Bournemouth
+	703228 : "HUL", //Hull City
+	702055 : "LEI", //Leicester
+	702061 : "SUN", //Sunderland
+	702067 : "BUR", //Burnley
+	702053 : "CRY", //Crystal Palace
+	702052 : "CHE", //Chelsea
+	702062 : "SWA", //Swansea City
+	702068 : "MID", //Middlesbrough
+	702059 : "SOU", //Southampton
+	702051 : "ARS", //Arsenal
+	702066 : "WHU", //West Ham
+	702060 : "STK", //Stoke City
+	702056 : "LIV", //Liverpool
+	702065 : "WBA", //West Bromwich Albion
+	702057 : "MCI", //Manchester City
 	//Ligue 1 (France) 
 	210445 : "PSG", //PSG (Parc des Princes)
 	210433 : "SCB", //Bastia (Armand-Cesari-Furiani)
@@ -378,66 +378,66 @@ var TeamShortName = {
 
 var FieldName = {
 	//Liga BBVA (Spain)
-	214628  : "La Rosaleda", //Málaga
-	214626  : "San Mames", //Athletic de Bilbao
-	214624  : "Ramon Sanchez Pizjuan", //Sevilla
-	214623  : "Mestalla", //Valencia
-	214635  : "Nuevo Los Carmenes", //Granada
-	214634  : "Municipal Riazor", //Deportivo
-	214619  : "Municipal El Molinon", //Sporting de Gijón
-	214629  : "Power8 Stadium", //Español
-	214636  : "Municipal de Ipurua", //Eibar
-	214631  : "Anoeta", //Real Sociedad
-	214627  : "Balaidos", //Celta de Vigo
-	214633  : "Coliseum Alfonso Perez", //Getafe
-	214632  : "Ciutat de Valencia", //Levante
-	214625  : "El Madrigal", //Villareal
-	214621  : "Santiago Bernabeu", //Real Madrid
-	214618  : "Benito Villamarin", //Betis
-	214630  : "Vallecas", //Rayo Vallecano
-	214622  : "Vicente Calderon", //Atlético de Madrid
-	214620  : "Camp Nou", //Barça
-	218388  : "Gran Canaria", //Las Palmas
+	704143  : "La Rosaleda", //Málaga
+	704134  : "San Mames", //Athletic de Bilbao
+	704147  : "Ramon Sanchez Pizjuan", //Sevilla
+	704149  : "Mestalla", //Valencia
+	704141  : "Nuevo Los Carmenes", //Granada
+	704138  : "Municipal Riazor", //Deportivo
+	704148  : "Municipal El Molinon", //Sporting de Gijón
+	704140  : "Power8 Stadium", //Español
+	704139  : "Municipal de Ipurua", //Eibar
+	704144  : "Anoeta", //Real Sociedad
+	704137  : "Balaidos", //Celta de Vigo
+	704150  : "El Madrigal", //Villareal
+	704146  : "Santiago Bernabeu", //Real Madrid
+	704145  : "Benito Villamarin", //Betis
+	704135  : "Vicente Calderon", //Atlético de Madrid
+	704136  : "Camp Nou", //Barça
+	704142  : "Gran Canaria", //Las Palmas
+	710097  : "El Sadar", //Osasuna
+	704151  : "Mendizorroza", //Alavés
+	710098  : "Estadio Municipal de Butarque", //Leganés
 	//Serie A (Italy)
-	212687 : "Carlo Castellani", //Empoli
-	212697 : "Stadio Olimpico di Roma", //Roma
-	212692 : "Juventus Stadium", //Juventus
-	212701 : "Stadio Communale Friuli", //Udinese
-	212698 : "Stadio Luigi Ferraris", //Sampdoria
-	212700 : "Stadio Olimpico di Torino", //Torino
-	212688 : "Stadio Artemio Franchi", //Fiorentina
-	212689 : "Stadio Comunale Luigi Ferraris", //Genoa
-	212703 : "Stadio Sandro Cabassi", //Carpi
-	212685 : "Stadio Atleti Azzurri d'Italia", //Atalanta
-	212691 : "Stadio Giuseppe Meazza", //Inter
-	212699 : "Stadio Citta del Tricolore", //Sassuolo Calcio
-	212695 : "San Paolo", //Napoli
-	212686 : "Stadio Marc'Antonio Bentegodi", //Chievo
-	212693 : "Stadio Olimpico", //Lazio
-	212702 : "Stadio Renato Dall'Ara", //Bologna
-	212704 : "Stadio Comunale Matusa", //Frosinone
-	212694 : "San Siro", //Milan
-	212690 : "Stadio Marc'Antonio Bentegodi", //Hellas Verona
-	212696 : "Stadio Renzo Barbera", //Palermo
+	706182 : "Carlo Castellani", //Empoli
+	706191 : "Stadio Olimpico di Roma", //Roma
+	706186 : "Juventus Stadium", //Juventus
+	706195 : "Stadio Communale Friuli", //Udinese
+	706192 : "Stadio Luigi Ferraris", //Sampdoria
+	706194 : "Stadio Olimpico di Torino", //Torino
+	706183 : "Stadio Artemio Franchi", //Fiorentina
+	706184 : "Stadio Comunale Luigi Ferraris", //Genoa
+	709864 : "Stadio Is Arenas", //Cagliari
+	706179 : "Stadio Atleti Azzurri d'Italia", //Atalanta
+	706185 : "Stadio Giuseppe Meazza", //Inter
+	706193 : "Stadio Citta del Tricolore", //Sassuolo Calcio
+	706189 : "San Paolo", //Napoli
+	706181 : "Stadio Marc'Antonio Bentegodi", //Chievo
+	706187 : "Stadio Olimpico", //Lazio
+	706180 : "Stadio Renato Dall'Ara", //Bologna
+	709865 : "Ezio Scida", //Crotone
+	706188 : "San Siro", //Milan
+	709866 : "Stadio Adriatico-Giovanni Cornacchia", //Pescara
+	706190 : "Stadio Renzo Barbera", //Palermo
 	//Bundesliga (Germany)
-	210688 : "Imtech Arena", // "Hamburger SV"
-	210694 : "Arena AufSchalke", //"Schalke 04"
-	210689 : "HDI-Arena", //"Hannover 96"
-	210698  : "Audi-Sportpark", //FC Ingolstadt
-	210685 : "Borussia-Park", // "Borussia Monchengladbach"
-	210687 : "SGL Arena", //"FC Augsburg"
-	210684 : "Allianz Arena", //"Bayern Munchen"
-	210693 : "Coface Arena", //"Mainz 05"
-	210692 : "RheinEnergie", //"Köln""
-	210697 : "Volkswagen-Arena", //"Wolfsburg"
-	210686 : "Commerzbank-Arena", //Eintracht Frankfurt
-	210683 : "BayArena", //B. Leverkusen
-	210691 : "Wirsol Rhein-Neckar-Arena", //Hoffenheim 
-	210690 : "Olympiastadion Berlin", //Hertha BSC
-	210682 : "Signal Iduna Park", //B. Dortmund
-	210696 : "Weserstadion", //Werder Bremen
-	210699  : "Stadion am Bollenfalltor", //Darmstadt 98
-	210695 : "Mercedes-Benz-Arena", //Stuttgart 
+	701941 : "Imtech Arena", // "Hamburger SV"
+	701947 : "Arena AufSchalke", //"Schalke 04"
+	701950 : "Schwarzwald-Stadion", //"HSC Freiburg""
+	701944  : "Audi-Sportpark", //FC Ingolstadt
+	701937 : "Borussia-Park", // "Borussia Monchengladbach"
+	701940 : "SGL Arena", //"FC Augsburg"
+	701936 : "Allianz Arena", //"Bayern Munchen"
+	701946 : "Coface Arena", //"Mainz 05"
+	701945 : "RheinEnergie", //"Köln""
+	701949 : "Volkswagen-Arena", //"Wolfsburg"
+	701939 : "Commerzbank-Arena", //Eintracht Frankfurt
+	701935 : "BayArena", //B. Leverkusen
+	701943 : "Wirsol Rhein-Neckar-Arena", //Hoffenheim 
+	701942 : "Olympiastadion Berlin", //Hertha BSC
+	701934 : "Signal Iduna Park", //B. Dortmund
+	701948 : "Weserstadion", //Werder Bremen
+	701938  : "Stadion am Bollenfalltor", //Darmstadt 98
+	701951 : "Red Bull Arena", //RB Leipzig 
 	//MLS (USA)
 	581486 : "Sporting Park", //Kansas City Sporting
 	581482 : "BMO Field", //Toronto FC
@@ -460,45 +460,45 @@ var FieldName = {
 	581479 : "Red Bull Arena", //New York RB
 	581485 : "BBVA Compass Stadium", //Houston Dynamo
 	//Liga Nos (Portugal)
-	214934 : "Estadio do Restelo", //Belenenses 
-	214943 : "Estadio do Rio Ave Futebol Clube", //Rio Ave
-	214935 : "Estadio da Luz", //Benfica
-	214937 : "Estadio Antonio Coimbra da Mota", //Estoril
-	214944 : "Estadio AXA", //Sporting Braga
-	214940 : "Estadio da Madeira", //Nacional
-	214941 : "Estadio da Capital do Movel", //Paços de Ferreira
-	214932 : "Estadio Cidade de Coimbra", //Academica
-	214939 : "Comendador Joaquim Almeida Freitas", //Moreirense
-	214933 : "Estadio Municipal de Arouca", //Arouca
-	214954 : "Estadio do Bonfim", //Vitória Setúbal
-	214936 : "Bessa Seculo XXI", //Boavista
-	214942 : "Estadio Do Dragao", //Porto
-	214953 : "Estadio Dom Afonso Henriques", //Vitória Guimarães
-	214951 : "Estadio Municipal de Machico", //União Madeira
-	214938 : "Estadio dos Barreiros", //Marítimo 
-	214948 : "Joao Cardoso", //Tondela
-	214947 : "Jose Alvalade", //Sporting CP
+	707538 : "Estadio do Restelo", //Belenenses 
+	707547 : "Estadio do Rio Ave Futebol Clube", //Rio Ave
+	707539 : "Estadio da Luz", //Benfica
+	707541 : "Estadio Antonio Coimbra da Mota", //Estoril
+	707548 : "Estadio AXA", //Sporting Braga
+	707544 : "Estadio da Madeira", //Nacional
+	707545 : "Estadio da Capital do Movel", //Paços de Ferreira
+	707581 : "Estadio Marcolino de Castro", //Feirense
+	707543 : "Comendador Joaquim Almeida Freitas", //Moreirense
+	707537 : "Estadio Municipal de Arouca", //Arouca
+	707552 : "Estadio do Bonfim", //Vitória Setúbal
+	707540 : "Bessa Seculo XXI", //Boavista
+	707546 : "Estadio Do Dragao", //Porto
+	707551 : "Estadio Dom Afonso Henriques", //Vitória Guimarães
+	707580 : "Manuel Branco Teixeira", //Chaves
+	707542 : "Estadio dos Barreiros", //Marítimo 
+	707550 : "Joao Cardoso", //Tondela
+	707549 : "Jose Alvalade", //Sporting CP
 	//Barclays Premier League (England)
-	210922 : "Old Trafford", //Manchester United
-	210928 : "White Hart Lane", //Tottenham Hotspur
-	210918 : "Goodison Park", //Everton
-	210931 : "Vicarage Road Stadium", //Watford
-	210932 : "The Goldsands Stadium", //AFC Bournemouth
-	210915 : "Villa Park", //Aston Villa
-	210919 : "King Power Stadium", //Leicester
-	210926 : "Stadium of Light", //Sunderland
-	210933 : "Carrow Road", //Norwich City
-	210917 : "Selhurst Park", //Crystal Palace
-	210916 : "Stamford Bridge", //Chelsea
-	210927 : "Liberty Stadium", //Swansea City
-	210923 : "St. James Park", //NewCastle
-	210924 : "St. Marys Stadium", //Southampton
-	210914 : "Emirates Stadium", //Arsenal
-	210930 : "Boleyn Ground", //West Ham
-	210925 : "Britannia Stadium", //Stoke City
-	210920 : "Anfield", //Liverpool
-	210929 : "The Hawthorns", //West Bromwich Albion
-	210921 : "Etihad Stadium", //Manchester City
+	702058 : "Old Trafford", //Manchester United
+	702063 : "White Hart Lane", //Tottenham Hotspur
+	702054 : "Goodison Park", //Everton
+	702064 : "Vicarage Road Stadium", //Watford
+	702050 : "The Goldsands Stadium", //AFC Bournemouth
+	703228 : "Kingston Communications Stadium", //Hull City
+	702055 : "King Power Stadium", //Leicester
+	702061 : "Stadium of Light", //Sunderland
+	702067 : "Turf Moor", //Burnley
+	702053 : "Selhurst Park", //Crystal Palace
+	702052 : "Stamford Bridge", //Chelsea
+	702062 : "Liberty Stadium", //Swansea City
+	702068 : "Riverside Stadium", //Middlesbrough
+	702059 : "St. Marys Stadium", //Southampton
+	702051 : "Emirates Stadium", //Arsenal
+	702066 : "Boleyn Ground", //West Ham
+	702060 : "Britannia Stadium", //Stoke City
+	702056 : "Anfield", //Liverpool
+	702065 : "The Hawthorns", //West Bromwich Albion
+	702057 : "Etihad Stadium", //Manchester City
 	//Ligue 1 (France) 
 	210445 : "Parc des Princes", //PSG 
 	210433 : "Armand-Cesari-Furiani", //Bastia 
@@ -835,8 +835,8 @@ function getLigaBBVA(){
 ///////////////////////////////////////
 //Displays the configuration page in the phone
 Pebble.addEventListener('showConfiguration', function(e) {
-  //var uri = 'http://yweather.es/fpsettings35.html?' + //PRO
-	var uri = 'http://dabdemon.github.io/balonpie/development.html?' + //DEV
+  var uri = 'http://yweather.es/fpsettings37.html?' + //PRO
+	//var uri = 'http://dabdemon.github.io/balonpie/development.html?' + //DEV
 	'&league_id=' + encodeURIComponent(options.league_id)+
 	'&my_team=' + encodeURIComponent(options.my_team)+
 	'&timeline_pins=' + encodeURIComponent(options.timeline_pins);

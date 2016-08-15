@@ -22,12 +22,12 @@ static const char *LigaBBVA[] = {
 	"EIB", //Eibar
 	"RSO", //Real Sociedad
 	"CEL", //Celta de Vigo
-	"GET", //Getafe
-	"LEV", //Levante
+	"OSA", //Osasuna
+	"ALA", //Alavés
 	"VIL", //Villareal
 	"RMA", //Real Madrid
 	"BET", //Betis
-	"RAY", //Rayo Vallecano
+	"LEG", //Leganés
 	"ATM", //Atlético de Madrid
 	"FCB", //Barça
 	"UDL", //Las Palmas
@@ -40,7 +40,7 @@ static const char *LigaBBVA[] = {
 	"TOR", //Torino
 	"FIO", //Fiorentina
 	"GEN", //Genoa
-	"CAR", //Carpi
+	"CAG", //Cagliari
 	"ATL", //Atalanta
 	"INT", //Inter
 	"SAS", //Sassuolo Calcio
@@ -48,15 +48,15 @@ static const char *LigaBBVA[] = {
 	"CHI", //Chievo
 	"LAZ", //Lazio
 	"BOL", //Bologna
-	"FRO", //Frosinone
+	"CRO", //Crotone
 	"ACM", //Milan
-	"HLL", //Hellas Verona
+	"PES", //Pescara
 	"PAL", //Palermo
 	//Bundesliga (Germany)
 	"HSV", // "Hamburger SV"
 	"S04", //"Schalke 04"
-	"HAN", //"Hannover 96"
-	"ING", //"FC Ingolstadt "
+	"SCF", //"SC Freiburg"
+	"ING", //FC Ingolstadt 
 	"MON", // "Borussia Monchengladbach"
 	"AUG", //"FC Augsburg"
 	"BYM", //"Bayern Munchen"
@@ -69,8 +69,8 @@ static const char *LigaBBVA[] = {
 	"HER", //Hertha BSC
 	"BVB", //B. Dortmund
 	"BRE", //Werder Bremen
-	"DAR", //Darmstadt 98 
-	"STU", //Stuttgart 
+	"DAR", //Darmstadt 98
+	"RBL", //RB Leipzig 
 	"",//DUMMY
 	"",//DUMMY
 	//MLS (USA)
@@ -102,14 +102,14 @@ static const char *LigaBBVA[] = {
 	"BRA", //Sporting Braga
 	"NAC", //Nacional
 	"PFE", //Paços de Ferreira
-	"ACA", //Academica
+	"FEI", //Feirense
 	"MOR", //Moreirense
 	"ARO", //Arouca
 	"SET", //Vitória Setúbal
 	"BOA", //Boavista
 	"POR", //Porto
 	"GUI", //Vitória Guimarães
-	"UNI", //União Madeira
+	"CHA", //Chaves
 	"MAR", //Marítimo 
 	"TON", //Tondela
 	"SPO", //Sporting CP
@@ -121,14 +121,14 @@ static const char *LigaBBVA[] = {
 	"EVE", //Everton
 	"WAT", //Watford
 	"BOU", //AFC Bournemouth
-	"AVL", //Aston Villa
+	"HUL", //Hull City
 	"LEI", //Leicester
 	"SUN", //Sunderland
-	"NOR", //Norwich City
+	"BUR", //Burnley
 	"CRY", //Crystal Palace
 	"CHE", //Chelsea
 	"SWA", //Swansea City
-	"NEW", //NewCastle
+	"MID", //Middlesbrough
 	"SOU", //Southampton
 	"ARS", //Arsenal
 	"WHU", //West Ham
@@ -214,12 +214,12 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_EIB,
 	RESOURCE_ID_RSO,
 	RESOURCE_ID_CEL,
-	RESOURCE_ID_GET,
-	RESOURCE_ID_LEV,
+	RESOURCE_ID_OSA,
+	RESOURCE_ID_ALA,
 	RESOURCE_ID_VIL,
 	RESOURCE_ID_RMA,
 	RESOURCE_ID_BET,
-	RESOURCE_ID_RAY,
+	RESOURCE_ID_LEG,
 	RESOURCE_ID_ATM,
 	RESOURCE_ID_FCB,
 	RESOURCE_ID_UDL,
@@ -232,7 +232,7 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_TOR,
 	RESOURCE_ID_FIO,
 	RESOURCE_ID_GEN,
-	RESOURCE_ID_CAR,
+	RESOURCE_ID_CAG, 
 	RESOURCE_ID_ATL,
 	RESOURCE_ID_INT,
 	RESOURCE_ID_SAS,
@@ -240,14 +240,14 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_CHI,
 	RESOURCE_ID_LAZ,
 	RESOURCE_ID_BOL,
-	RESOURCE_ID_FRO,
+	RESOURCE_ID_CRO, 
 	RESOURCE_ID_ACM,
-	RESOURCE_ID_HLL,
+	RESOURCE_ID_PES, 
 	RESOURCE_ID_PAL,
 	//Bundesliga (Germany)
 	RESOURCE_ID_HSV,
 	RESOURCE_ID_S04,
-	RESOURCE_ID_HAN,
+	RESOURCE_ID_FRE,
 	RESOURCE_ID_ING,
 	RESOURCE_ID_MON,
 	RESOURCE_ID_AUG,
@@ -262,7 +262,7 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_BVB,
 	RESOURCE_ID_BRE,
 	RESOURCE_ID_DAR,
-	RESOURCE_ID_STU,
+	RESOURCE_ID_LEIP, //Pendiente de extracción
 	RESOURCE_ID_DUMMY,
 	RESOURCE_ID_DUMMY,
 	//MLS (USA) 
@@ -294,14 +294,14 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_BRA,
 	RESOURCE_ID_NAC,
 	RESOURCE_ID_FER,
-	RESOURCE_ID_ACA,
+	RESOURCE_ID_FEI, 
 	RESOURCE_ID_MOR,
 	RESOURCE_ID_ARO,
 	RESOURCE_ID_VIT,
 	RESOURCE_ID_BOA,
 	RESOURCE_ID_POR,
 	RESOURCE_ID_GUI,
-	RESOURCE_ID_UNI,
+	RESOURCE_ID_CHA, 
 	RESOURCE_ID_MAR,
 	RESOURCE_ID_TON,
 	RESOURCE_ID_SPOP,
@@ -313,14 +313,14 @@ static const char LigaBBVA_escudos[] = {
 	RESOURCE_ID_EVE,
 	RESOURCE_ID_WAT,
 	RESOURCE_ID_BOU,
-	RESOURCE_ID_AVL,
+	RESOURCE_ID_HUL, 
 	RESOURCE_ID_LEI,
 	RESOURCE_ID_SUN,
-	RESOURCE_ID_NOR,
+	RESOURCE_ID_BUR, 
 	RESOURCE_ID_CRY,
 	RESOURCE_ID_CHE,
 	RESOURCE_ID_SWA,
-	RESOURCE_ID_NEW,
+	RESOURCE_ID_MID, 
 	RESOURCE_ID_SOU,
 	RESOURCE_ID_ARS,
 	RESOURCE_ID_WHU,
@@ -465,6 +465,14 @@ int intLeague_Id = 1;
 int intLeague;
 
 //InverterLayer *inv_layer;
+
+//Wakeup
+static WakeupId s_wakeup_id = -1;
+static time_t s_wakeup_timestamp = 0;
+
+enum {
+  PERSIST_WAKEUP // Persistent storage key for wakeup_id
+};
 
 
 						 
@@ -1301,6 +1309,37 @@ void handle_init(void)
 
 	//Initialize the Message Service
 	SetupMessages();
+
+	//Check Wakeup info
+
+	  // Check if we have already scheduled a wakeup event
+	  // so we can transition to the countdown window
+	  if (persist_exists(PERSIST_WAKEUP)) {
+	    s_wakeup_id = persist_read_int(PERSIST_WAKEUP);
+	    // query if event is still valid, otherwise delete
+	    if (wakeup_query(s_wakeup_id, NULL)==false) {
+	      persist_delete(PERSIST_WAKEUP);
+	      s_wakeup_id = -1;
+
+	      //Schedule a new one
+			  // Wakeup time is a timestamp in the future
+			  // so time(NULL) + delay_time_in_seconds = wakeup_time
+			  time_t wakeup_time = time(NULL) + 0.5 * 60;
+
+			  // Use the tea_array index as the wakeup reason, so on wakeup trigger
+			  // we know which tea is brewed
+			  s_wakeup_id = wakeup_schedule(wakeup_time, 1, true);
+
+			  // Store the handle so we can cancel if necessary, or look it up next launch
+			  persist_write_int(PERSIST_WAKEUP, s_wakeup_id);
+	    }
+	  }
+
+	if (launch_reason() == APP_LAUNCH_WAKEUP) {
+		//If the app woke up, just update the timeline and close the app
+		//Deallocate the main window
+    	window_stack_pop_all(false);
+	}
 	
 	//Fill Locals array
 	SplitDateFromArrays();

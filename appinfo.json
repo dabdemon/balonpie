@@ -422,8 +422,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Union Madeira",
-                "name": "UNI",
+                "file": "images/Chaves.png",
+                "name": "CHA",
                 "storageFormat": "pbi",
                 "targetPlatforms": [
                     "aplite",
@@ -567,8 +567,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Stuttgart",
-                "name": "STU",
+                "file": "images/RB Leipzig.png",
+                "name": "LEIP",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -693,8 +693,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Rayo Vallecano",
-                "name": "RAY",
+                "file": "images/Leganes",
+                "name": "LEG",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -749,15 +749,15 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Norwich City",
-                "name": "NOR",
+                "file": "images/Burnley.png",
+                "name": "BUR",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
-                "file": "images/NewCastle",
-                "name": "NEW",
+                "file": "images/Middlesbrough.png",
+                "name": "MID",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -882,8 +882,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Levante",
-                "name": "LEV",
+                "file": "images/Alaves.png",
+                "name": "ALA",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -959,15 +959,15 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Hellas Verona",
-                "name": "HLL",
+                "file": "images/Pescara.png",
+                "name": "PES",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
-                "file": "images/Hannover 96",
-                "name": "HAN",
+                "file": "images/Freiburg.png",
+                "name": "FRE",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -987,8 +987,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Getafe",
-                "name": "GET",
+                "file": "images/osasuna.png",
+                "name": "OSA",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -1001,8 +1001,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Frosinone",
-                "name": "FRO",
+                "file": "images/Crotone.png",
+                "name": "CRO",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -1170,8 +1170,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Carpi",
-                "name": "CAR",
+                "file": "images/Cagliari.png",
+                "name": "CAG",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -1286,8 +1286,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Aston Villa",
-                "name": "AVL",
+                "file": "images/HULL.png",
+                "name": "HUL",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -1314,8 +1314,8 @@
                 "type": "bitmap"
             },
             {
-                "file": "images/Academica",
-                "name": "ACA",
+                "file": "images/Feirense.png",
+                "name": "FEI",
                 "storageFormat": "pbi",
                 "targetPlatforms": null,
                 "type": "bitmap"
@@ -1343,7 +1343,7 @@
         "chalk"
     ],
     "uuid": "1f6720ca-a410-48b9-9135-ee57b4da4ee4",
-    "versionLabel": "3.6",
+    "versionLabel": "3.7",
     "watchapp": {
         "watchface": false
     }
